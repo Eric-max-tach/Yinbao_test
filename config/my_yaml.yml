@@ -1,0 +1,7 @@
+yinbao:
+  platformName: Android
+  platformVersion: '9'
+  deviceName: emulator-5554
+  appPackage: cn.pospal.www.pospal_pos_android_new.pospal
+  appActivity: cn.pospal.www.pospal_pos_android_new.activity.main.MainActivity
+  remoteurl: "http://localhost:4723/wd/hub"
