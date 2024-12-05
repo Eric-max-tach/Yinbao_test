@@ -124,6 +124,21 @@ class CashInterface(object):
     # “点击选择会员”按钮
     SelectMemberBtn = (AppiumBy.ID, "cn.pospal.www.pospal_pos_android_new.pospal:id/customer_rl")
 
+    # “订单”视图框
+    OrderView = (AppiumBy.ID, "cn.pospal.www.pospal_pos_android_new.pospal:id/sale_ls")
+
+    # 当前屏幕中订单视图框内所有商品的序号的元素集合
+    OrderViewGoodsNums = (AppiumBy.XPATH, "//*[@resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/sale_ls']//*[@resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/no_tv']")
+
+    # 当前屏幕中订单视图框内所有商品的名称的元素集合
+    OrderViewGoodsNames = (AppiumBy.XPATH, "//*[@resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/sale_ls']//*[@resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/plu_name_tv']")
+
+    # 当前屏幕中订单视图框内所有商品的单价的元素集合
+    OrderViewGoodsPrices = (AppiumBy.XPATH, "//*[@resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/sale_ls']//*[@resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/price_tv']")
+
+    # “收银”按钮
+    CashBtn = (AppiumBy.ID, "cn.pospal.www.pospal_pos_android_new.pospal:id/checkout_action_ll")
+
 class NewProductPage(object):
     """
         新增商品页面元素
@@ -246,6 +261,9 @@ class MembershipDetailsPage(object):
     # “充值”按钮
     RechargeBtn = (AppiumBy.ID, "cn.pospal.www.pospal_pos_android_new.pospal:id/recharge_btn")
 
+    # “选择会员”按钮
+    SelectMemberBtn = (AppiumBy.ID, "cn.pospal.www.pospal_pos_android_new.pospal:id/choose_btn")
+
     # “余额”文本值
     BalanceText = (AppiumBy.ID, "cn.pospal.www.pospal_pos_android_new.pospal:id/balance_tv")
 
@@ -343,3 +361,73 @@ class PointExchangePage(object):
 
     # 搜索框
     SearchInput = (AppiumBy.ID, "cn.pospal.www.pospal_pos_android_new.pospal:id/input_et")
+
+class RechargeDetailPage(object):
+    """
+        结账详情页元素定位
+    """
+    # "现金"按钮
+    CashBtn = (AppiumBy.XPATH, "//*[@text='现金']")
+
+    # "储值卡"按钮
+    ValueCardBtn = (AppiumBy.XPATH, "//*[@text='储值卡']")
+
+    # "银联卡"按钮
+    UnionPayBtn = (AppiumBy.XPATH, "//*[@text='银联卡']")
+
+    # "收款码"按钮
+    QRCodeBtn = (AppiumBy.XPATH, "//*[@text='收款码']")
+
+    # "Zfb支付"按钮
+    AliPayBtn = (AppiumBy.XPATH, "//*[@text='Zfb支付']")
+
+    # "预付卡"按钮
+    PrepaidCardBtn = (AppiumBy.XPATH, "//*[@text='预付卡']")
+
+    # 数字“1”
+    OneBtn = (AppiumBy.ID, "cn.pospal.www.pospal_pos_android_new.pospal:id/num_1")
+
+    # 数字“2”
+    TwoBtn = (AppiumBy.ID, "cn.pospal.www.pospal_pos_android_new.pospal:id/num_2")
+
+    # 数字“3”
+    ThreeBtn = (AppiumBy.ID, "cn.pospal.www.pospal_pos_android_new.pospal:id/num_3")
+
+    # 数字“4”
+    FourBtn = (AppiumBy.ID, "cn.pospal.www.pospal_pos_android_new.pospal:id/num_4")
+
+    # 数字“5”
+    FiveBtn = (AppiumBy.ID, "cn.pospal.www.pospal_pos_android_new.pospal:id/num_5")
+
+    # 数字“6”
+    SixBtn = (AppiumBy.ID, "cn.pospal.www.pospal_pos_android_new.pospal:id/num_6")
+
+    # 数字“7”
+    SevenBtn = (AppiumBy.ID, "cn.pospal.www.pospal_pos_android_new.pospal:id/num_7")
+
+    # 数字“8”
+    EightBtn = (AppiumBy.ID, "cn.pospal.www.pospal_pos_android_new.pospal:id/num_8")
+
+    # 数字“9”
+    NineBtn = (AppiumBy.ID, "cn.pospal.www.pospal_pos_android_new.pospal:id/num_9")
+
+    # 数字“0”
+    ZeroBtn = (AppiumBy.ID, "cn.pospal.www.pospal_pos_android_new.pospal:id/num_0")
+
+    # 数字“00”
+    ZeroZeroBtn = (AppiumBy.ID, "cn.pospal.www.pospal_pos_android_new.pospal:id/num_00")
+
+    # 数字“.”
+    DotBtn = (AppiumBy.ID, "cn.pospal.www.pospal_pos_android_new.pospal:id/num_dot")
+
+    # “删除”按钮
+    DeleteBtn = (AppiumBy.ID, "cn.pospal.www.pospal_pos_android_new.pospal:id/num_del")
+
+    # “确定”按钮
+    ConfirmBtn = (AppiumBy.ID, "cn.pospal.www.pospal_pos_android_new.pospal:id/ok_btn")
+
+    # “应收金额”文本信息
+    ReceivableAmountText = (AppiumBy.ID, "cn.pospal.www.pospal_pos_android_new.pospal:id/after_amount_tv")
+
+    # “实收金额”文本信息
+    ActualAmountText = (AppiumBy.ID, "cn.pospal.www.pospal_pos_android_new.pospal:id/real_take_et")

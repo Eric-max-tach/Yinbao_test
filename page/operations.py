@@ -323,6 +323,132 @@ class CashInterfaceOpn(BasePage):
         ele = self.get_presence_element(CashInterface.SelectMemberBtn)
         ele.click()
 
+    # 获取当前分类下的商品列表的元素个数
+    def get_goods_list_num(self) -> int:
+        logging.info('==========get_goods_list_num==========')
+        eles = self.get_elements(CashInterface.GoodsList)
+        return len(eles)
+
+    # 点击指定序号的商品
+    def click_goods_btn(self, goods_num):
+        logging.info('==========click_goods_btn==========')
+        eles = self.get_elements(CashInterface.GoodsList)
+        eles[goods_num - 1].click()
+
+    # 获取指定序号的商品名
+    def get_goods_name(self, goods_num) -> str:
+        logging.info('==========get_goods_name==========')
+        eles = self.get_elements(CashInterface.GoodsList)
+        return self.get_presence_element(locator=CashInterface.GoodsNameText, element=eles[goods_num - 1]).get_attribute("text")
+
+    # 获取指定序号的商品价格
+    def get_goods_price(self, goods_num) -> str:
+        logging.info('==========get_goods_price==========')
+        eles = self.get_elements(CashInterface.GoodsList)
+        return self.get_presence_element(locator=CashInterface.GoodsPriceText, element=eles[goods_num - 1]).get_attribute("text").split('￥')[-1] # 去掉符号后提取数字
+
+    # 获取“订单”视图框的大小，并返回该视图框左上角和右下角的坐标值，即"[480,92][1440,1080]"
+    def get_order_view_size(self) -> tuple:
+        logging.info('==========get_order_view_size==========')
+        ele = self.get_presence_element(CashInterface.OrderView)
+        ele_bounds = ele.get_attribute('bounds')
+        # 使用正则表达式提取两个坐标对
+        matches = re.findall(r'\[(\d+),(\d+)\]', ele_bounds)
+        top_left_x, top_left_y = int(matches[0][0]), int(matches[0][1])  # 第一个坐标对
+        lower_right_x, lower_right_y = int(matches[1][0]), int(matches[1][1])  # 第二个坐标对
+        return top_left_x, top_left_y, lower_right_x, lower_right_y
+
+    # 获取当前屏幕中订单视图框内所有商品的序号的元素集合
+    def get_goods_num_list(self) -> list:
+        logging.info('==========get_goods_num_list==========')
+        return self.get_elements(CashInterface.OrderViewGoodsNums)
+    
+    # 将订单列表滑动到顶部
+    def scroll_order_list_to_top(self):
+        logging.info('==========scroll_order_list_to_top==========')
+        # 获取“订单”视图框列表的大小，得到视图框左上角和右下角的坐标值，即"[480,92][1440,1080]"
+        top_left_x, top_left_y, lower_right_x, lower_right_y = self.get_order_view_size()
+
+        # 获取屏幕的大小
+        size_dict = self.driver.get_window_size()
+
+        # 先将订单列表滑动到顶部
+        while True:
+            # 获取当前屏幕中订单视图框内所有商品的序号的元素
+            product_ids_in_order_eles = self.get_goods_num_list()
+
+            # 判断当前屏幕中的订单位置,第一个商品的序号是否为"01.",如果为1则说明已经滑动到顶部
+            if product_ids_in_order_eles[0].text == "01.":
+                break
+
+            # 从下往上滑动"订单列表"
+            BasePage(self.driver).swipe_screen(start_x=((lower_right_x + top_left_x) / 2) / size_dict['width'],
+                                               start_y=(top_left_y * 1.1) / size_dict['height'],
+                                               end_x=((lower_right_x + top_left_x) / 2) / size_dict['width'],
+                                               end_y=(lower_right_y * 0.9) / size_dict['height'], duration=2)
+
+    # 将订单列表滑动到底部，并统计订单中包含的商品名和商品价格，返回两个字典，分别为订单中的商品名和商品价格
+    def scroll_order_list_to_bottom(self, product_names_in_order, product_prices_in_order) -> tuple:
+        """
+        :param product_names_in_order: product_names_in_order = OrderedDict()  # 用于记录订单中商品的名字
+        :param product_prices_in_order: product_prices_in_order = OrderedDict()  # 用于记录订单中商品的价格
+        :return: product_names_in_order, product_prices_in_order
+        """
+        logging.info('==========scroll_order_list_to_bottom==========')
+        # 获取“订单”视图框列表的大小，得到视图框左上角和右下角的坐标值，即"[480,92][1440,1080]"
+        top_left_x, top_left_y, lower_right_x, lower_right_y = self.get_order_view_size()
+
+        # 获取屏幕的大小
+        size_dict = self.driver.get_window_size()
+
+        # 判断是否已经滑动到列表底部的标志位
+        last_id_in_order = "0"
+        
+        while True:
+            # 获取当前屏幕中订单视图框内所有商品的序号的元素集合
+            product_ids_in_order_eles = self.get_elements(CashInterface.OrderViewGoodsNums)
+
+            # 获得当前屏幕中订单视图框内所有商品的名称和价格元素集合
+            product_names_in_order_eles = self.get_elements(CashInterface.OrderViewGoodsNames)
+            product_prices_in_order_eles = self.get_elements(CashInterface.OrderViewGoodsPrices)
+
+            """
+                可能会出现当前屏幕中订单视图框中最后一个元素"商品序号","商品名字","商品价格"不能同时获取的情况
+                当上述情况发生时,就先不处理最后一个元素
+            """
+            min_len = min(min(len(product_ids_in_order_eles), len(product_names_in_order_eles)), len(product_prices_in_order_eles))
+
+            for i in range(min_len): # 遍历订单视图框内所有商品的序号元素,并将其添加到列表中
+                product_id_in_order = product_ids_in_order_eles[i].get_attribute('text')    # 商品在订单中的编号
+                if product_id_in_order not in product_names_in_order:
+                    product_names_in_order[product_id_in_order] = product_names_in_order_eles[i].text
+                if product_id_in_order not in product_prices_in_order:
+                    product_prices_in_order[product_id_in_order] = product_prices_in_order_eles[i].text.split('￥')[-1] # 去掉符号后提取数字
+
+            if product_ids_in_order_eles[min_len - 1].get_attribute('text') == last_id_in_order: # 用于判断是否滑动到列表底部
+                break
+
+            last_id_in_order = product_ids_in_order_eles[min_len - 1].get_attribute('text')
+
+            # 滑动"订单列表"
+            BasePage(self.driver).swipe_screen(start_x=((lower_right_x + top_left_x) / 2) / size_dict['width'],
+                                               start_y=(lower_right_y * 0.9) / size_dict['height'],
+                                               end_x=((lower_right_x + top_left_x) / 2) / size_dict['width'],
+                                               end_y=(lower_right_y * 0.5) / size_dict['height'], duration=2)
+
+            # 清空列表
+            product_ids_in_order_eles.clear()
+            product_names_in_order_eles.clear()
+            product_prices_in_order_eles.clear()
+        
+        return product_names_in_order, product_prices_in_order
+
+    # 点击“收银”按钮
+    def click_cash_btn(self):
+        logging.info('==========click_cash_btn==========')
+        self.get_clickable_element(CashInterface.CashBtn).click()
+    
+
 class NewProductPageOpn(BasePage):
     """
         新增商品元素操作
@@ -548,6 +674,12 @@ class MembershipDetailOpn(BasePage):
         ele = self.get_presence_element(MembershipDetailsPage.RechargeBtn)
         ele.click()
 
+    # 点击“选择会员”按钮
+    def click_select_member_btn(self):
+        logging.info('==========click_select_member_btn==========')
+        ele = self.get_presence_element(MembershipDetailsPage.SelectMemberBtn)
+        ele.click()
+
     # 获取“余额”
     def get_balance(self):
         logging.info('==========get_balance==========')
@@ -728,3 +860,139 @@ class PointExchangeOpn(BasePage):
         logging.info('==========send_keys_search_input==========')
         ele = self.get_presence_element(PointExchangePage.SearchInput)
         ele.send_keys(text)
+
+class RechargeDetailOpn(BasePage):
+    """
+        结账详情页相关元素操作
+    """
+    # 点击"现金"按钮
+    def click_cash_btn(self):
+        logging.info('==========click_cash_btn==========')
+        ele = self.get_presence_element(RechargeDetailPage.CashBtn)
+        ele.click()
+
+    # 点击"储值卡"按钮
+    def click_value_card_btn(self):
+        logging.info('==========click_value_card_btn==========')
+        ele = self.get_presence_element(RechargeDetailPage.ValueCardBtn)
+        ele.click()
+
+    # 点击"银联卡"按钮
+    def click_union_card_btn(self):
+        logging.info('==========click_union_card_btn==========')
+        ele = self.get_presence_element(RechargeDetailPage.UnionPayBtn)
+        ele.click()
+
+    # 点击"收款码"按钮
+    def click_qr_code_btn(self):
+        logging.info('==========click_qr_code_btn==========')
+        ele = self.get_presence_element(RechargeDetailPage.QRCodeBtn)
+        ele.click()
+
+    # 点击"Zfb支付"按钮
+    def click_ali_pay_btn(self):
+        logging.info('==========click_ali_pay_btn==========')
+        ele = self.get_presence_element(RechargeDetailPage.AliPayBtn)
+        ele.click()
+
+    # 点击"预付卡"按钮
+    def click_prepaid_card_btn(self):
+        logging.info('==========click_prepaid_card_btn==========')
+        ele = self.get_presence_element(RechargeDetailPage.PrepaidCardBtn)
+        ele.click()
+
+    # 输入数字“1”
+    def input_search_input_one(self):
+        logging.info('==========input_one==========')
+        ele = self.get_presence_element(RechargeDetailPage.OneBtn)
+        ele.click()
+
+    # 输入数字“2”
+    def input_search_input_two(self):
+        logging.info('==========input_two==========')
+        ele = self.get_presence_element(RechargeDetailPage.TwoBtn)
+        ele.click()
+
+    # 输入数字“3”
+    def input_search_input_three(self):
+        logging.info('==========input_three==========')
+        ele = self.get_presence_element(RechargeDetailPage.ThreeBtn)
+        ele.click()
+
+    # 输入数字“4”
+    def input_search_input_four(self):
+        logging.info('==========input_four==========')
+        ele = self.get_presence_element(RechargeDetailPage.FourBtn)
+        ele.click()
+
+    # 输入数字“5”
+    def input_search_input_five(self):
+        logging.info('==========input_five==========')
+        ele = self.get_presence_element(RechargeDetailPage.FiveBtn)
+        ele.click()
+
+    # 输入数字“6”
+    def input_search_input_six(self):
+        logging.info('==========input_six==========')
+        ele = self.get_presence_element(RechargeDetailPage.SixBtn)
+        ele.click()
+
+    # 输入数字“7”
+    def input_search_input_seven(self):
+        logging.info('==========input_seven==========')
+        ele = self.get_presence_element(RechargeDetailPage.SevenBtn)
+        ele.click()
+
+    # 输入数字“8”
+    def input_search_input_eight(self):
+        logging.info('==========input_eight==========')
+        ele = self.get_presence_element(RechargeDetailPage.EightBtn)
+        ele.click()
+
+    # 输入数字“9”
+    def input_search_input_nine(self):
+        logging.info('==========input_nine==========')
+        ele = self.get_presence_element(RechargeDetailPage.NineBtn)
+        ele.click()
+
+    # 输入数字“0”
+    def input_search_input_zero(self):
+        logging.info('==========input_zero==========')
+        ele = self.get_presence_element(RechargeDetailPage.ZeroBtn)
+        ele.click()
+
+    # 输入数字“00”
+    def input_search_input_zero_zero(self):
+        logging.info('==========input_zero_zero==========')
+        ele = self.get_presence_element(RechargeDetailPage.ZeroZeroBtn)
+        ele.click()
+
+    # 输入数字"."
+    def input_search_input_dot(self):
+        logging.info('==========input_dot==========')
+        ele = self.get_presence_element(RechargeDetailPage.DotBtn)
+        ele.click()
+
+    # 点击"删除"按钮
+    def click_delete_btn(self):
+        logging.info('==========click_delete_btn==========')
+        ele = self.get_presence_element(RechargeDetailPage.DeleteBtn)
+        ele.click()
+
+    # 点击"确定"按钮
+    def click_confirm_btn(self):
+        logging.info('==========click_confirm_btn==========')
+        ele = self.get_presence_element(RechargeDetailPage.ConfirmBtn)
+        ele.click()
+
+    # 获取“应收金额”文本信息
+    def get_receivable_amount_text(self):
+        logging.info('==========get_receivable_amount_text==========')
+        ele = self.get_presence_element(RechargeDetailPage.ReceivableAmountText)
+        return ele.text
+
+    # 获取“实收金额”文本信息
+    def get_actual_amount_text(self):
+        logging.info('==========get_actual_amount_text==========')
+        ele = self.get_presence_element(RechargeDetailPage.ActualAmountText)
+        return ele.text
