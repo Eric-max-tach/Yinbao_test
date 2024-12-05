@@ -560,9 +560,21 @@ class MembershipDetailOpn(BasePage):
         ele = self.get_presence_element(MembershipDetailsPage.CouponViewBtn)
         ele.click()
 
+    # 获取“积分”
+    def get_points(self):
+        logging.info('==========get_points==========')
+        ele = self.get_presence_element(MembershipDetailsPage.PointsText)
+        return ele.text
+
+    # 点击“积分兑换”按钮
+    def click_points_exchange_btn(self):
+        logging.info('==========click_points_exchange_btn==========')
+        ele = self.get_presence_element(MembershipDetailsPage.PointsExchangeBtn)
+        ele.click()
+
 class MemberRechargeOpn(BasePage):
     """
-        会员充值页面元素定位
+        会员充值页面元素定位操作
     """
     # 选择指定充值项
     def select_recharge_item(self, item_no):
@@ -659,3 +671,60 @@ class NotAvailableCouponOpn(BasePage):
         logging.info('==========get_not_available_coupon_number_list==========')
         eles = self.get_elements(NotAvailableCouponPage.UnavailableCouponNum)
         return eles
+
+class PointExchangeOpn(BasePage):
+    """
+        积分兑换页面元素相关操作
+    """
+
+    # 获取“积分兑换商品”列表元素
+    def get_points_exchange_list(self):
+        logging.info('==========get_points_exchange_list==========')
+        eles = self.get_elements(PointExchangePage.PointsExchangeViewElem)
+        return eles
+
+    # 点击“积分兑换商品”列表中，指定序号的元素
+    def click_points_exchange_item(self, item_no):
+        logging.info('==========click_points_exchange_item==========')
+        eles = self.get_points_exchange_list()
+        eles[item_no].click()
+
+    # 获取“积分兑换商品”列表中，指定序号元素的积分值
+    def get_points_exchange_item_points(self, item_no):
+        logging.info('==========get_points_exchange_item_points==========')
+        eles = self.get_points_exchange_list()
+        ele = self.get_presence_element(locator=PointExchangePage.PointsExchangeItemPoints, element=eles[item_no])
+        return ele.get_attribute("text")
+
+    # 获取"积分兑换商品"列表中,指定序号元素的品名
+    def get_points_exchange_item_name(self, item_no):
+        logging.info('==========get_points_exchange_item_name==========')
+        eles = self.get_elements(PointExchangePage.PointsExchangeItemNames)
+        return eles[item_no].get_attribute("text")
+
+    # 点击“积分兑换”按钮
+    def click_points_exchange_btn(self):
+        logging.info('==========click_points_exchange_btn==========')
+        ele = self.get_presence_element(PointExchangePage.ExchangeBtn)
+        ele.click()
+
+    # 获取“积分兑换商品”视图大小，并返回视图框左上角和右下角的坐标值
+    def get_points_exchange_view_size(self):
+        """
+            :return: 视图框左上角x轴的值、视图框左上角y轴的值、视图框右下角x轴的值、视图框右下角y轴的值
+        """
+        logging.info('==========get_points_exchange_view_size==========')
+        ele = self.get_presence_element(PointExchangePage.PointsExchangeView)
+        ele_bounds = ele.get_attribute('bounds')
+
+        # 使用正则表达式提取两个坐标对
+        matches = re.findall(r'\[(\d+),(\d+)\]', ele_bounds)
+        top_left_x, top_left_y = int(matches[0][0]), int(matches[0][1])  # 第一个坐标对
+        lower_right_x, lower_right_y = int(matches[1][0]), int(matches[1][1])  # 第二个坐标对
+        return top_left_x, top_left_y, lower_right_x, lower_right_y
+
+    # 搜索框发送指定数据
+    def send_keys_search_input(self, text):
+        logging.info('==========send_keys_search_input==========')
+        ele = self.get_presence_element(PointExchangePage.SearchInput)
+        ele.send_keys(text)

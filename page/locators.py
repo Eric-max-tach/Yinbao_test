@@ -249,8 +249,14 @@ class MembershipDetailsPage(object):
     # “余额”文本值
     BalanceText = (AppiumBy.ID, "cn.pospal.www.pospal_pos_android_new.pospal:id/balance_tv")
 
+    # “积分”文本值
+    PointsText = (AppiumBy.ID, "cn.pospal.www.pospal_pos_android_new.pospal:id/point_tv")
+
     # “优惠券查看”按钮
     CouponViewBtn = (AppiumBy.ID, "cn.pospal.www.pospal_pos_android_new.pospal:id/coupon_check_btn")
+
+    # “积分兑换”按钮
+    PointsExchangeBtn = (AppiumBy.ID, "cn.pospal.www.pospal_pos_android_new.pospal:id/exchange_btn")
 
 class MemberRechargePage(object):
     """
@@ -314,3 +320,26 @@ class NotAvailableCouponPage(object):
 
     # “已过期优惠券”的优惠券名称
     ExpiredCouponName = (AppiumBy.XPATH, "//*[@resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/expired_customer_coupon_rv']//*[@resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/coupon_name_tv']")
+
+class PointExchangePage(object):
+    """
+        积分兑换页面元素定位
+    """
+    # “积分兑换商品”视图列表元素项
+    PointsExchangeViewElem = (
+        AppiumBy.ID, "cn.pospal.www.pospal_pos_android_new.pospal:id/root_ll")
+
+    # “积分兑换商品”列表中商品项的积分值
+    PointsExchangeItemPoints = (AppiumBy.ID, "cn.pospal.www.pospal_pos_android_new.pospal:id/need_point_tv")
+
+    # "积分兑换商品"列表中商品项的品名
+    PointsExchangeItemNames = (AppiumBy.ID, "cn.pospal.www.pospal_pos_android_new.pospal:id/product_name_tv")
+
+    # “兑换”按钮
+    ExchangeBtn = (AppiumBy.ID, "cn.pospal.www.pospal_pos_android_new.pospal:id/ok_btn")
+
+    # “积分兑换商品”视图
+    PointsExchangeView = (AppiumBy.ID, "cn.pospal.www.pospal_pos_android_new.pospal:id/product_list")
+
+    # 搜索框
+    SearchInput = (AppiumBy.ID, "cn.pospal.www.pospal_pos_android_new.pospal:id/input_et")

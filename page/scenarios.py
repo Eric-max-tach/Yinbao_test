@@ -67,3 +67,38 @@ class NotAvailableCouponScenario(BasePage):
                                                                 ((lower_right_x + top_left_x) / 2), (top_left_y * 1.2)))
 
         return coupon_number_dic, coupon_number_extend_dic
+
+class PointExchangeScenarios(BasePage):
+    """
+    定义了积分兑换页面相关的场景
+    """
+    # 获得"积分兑换商品"列表的最后一个元素的名称
+    def get_last_point_exchange_goods_name(self):
+        """
+        获得"积分兑换商品"列表的最后一个元素的名称
+        :return:
+        """
+        # 获取“兑换商品”视图框列表的大小，得到视图框左上角和右下角的坐标值，即"[480,92][1440,1080]"
+        top_left_x, top_left_y, lower_right_x, lower_right_y = PointExchangeOpn(
+            self.driver).get_points_exchange_view_size()
+
+        # 判断是否已经滑动到列表底部的标志位
+        last_product = ""
+
+        # 获取屏幕的大小
+        size_dict = self.driver.get_window_size()
+
+        # 滑动到列表底部
+        while True:
+            # 获取当前显示在“兑换商品”视图中，品名元素列表
+            if last_product == PointExchangeOpn(self.driver).get_points_exchange_item_name(-1):
+                break
+            last_product = PointExchangeOpn(self.driver).get_points_exchange_item_name(-1)
+
+            # 滑动“兑换商品”列表
+            BasePage(self.driver).swipe_screen(start_x=((lower_right_x + top_left_x) / 2) / size_dict['width'],
+                                               start_y=(lower_right_y * 0.9) / size_dict['height'],
+                                               end_x=((lower_right_x + top_left_x) / 2) / size_dict['width'],
+                                               end_y=(top_left_y * 0.9) / size_dict['height'], duration=2)
+
+        return last_product
