@@ -1,0 +1,169 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>scenarios module &mdash; e d 文档</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=92fd9be5" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=bcdc910c"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/translations.js?v=beaddf03"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            e
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">scenarios module</a><ul>
+<li><a class="reference internal" href="#scenarios.LoginScenario"><code class="docutils literal notranslate"><span class="pre">LoginScenario</span></code></a><ul>
+<li><a class="reference internal" href="#scenarios.LoginScenario.fillin_account_pwd_and_login"><code class="docutils literal notranslate"><span class="pre">LoginScenario.fillin_account_pwd_and_login()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scenarios.NotAvailableCouponScenario"><code class="docutils literal notranslate"><span class="pre">NotAvailableCouponScenario</span></code></a><ul>
+<li><a class="reference internal" href="#scenarios.NotAvailableCouponScenario.get_unavailable_coupon_num"><code class="docutils literal notranslate"><span class="pre">NotAvailableCouponScenario.get_unavailable_coupon_num()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#scenarios.PointExchangeScenarios"><code class="docutils literal notranslate"><span class="pre">PointExchangeScenarios</span></code></a><ul>
+<li><a class="reference internal" href="#scenarios.PointExchangeScenarios.get_last_point_exchange_goods_name"><code class="docutils literal notranslate"><span class="pre">PointExchangeScenarios.get_last_point_exchange_goods_name()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">e</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">scenarios module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/scenarios.rst.txt" rel="nofollow"> 查看页面源码</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-scenarios">
+<span id="scenarios-module"></span><h1>scenarios module<a class="headerlink" href="#module-scenarios" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="scenarios.LoginScenario">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scenarios.</span></span><span class="sig-name descname"><span class="pre">LoginScenario</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#scenarios.LoginScenario" title="Link to this definition"></a></dt>
+<dd><p>基类：<a class="reference internal" href="basepage.html#basepage.BasePage" title="basepage.BasePage"><code class="xref py py-class docutils literal notranslate"><span class="pre">BasePage</span></code></a></p>
+<p>定义了与登录相关的场景</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="scenarios.LoginScenario.fillin_account_pwd_and_login">
+<span class="sig-name descname"><span class="pre">fillin_account_pwd_and_login</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">username</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#scenarios.LoginScenario.fillin_account_pwd_and_login" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="scenarios.NotAvailableCouponScenario">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scenarios.</span></span><span class="sig-name descname"><span class="pre">NotAvailableCouponScenario</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#scenarios.NotAvailableCouponScenario" title="Link to this definition"></a></dt>
+<dd><p>基类：<a class="reference internal" href="basepage.html#basepage.BasePage" title="basepage.BasePage"><code class="xref py py-class docutils literal notranslate"><span class="pre">BasePage</span></code></a></p>
+<p>定义了不可用优惠券页面相关的场景</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="scenarios.NotAvailableCouponScenario.get_unavailable_coupon_num">
+<span class="sig-name descname"><span class="pre">get_unavailable_coupon_num</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coupon_number_dic</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coupon_number_extend_dic</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_first</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#scenarios.NotAvailableCouponScenario.get_unavailable_coupon_num" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>coupon_number_dic</strong> – 统计优惠券编号的字典</p></li>
+<li><p><strong>coupon_number_extend_dic</strong> – 统计添加新优惠券后，记录新增优惠券编号的字典，默认为空</p></li>
+<li><p><strong>is_first</strong> – 判断是否为第一次统计优惠券编号，如果是第一次统计，则将记录信息添加到coupon_number_dic字典中。如果不是第一次添加，浙江记录信息添加到coupon_number_extend_dic字典中</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>返回两个字典</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="scenarios.PointExchangeScenarios">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scenarios.</span></span><span class="sig-name descname"><span class="pre">PointExchangeScenarios</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#scenarios.PointExchangeScenarios" title="Link to this definition"></a></dt>
+<dd><p>基类：<a class="reference internal" href="basepage.html#basepage.BasePage" title="basepage.BasePage"><code class="xref py py-class docutils literal notranslate"><span class="pre">BasePage</span></code></a></p>
+<p>定义了积分兑换页面相关的场景</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="scenarios.PointExchangeScenarios.get_last_point_exchange_goods_name">
+<span class="sig-name descname"><span class="pre">get_last_point_exchange_goods_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#scenarios.PointExchangeScenarios.get_last_point_exchange_goods_name" title="Link to this definition"></a></dt>
+<dd><p>获得”积分兑换商品”列表的最后一个元素的名称
+:return:</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2024, w。</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用的 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a> 开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

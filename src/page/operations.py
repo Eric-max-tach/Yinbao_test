@@ -228,6 +228,13 @@ class IndustrySelectionPageOpn(BasePage):
 
     # 母婴行业按钮点击
     def maternal_supply_industry_btn(self):
+        """
+        母婴行业按钮点击
+
+        Example
+        -------
+        >>>  IndustrySelectionPageOpn(self.driver).maternal_supply_industry_btn()
+        """
         logging.info('==========maternal_supply_industry_btn==========')
         # ele = self.driver.find_element(*IndustrySelectionPageLocators.MaternalSupplyBtn)
         ele = self.get_clickable_element(IndustrySelectionPageLocators.MaternalSupplyBtn)   # 替换为添加了显示等待的元素定位方法
@@ -235,6 +242,13 @@ class IndustrySelectionPageOpn(BasePage):
 
     # 宠物行业按钮点击
     def pet_industry_btn(self):
+        """
+        宠物行业按钮点击
+
+        Example
+        -------
+        >>>  IndustrySelectionPageOpn(self.driver).pet_industry_btn()
+        """
         logging.info('==========pet_industry_btn==========')
         # ele = self.driver.find_element(*IndustrySelectionPageLocators.PetBtn)
         ele = self.get_clickable_element(IndustrySelectionPageLocators.PetBtn)  # 替换为添加了显示等待的元素定位方法
@@ -242,6 +256,13 @@ class IndustrySelectionPageOpn(BasePage):
 
     # 烘焙行业按钮点击
     def bake_industry_btn(self):
+        """
+        烘焙行业按钮点击
+
+        Example
+        -------
+        >>>  IndustrySelectionPageOpn(self.driver).bake_industry_btn()
+        """
         logging.info('==========bake_industry_btn==========')
         # ele = self.driver.find_element(*IndustrySelectionPageLocators.BakeBtn)
         ele = self.get_clickable_element(IndustrySelectionPageLocators.BakeBtn) # 替换为添加了显示等待的元素定位方法
@@ -249,6 +270,13 @@ class IndustrySelectionPageOpn(BasePage):
 
     # 生鲜称重按钮点击
     def fresh_industry_btn(self):
+        """
+        生鲜称重按钮点击
+
+        Example
+        -------
+        >>>  IndustrySelectionPageOpn(self.driver).fresh_industry_btn()
+        """
         logging.info('==========fresh_industry_btn==========')
         # ele = self.driver.find_element(*IndustrySelectionPageLocators.FreshBtn)
         ele = self.get_clickable_element(IndustrySelectionPageLocators.FreshBtn)    # 替换为添加了显示等待的元素定位方法
@@ -256,6 +284,13 @@ class IndustrySelectionPageOpn(BasePage):
 
     # 美妆休闲按钮点击
     def leisure_industry_btn(self):
+        """
+        美妆休闲按钮点击
+
+        Example
+        -------
+        >>>  IndustrySelectionPageOpn(self.driver).leisure_industry_btn()
+        """
         logging.info('==========leisure_industry_btn==========')
         # ele = self.driver.find_element(*IndustrySelectionPageLocators.LeisureBtn)
         ele = self.get_clickable_element(IndustrySelectionPageLocators.LeisureBtn)  # 替换为添加了显示等待的元素定位方法
@@ -263,6 +298,13 @@ class IndustrySelectionPageOpn(BasePage):
 
     # 尽请期待按钮点击
     def future_industry_btn(self):
+        """
+        尽请期待按钮点击
+
+        Example
+        -------
+        >>>  IndustrySelectionPageOpn(self.driver).future_industry_btn()
+        """
         logging.info('==========future_industry_btn==========')
         # ele = self.driver.find_element(*IndustrySelectionPageLocators.FutureBtn)
         ele = self.get_clickable_element(IndustrySelectionPageLocators.FutureBtn)   # 替换为添加了显示等待的元素定位方法

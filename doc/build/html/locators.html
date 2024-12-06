@@ -1,0 +1,1087 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>locators module &mdash; e d 文档</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=92fd9be5" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=bcdc910c"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/translations.js?v=beaddf03"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            e
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">locators module</a><ul>
+<li><a class="reference internal" href="#locators.CashInterface"><code class="docutils literal notranslate"><span class="pre">CashInterface</span></code></a><ul>
+<li><a class="reference internal" href="#locators.CashInterface.CashBtn"><code class="docutils literal notranslate"><span class="pre">CashInterface.CashBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.CashInterface.CategoryList"><code class="docutils literal notranslate"><span class="pre">CashInterface.CategoryList</span></code></a></li>
+<li><a class="reference internal" href="#locators.CashInterface.CategoryText"><code class="docutils literal notranslate"><span class="pre">CashInterface.CategoryText</span></code></a></li>
+<li><a class="reference internal" href="#locators.CashInterface.CouponBtn"><code class="docutils literal notranslate"><span class="pre">CashInterface.CouponBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.CashInterface.DiscountText"><code class="docutils literal notranslate"><span class="pre">CashInterface.DiscountText</span></code></a></li>
+<li><a class="reference internal" href="#locators.CashInterface.GoodsList"><code class="docutils literal notranslate"><span class="pre">CashInterface.GoodsList</span></code></a></li>
+<li><a class="reference internal" href="#locators.CashInterface.GoodsNameText"><code class="docutils literal notranslate"><span class="pre">CashInterface.GoodsNameText</span></code></a></li>
+<li><a class="reference internal" href="#locators.CashInterface.GoodsPriceText"><code class="docutils literal notranslate"><span class="pre">CashInterface.GoodsPriceText</span></code></a></li>
+<li><a class="reference internal" href="#locators.CashInterface.OrderView"><code class="docutils literal notranslate"><span class="pre">CashInterface.OrderView</span></code></a></li>
+<li><a class="reference internal" href="#locators.CashInterface.OrderViewGoodsDiscounts"><code class="docutils literal notranslate"><span class="pre">CashInterface.OrderViewGoodsDiscounts</span></code></a></li>
+<li><a class="reference internal" href="#locators.CashInterface.OrderViewGoodsNames"><code class="docutils literal notranslate"><span class="pre">CashInterface.OrderViewGoodsNames</span></code></a></li>
+<li><a class="reference internal" href="#locators.CashInterface.OrderViewGoodsNums"><code class="docutils literal notranslate"><span class="pre">CashInterface.OrderViewGoodsNums</span></code></a></li>
+<li><a class="reference internal" href="#locators.CashInterface.OrderViewGoodsPrices"><code class="docutils literal notranslate"><span class="pre">CashInterface.OrderViewGoodsPrices</span></code></a></li>
+<li><a class="reference internal" href="#locators.CashInterface.ReceiptPriceText"><code class="docutils literal notranslate"><span class="pre">CashInterface.ReceiptPriceText</span></code></a></li>
+<li><a class="reference internal" href="#locators.CashInterface.SelectMemberBtn"><code class="docutils literal notranslate"><span class="pre">CashInterface.SelectMemberBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.CashInterface.Toast"><code class="docutils literal notranslate"><span class="pre">CashInterface.Toast</span></code></a></li>
+<li><a class="reference internal" href="#locators.CashInterface.TotalPriceText"><code class="docutils literal notranslate"><span class="pre">CashInterface.TotalPriceText</span></code></a></li>
+<li><a class="reference internal" href="#locators.CashInterface.UreadMessageBtn"><code class="docutils literal notranslate"><span class="pre">CashInterface.UreadMessageBtn</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#locators.CouponPage"><code class="docutils literal notranslate"><span class="pre">CouponPage</span></code></a><ul>
+<li><a class="reference internal" href="#locators.CouponPage.CouponListView"><code class="docutils literal notranslate"><span class="pre">CouponPage.CouponListView</span></code></a></li>
+<li><a class="reference internal" href="#locators.CouponPage.UnavailableCouponBtn"><code class="docutils literal notranslate"><span class="pre">CouponPage.UnavailableCouponBtn</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#locators.IndustrySelectionPageLocators"><code class="docutils literal notranslate"><span class="pre">IndustrySelectionPageLocators</span></code></a><ul>
+<li><a class="reference internal" href="#locators.IndustrySelectionPageLocators.BakeBtn"><code class="docutils literal notranslate"><span class="pre">IndustrySelectionPageLocators.BakeBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.IndustrySelectionPageLocators.ClothesShoesBtn"><code class="docutils literal notranslate"><span class="pre">IndustrySelectionPageLocators.ClothesShoesBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.IndustrySelectionPageLocators.FoodBtn"><code class="docutils literal notranslate"><span class="pre">IndustrySelectionPageLocators.FoodBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.IndustrySelectionPageLocators.FreshBtn"><code class="docutils literal notranslate"><span class="pre">IndustrySelectionPageLocators.FreshBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.IndustrySelectionPageLocators.FutureBtn"><code class="docutils literal notranslate"><span class="pre">IndustrySelectionPageLocators.FutureBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.IndustrySelectionPageLocators.LeisureBtn"><code class="docutils literal notranslate"><span class="pre">IndustrySelectionPageLocators.LeisureBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.IndustrySelectionPageLocators.MaternalSupplyBtn"><code class="docutils literal notranslate"><span class="pre">IndustrySelectionPageLocators.MaternalSupplyBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.IndustrySelectionPageLocators.PetBtn"><code class="docutils literal notranslate"><span class="pre">IndustrySelectionPageLocators.PetBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.IndustrySelectionPageLocators.RetailBtn"><code class="docutils literal notranslate"><span class="pre">IndustrySelectionPageLocators.RetailBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.IndustrySelectionPageLocators.ServiceBtn"><code class="docutils literal notranslate"><span class="pre">IndustrySelectionPageLocators.ServiceBtn</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#locators.LoginInPageLocators"><code class="docutils literal notranslate"><span class="pre">LoginInPageLocators</span></code></a><ul>
+<li><a class="reference internal" href="#locators.LoginInPageLocators.AccountCashierLoginBtn"><code class="docutils literal notranslate"><span class="pre">LoginInPageLocators.AccountCashierLoginBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.LoginInPageLocators.AccountInput"><code class="docutils literal notranslate"><span class="pre">LoginInPageLocators.AccountInput</span></code></a></li>
+<li><a class="reference internal" href="#locators.LoginInPageLocators.ContactServiceBtn"><code class="docutils literal notranslate"><span class="pre">LoginInPageLocators.ContactServiceBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.LoginInPageLocators.FreeRegistBtn"><code class="docutils literal notranslate"><span class="pre">LoginInPageLocators.FreeRegistBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.LoginInPageLocators.LoginBtn"><code class="docutils literal notranslate"><span class="pre">LoginInPageLocators.LoginBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.LoginInPageLocators.PasswordInput"><code class="docutils literal notranslate"><span class="pre">LoginInPageLocators.PasswordInput</span></code></a></li>
+<li><a class="reference internal" href="#locators.LoginInPageLocators.PermissionAllowBtn"><code class="docutils literal notranslate"><span class="pre">LoginInPageLocators.PermissionAllowBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.LoginInPageLocators.PermissionPageText"><code class="docutils literal notranslate"><span class="pre">LoginInPageLocators.PermissionPageText</span></code></a></li>
+<li><a class="reference internal" href="#locators.LoginInPageLocators.Toast"><code class="docutils literal notranslate"><span class="pre">LoginInPageLocators.Toast</span></code></a></li>
+<li><a class="reference internal" href="#locators.LoginInPageLocators.TryAccountBtn"><code class="docutils literal notranslate"><span class="pre">LoginInPageLocators.TryAccountBtn</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#locators.MemberRechargePage"><code class="docutils literal notranslate"><span class="pre">MemberRechargePage</span></code></a><ul>
+<li><a class="reference internal" href="#locators.MemberRechargePage.AliPayBtn"><code class="docutils literal notranslate"><span class="pre">MemberRechargePage.AliPayBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.MemberRechargePage.CashBtn"><code class="docutils literal notranslate"><span class="pre">MemberRechargePage.CashBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.MemberRechargePage.ConfirmRechargeBtn"><code class="docutils literal notranslate"><span class="pre">MemberRechargePage.ConfirmRechargeBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.MemberRechargePage.PrintReceiptCheckBox"><code class="docutils literal notranslate"><span class="pre">MemberRechargePage.PrintReceiptCheckBox</span></code></a></li>
+<li><a class="reference internal" href="#locators.MemberRechargePage.QRCodeBtn"><code class="docutils literal notranslate"><span class="pre">MemberRechargePage.QRCodeBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.MemberRechargePage.RechargeItemList"><code class="docutils literal notranslate"><span class="pre">MemberRechargePage.RechargeItemList</span></code></a></li>
+<li><a class="reference internal" href="#locators.MemberRechargePage.SFPayBtn"><code class="docutils literal notranslate"><span class="pre">MemberRechargePage.SFPayBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.MemberRechargePage.UnionPayBtn"><code class="docutils literal notranslate"><span class="pre">MemberRechargePage.UnionPayBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.MemberRechargePage.WechatBtn"><code class="docutils literal notranslate"><span class="pre">MemberRechargePage.WechatBtn</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#locators.MembershipDetailsPage"><code class="docutils literal notranslate"><span class="pre">MembershipDetailsPage</span></code></a><ul>
+<li><a class="reference internal" href="#locators.MembershipDetailsPage.BalanceText"><code class="docutils literal notranslate"><span class="pre">MembershipDetailsPage.BalanceText</span></code></a></li>
+<li><a class="reference internal" href="#locators.MembershipDetailsPage.CouponViewBtn"><code class="docutils literal notranslate"><span class="pre">MembershipDetailsPage.CouponViewBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.MembershipDetailsPage.PointsExchangeBtn"><code class="docutils literal notranslate"><span class="pre">MembershipDetailsPage.PointsExchangeBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.MembershipDetailsPage.PointsText"><code class="docutils literal notranslate"><span class="pre">MembershipDetailsPage.PointsText</span></code></a></li>
+<li><a class="reference internal" href="#locators.MembershipDetailsPage.RechargeBtn"><code class="docutils literal notranslate"><span class="pre">MembershipDetailsPage.RechargeBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.MembershipDetailsPage.SelectMemberBtn"><code class="docutils literal notranslate"><span class="pre">MembershipDetailsPage.SelectMemberBtn</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#locators.MessageCenterPageLocators"><code class="docutils literal notranslate"><span class="pre">MessageCenterPageLocators</span></code></a><ul>
+<li><a class="reference internal" href="#locators.MessageCenterPageLocators.BackBtn"><code class="docutils literal notranslate"><span class="pre">MessageCenterPageLocators.BackBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.MessageCenterPageLocators.IgnoreThisGoodsBtn"><code class="docutils literal notranslate"><span class="pre">MessageCenterPageLocators.IgnoreThisGoodsBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.MessageCenterPageLocators.SelectAllBtn"><code class="docutils literal notranslate"><span class="pre">MessageCenterPageLocators.SelectAllBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.MessageCenterPageLocators.StockWarningBtn"><code class="docutils literal notranslate"><span class="pre">MessageCenterPageLocators.StockWarningBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.MessageCenterPageLocators.StockWarningCount"><code class="docutils literal notranslate"><span class="pre">MessageCenterPageLocators.StockWarningCount</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#locators.NewProductPage"><code class="docutils literal notranslate"><span class="pre">NewProductPage</span></code></a><ul>
+<li><a class="reference internal" href="#locators.NewProductPage.BarcodeInput"><code class="docutils literal notranslate"><span class="pre">NewProductPage.BarcodeInput</span></code></a></li>
+<li><a class="reference internal" href="#locators.NewProductPage.CategoryDropdown"><code class="docutils literal notranslate"><span class="pre">NewProductPage.CategoryDropdown</span></code></a></li>
+<li><a class="reference internal" href="#locators.NewProductPage.CategorySearchConfirmBtn"><code class="docutils literal notranslate"><span class="pre">NewProductPage.CategorySearchConfirmBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.NewProductPage.CategorySearchInput"><code class="docutils literal notranslate"><span class="pre">NewProductPage.CategorySearchInput</span></code></a></li>
+<li><a class="reference internal" href="#locators.NewProductPage.CategorySearchResult"><code class="docutils literal notranslate"><span class="pre">NewProductPage.CategorySearchResult</span></code></a></li>
+<li><a class="reference internal" href="#locators.NewProductPage.GenerateBtn"><code class="docutils literal notranslate"><span class="pre">NewProductPage.GenerateBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.NewProductPage.NameInput"><code class="docutils literal notranslate"><span class="pre">NewProductPage.NameInput</span></code></a></li>
+<li><a class="reference internal" href="#locators.NewProductPage.PriceInput"><code class="docutils literal notranslate"><span class="pre">NewProductPage.PriceInput</span></code></a></li>
+<li><a class="reference internal" href="#locators.NewProductPage.PurchasePriceInput"><code class="docutils literal notranslate"><span class="pre">NewProductPage.PurchasePriceInput</span></code></a></li>
+<li><a class="reference internal" href="#locators.NewProductPage.SaveBtn"><code class="docutils literal notranslate"><span class="pre">NewProductPage.SaveBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.NewProductPage.StockInput"><code class="docutils literal notranslate"><span class="pre">NewProductPage.StockInput</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#locators.NotAvailableCouponPage"><code class="docutils literal notranslate"><span class="pre">NotAvailableCouponPage</span></code></a><ul>
+<li><a class="reference internal" href="#locators.NotAvailableCouponPage.ExpiredCouponName"><code class="docutils literal notranslate"><span class="pre">NotAvailableCouponPage.ExpiredCouponName</span></code></a></li>
+<li><a class="reference internal" href="#locators.NotAvailableCouponPage.ExpiredCouponNum"><code class="docutils literal notranslate"><span class="pre">NotAvailableCouponPage.ExpiredCouponNum</span></code></a></li>
+<li><a class="reference internal" href="#locators.NotAvailableCouponPage.ExpiredCouponView"><code class="docutils literal notranslate"><span class="pre">NotAvailableCouponPage.ExpiredCouponView</span></code></a></li>
+<li><a class="reference internal" href="#locators.NotAvailableCouponPage.UnavailableCouponName"><code class="docutils literal notranslate"><span class="pre">NotAvailableCouponPage.UnavailableCouponName</span></code></a></li>
+<li><a class="reference internal" href="#locators.NotAvailableCouponPage.UnavailableCouponNum"><code class="docutils literal notranslate"><span class="pre">NotAvailableCouponPage.UnavailableCouponNum</span></code></a></li>
+<li><a class="reference internal" href="#locators.NotAvailableCouponPage.UnavailableCouponView"><code class="docutils literal notranslate"><span class="pre">NotAvailableCouponPage.UnavailableCouponView</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#locators.PointExchangePage"><code class="docutils literal notranslate"><span class="pre">PointExchangePage</span></code></a><ul>
+<li><a class="reference internal" href="#locators.PointExchangePage.ExchangeBtn"><code class="docutils literal notranslate"><span class="pre">PointExchangePage.ExchangeBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.PointExchangePage.PointsExchangeItemNames"><code class="docutils literal notranslate"><span class="pre">PointExchangePage.PointsExchangeItemNames</span></code></a></li>
+<li><a class="reference internal" href="#locators.PointExchangePage.PointsExchangeItemPoints"><code class="docutils literal notranslate"><span class="pre">PointExchangePage.PointsExchangeItemPoints</span></code></a></li>
+<li><a class="reference internal" href="#locators.PointExchangePage.PointsExchangeView"><code class="docutils literal notranslate"><span class="pre">PointExchangePage.PointsExchangeView</span></code></a></li>
+<li><a class="reference internal" href="#locators.PointExchangePage.PointsExchangeViewElem"><code class="docutils literal notranslate"><span class="pre">PointExchangePage.PointsExchangeViewElem</span></code></a></li>
+<li><a class="reference internal" href="#locators.PointExchangePage.SearchInput"><code class="docutils literal notranslate"><span class="pre">PointExchangePage.SearchInput</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#locators.RechargeDetailPage"><code class="docutils literal notranslate"><span class="pre">RechargeDetailPage</span></code></a><ul>
+<li><a class="reference internal" href="#locators.RechargeDetailPage.ActualAmountText"><code class="docutils literal notranslate"><span class="pre">RechargeDetailPage.ActualAmountText</span></code></a></li>
+<li><a class="reference internal" href="#locators.RechargeDetailPage.AliPayBtn"><code class="docutils literal notranslate"><span class="pre">RechargeDetailPage.AliPayBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.RechargeDetailPage.CashBtn"><code class="docutils literal notranslate"><span class="pre">RechargeDetailPage.CashBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.RechargeDetailPage.ConfirmBtn"><code class="docutils literal notranslate"><span class="pre">RechargeDetailPage.ConfirmBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.RechargeDetailPage.DeleteBtn"><code class="docutils literal notranslate"><span class="pre">RechargeDetailPage.DeleteBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.RechargeDetailPage.DotBtn"><code class="docutils literal notranslate"><span class="pre">RechargeDetailPage.DotBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.RechargeDetailPage.EightBtn"><code class="docutils literal notranslate"><span class="pre">RechargeDetailPage.EightBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.RechargeDetailPage.FiveBtn"><code class="docutils literal notranslate"><span class="pre">RechargeDetailPage.FiveBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.RechargeDetailPage.FourBtn"><code class="docutils literal notranslate"><span class="pre">RechargeDetailPage.FourBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.RechargeDetailPage.NineBtn"><code class="docutils literal notranslate"><span class="pre">RechargeDetailPage.NineBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.RechargeDetailPage.OneBtn"><code class="docutils literal notranslate"><span class="pre">RechargeDetailPage.OneBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.RechargeDetailPage.PrepaidCardBtn"><code class="docutils literal notranslate"><span class="pre">RechargeDetailPage.PrepaidCardBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.RechargeDetailPage.QRCodeBtn"><code class="docutils literal notranslate"><span class="pre">RechargeDetailPage.QRCodeBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.RechargeDetailPage.ReceivableAmountText"><code class="docutils literal notranslate"><span class="pre">RechargeDetailPage.ReceivableAmountText</span></code></a></li>
+<li><a class="reference internal" href="#locators.RechargeDetailPage.SevenBtn"><code class="docutils literal notranslate"><span class="pre">RechargeDetailPage.SevenBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.RechargeDetailPage.SixBtn"><code class="docutils literal notranslate"><span class="pre">RechargeDetailPage.SixBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.RechargeDetailPage.ThreeBtn"><code class="docutils literal notranslate"><span class="pre">RechargeDetailPage.ThreeBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.RechargeDetailPage.TwoBtn"><code class="docutils literal notranslate"><span class="pre">RechargeDetailPage.TwoBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.RechargeDetailPage.UnionPayBtn"><code class="docutils literal notranslate"><span class="pre">RechargeDetailPage.UnionPayBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.RechargeDetailPage.ValueCardBtn"><code class="docutils literal notranslate"><span class="pre">RechargeDetailPage.ValueCardBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.RechargeDetailPage.ZeroBtn"><code class="docutils literal notranslate"><span class="pre">RechargeDetailPage.ZeroBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.RechargeDetailPage.ZeroZeroBtn"><code class="docutils literal notranslate"><span class="pre">RechargeDetailPage.ZeroZeroBtn</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#locators.SelectCouponInterface"><code class="docutils literal notranslate"><span class="pre">SelectCouponInterface</span></code></a><ul>
+<li><a class="reference internal" href="#locators.SelectCouponInterface.CommentCouponBtn"><code class="docutils literal notranslate"><span class="pre">SelectCouponInterface.CommentCouponBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.SelectCouponInterface.ConfirmBtn"><code class="docutils literal notranslate"><span class="pre">SelectCouponInterface.ConfirmBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.SelectCouponInterface.CouponAddBtn"><code class="docutils literal notranslate"><span class="pre">SelectCouponInterface.CouponAddBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.SelectCouponInterface.CouponAddedNumText"><code class="docutils literal notranslate"><span class="pre">SelectCouponInterface.CouponAddedNumText</span></code></a></li>
+<li><a class="reference internal" href="#locators.SelectCouponInterface.CouponDeleteBtn"><code class="docutils literal notranslate"><span class="pre">SelectCouponInterface.CouponDeleteBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.SelectCouponInterface.CouponListView"><code class="docutils literal notranslate"><span class="pre">SelectCouponInterface.CouponListView</span></code></a></li>
+<li><a class="reference internal" href="#locators.SelectCouponInterface.CouponNameText"><code class="docutils literal notranslate"><span class="pre">SelectCouponInterface.CouponNameText</span></code></a></li>
+<li><a class="reference internal" href="#locators.SelectCouponInterface.CouponScanBtn"><code class="docutils literal notranslate"><span class="pre">SelectCouponInterface.CouponScanBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.SelectCouponInterface.GeneralCouponBtn"><code class="docutils literal notranslate"><span class="pre">SelectCouponInterface.GeneralCouponBtn</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#locators.SelectMemberPage"><code class="docutils literal notranslate"><span class="pre">SelectMemberPage</span></code></a><ul>
+<li><a class="reference internal" href="#locators.SelectMemberPage.AddMemberBtn"><code class="docutils literal notranslate"><span class="pre">SelectMemberPage.AddMemberBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.SelectMemberPage.BackBtn"><code class="docutils literal notranslate"><span class="pre">SelectMemberPage.BackBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.SelectMemberPage.ConfirmBtn"><code class="docutils literal notranslate"><span class="pre">SelectMemberPage.ConfirmBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.SelectMemberPage.DeleteBtn"><code class="docutils literal notranslate"><span class="pre">SelectMemberPage.DeleteBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.SelectMemberPage.DotBtn"><code class="docutils literal notranslate"><span class="pre">SelectMemberPage.DotBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.SelectMemberPage.EightBtn"><code class="docutils literal notranslate"><span class="pre">SelectMemberPage.EightBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.SelectMemberPage.FiveBtn"><code class="docutils literal notranslate"><span class="pre">SelectMemberPage.FiveBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.SelectMemberPage.FourBtn"><code class="docutils literal notranslate"><span class="pre">SelectMemberPage.FourBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.SelectMemberPage.NineBtn"><code class="docutils literal notranslate"><span class="pre">SelectMemberPage.NineBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.SelectMemberPage.OneBtn"><code class="docutils literal notranslate"><span class="pre">SelectMemberPage.OneBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.SelectMemberPage.ScanBtn"><code class="docutils literal notranslate"><span class="pre">SelectMemberPage.ScanBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.SelectMemberPage.SearchInput"><code class="docutils literal notranslate"><span class="pre">SelectMemberPage.SearchInput</span></code></a></li>
+<li><a class="reference internal" href="#locators.SelectMemberPage.SevenBtn"><code class="docutils literal notranslate"><span class="pre">SelectMemberPage.SevenBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.SelectMemberPage.SixBtn"><code class="docutils literal notranslate"><span class="pre">SelectMemberPage.SixBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.SelectMemberPage.ThreeBtn"><code class="docutils literal notranslate"><span class="pre">SelectMemberPage.ThreeBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.SelectMemberPage.TwoBtn"><code class="docutils literal notranslate"><span class="pre">SelectMemberPage.TwoBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.SelectMemberPage.ZeroBtn"><code class="docutils literal notranslate"><span class="pre">SelectMemberPage.ZeroBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.SelectMemberPage.ZeroZeroBtn"><code class="docutils literal notranslate"><span class="pre">SelectMemberPage.ZeroZeroBtn</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#locators.TryLoginInPageLocators"><code class="docutils literal notranslate"><span class="pre">TryLoginInPageLocators</span></code></a><ul>
+<li><a class="reference internal" href="#locators.TryLoginInPageLocators.AccountInput"><code class="docutils literal notranslate"><span class="pre">TryLoginInPageLocators.AccountInput</span></code></a></li>
+<li><a class="reference internal" href="#locators.TryLoginInPageLocators.ContactServiceBtn"><code class="docutils literal notranslate"><span class="pre">TryLoginInPageLocators.ContactServiceBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.TryLoginInPageLocators.EmployeeLoginBtn"><code class="docutils literal notranslate"><span class="pre">TryLoginInPageLocators.EmployeeLoginBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.TryLoginInPageLocators.HistoryHandoverBtn"><code class="docutils literal notranslate"><span class="pre">TryLoginInPageLocators.HistoryHandoverBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.TryLoginInPageLocators.JobNumberInput"><code class="docutils literal notranslate"><span class="pre">TryLoginInPageLocators.JobNumberInput</span></code></a></li>
+<li><a class="reference internal" href="#locators.TryLoginInPageLocators.ManagerBtn"><code class="docutils literal notranslate"><span class="pre">TryLoginInPageLocators.ManagerBtn</span></code></a></li>
+<li><a class="reference internal" href="#locators.TryLoginInPageLocators.PasswordInput"><code class="docutils literal notranslate"><span class="pre">TryLoginInPageLocators.PasswordInput</span></code></a></li>
+<li><a class="reference internal" href="#locators.TryLoginInPageLocators.Toast"><code class="docutils literal notranslate"><span class="pre">TryLoginInPageLocators.Toast</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">e</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">locators module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/locators.rst.txt" rel="nofollow"> 查看页面源码</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-locators">
+<span id="locators-module"></span><h1>locators module<a class="headerlink" href="#module-locators" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="locators.CashInterface">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">locators.</span></span><span class="sig-name descname"><span class="pre">CashInterface</span></span><a class="headerlink" href="#locators.CashInterface" title="Link to this definition"></a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>收银页面元素</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.CashInterface.CashBtn">
+<span class="sig-name descname"><span class="pre">CashBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/checkout_action_ll')</span></em><a class="headerlink" href="#locators.CashInterface.CashBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.CashInterface.CategoryList">
+<span class="sig-name descname"><span class="pre">CategoryList</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('xpath',</span> <span class="pre">&quot;//*[&#64;resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/category_gv']/*[&#64;resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/root_rl']&quot;)</span></em><a class="headerlink" href="#locators.CashInterface.CategoryList" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.CashInterface.CategoryText">
+<span class="sig-name descname"><span class="pre">CategoryText</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('xpath',</span> <span class="pre">&quot;//*[&#64;resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/name_tv']&quot;)</span></em><a class="headerlink" href="#locators.CashInterface.CategoryText" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.CashInterface.CouponBtn">
+<span class="sig-name descname"><span class="pre">CouponBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/coupon_ll')</span></em><a class="headerlink" href="#locators.CashInterface.CouponBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.CashInterface.DiscountText">
+<span class="sig-name descname"><span class="pre">DiscountText</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('xpath',</span> <span class="pre">&quot;//*[&#64;resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/cart_rl']/*[&#64;resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/discount_tv']&quot;)</span></em><a class="headerlink" href="#locators.CashInterface.DiscountText" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.CashInterface.GoodsList">
+<span class="sig-name descname"><span class="pre">GoodsList</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('xpath',</span> <span class="pre">&quot;//*[&#64;resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/product_rv']/*[&#64;class='android.widget.RelativeLayout']&quot;)</span></em><a class="headerlink" href="#locators.CashInterface.GoodsList" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.CashInterface.GoodsNameText">
+<span class="sig-name descname"><span class="pre">GoodsNameText</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('xpath',</span> <span class="pre">&quot;//*[&#64;resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/name_tv']&quot;)</span></em><a class="headerlink" href="#locators.CashInterface.GoodsNameText" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.CashInterface.GoodsPriceText">
+<span class="sig-name descname"><span class="pre">GoodsPriceText</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('xpath',</span> <span class="pre">&quot;//*[&#64;resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/price_et']&quot;)</span></em><a class="headerlink" href="#locators.CashInterface.GoodsPriceText" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.CashInterface.OrderView">
+<span class="sig-name descname"><span class="pre">OrderView</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/sale_ls')</span></em><a class="headerlink" href="#locators.CashInterface.OrderView" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.CashInterface.OrderViewGoodsDiscounts">
+<span class="sig-name descname"><span class="pre">OrderViewGoodsDiscounts</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('xpath',</span> <span class="pre">&quot;//*[&#64;resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/sale_ls']//*[&#64;resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/discount_tv']&quot;)</span></em><a class="headerlink" href="#locators.CashInterface.OrderViewGoodsDiscounts" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.CashInterface.OrderViewGoodsNames">
+<span class="sig-name descname"><span class="pre">OrderViewGoodsNames</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('xpath',</span> <span class="pre">&quot;//*[&#64;resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/sale_ls']//*[&#64;resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/plu_name_tv']&quot;)</span></em><a class="headerlink" href="#locators.CashInterface.OrderViewGoodsNames" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.CashInterface.OrderViewGoodsNums">
+<span class="sig-name descname"><span class="pre">OrderViewGoodsNums</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('xpath',</span> <span class="pre">&quot;//*[&#64;resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/sale_ls']//*[&#64;resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/no_tv']&quot;)</span></em><a class="headerlink" href="#locators.CashInterface.OrderViewGoodsNums" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.CashInterface.OrderViewGoodsPrices">
+<span class="sig-name descname"><span class="pre">OrderViewGoodsPrices</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('xpath',</span> <span class="pre">&quot;//*[&#64;resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/sale_ls']//*[&#64;resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/price_tv']&quot;)</span></em><a class="headerlink" href="#locators.CashInterface.OrderViewGoodsPrices" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.CashInterface.ReceiptPriceText">
+<span class="sig-name descname"><span class="pre">ReceiptPriceText</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('xpath',</span> <span class="pre">&quot;//*[&#64;resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/checkout_action_ll']/*[&#64;resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/amount_tv']&quot;)</span></em><a class="headerlink" href="#locators.CashInterface.ReceiptPriceText" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.CashInterface.SelectMemberBtn">
+<span class="sig-name descname"><span class="pre">SelectMemberBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/customer_rl')</span></em><a class="headerlink" href="#locators.CashInterface.SelectMemberBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.CashInterface.Toast">
+<span class="sig-name descname"><span class="pre">Toast</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('xpath',</span> <span class="pre">&quot;//*[&#64;class='android.widget.Toast']&quot;)</span></em><a class="headerlink" href="#locators.CashInterface.Toast" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.CashInterface.TotalPriceText">
+<span class="sig-name descname"><span class="pre">TotalPriceText</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('xpath',</span> <span class="pre">&quot;//*[&#64;resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/cart_rl']/*[&#64;resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/subtotal_tv']&quot;)</span></em><a class="headerlink" href="#locators.CashInterface.TotalPriceText" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.CashInterface.UreadMessageBtn">
+<span class="sig-name descname"><span class="pre">UreadMessageBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/notice_ib')</span></em><a class="headerlink" href="#locators.CashInterface.UreadMessageBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="locators.CouponPage">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">locators.</span></span><span class="sig-name descname"><span class="pre">CouponPage</span></span><a class="headerlink" href="#locators.CouponPage" title="Link to this definition"></a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>优惠券页面元素定位</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.CouponPage.CouponListView">
+<span class="sig-name descname"><span class="pre">CouponListView</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('xpath',</span> <span class="pre">&quot;//*[&#64;resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/customer_coupon_rv']&quot;)</span></em><a class="headerlink" href="#locators.CouponPage.CouponListView" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.CouponPage.UnavailableCouponBtn">
+<span class="sig-name descname"><span class="pre">UnavailableCouponBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('xpath',</span> <span class="pre">&quot;//*[&#64;resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/action_1_tv'</span> <span class="pre">and</span> <span class="pre">&#64;text='不可用券']&quot;)</span></em><a class="headerlink" href="#locators.CouponPage.UnavailableCouponBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="locators.IndustrySelectionPageLocators">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">locators.</span></span><span class="sig-name descname"><span class="pre">IndustrySelectionPageLocators</span></span><a class="headerlink" href="#locators.IndustrySelectionPageLocators" title="Link to this definition"></a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>在登录页选择体验账号后，进入的行业选择页面</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.IndustrySelectionPageLocators.BakeBtn">
+<span class="sig-name descname"><span class="pre">BakeBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/bake_version_ll')</span></em><a class="headerlink" href="#locators.IndustrySelectionPageLocators.BakeBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.IndustrySelectionPageLocators.ClothesShoesBtn">
+<span class="sig-name descname"><span class="pre">ClothesShoesBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/clothing_version_ll')</span></em><a class="headerlink" href="#locators.IndustrySelectionPageLocators.ClothesShoesBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.IndustrySelectionPageLocators.FoodBtn">
+<span class="sig-name descname"><span class="pre">FoodBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/food_version_ll')</span></em><a class="headerlink" href="#locators.IndustrySelectionPageLocators.FoodBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.IndustrySelectionPageLocators.FreshBtn">
+<span class="sig-name descname"><span class="pre">FreshBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/fresh_version_ll')</span></em><a class="headerlink" href="#locators.IndustrySelectionPageLocators.FreshBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.IndustrySelectionPageLocators.FutureBtn">
+<span class="sig-name descname"><span class="pre">FutureBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/future_version_ll')</span></em><a class="headerlink" href="#locators.IndustrySelectionPageLocators.FutureBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.IndustrySelectionPageLocators.LeisureBtn">
+<span class="sig-name descname"><span class="pre">LeisureBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/leisure_version_ll')</span></em><a class="headerlink" href="#locators.IndustrySelectionPageLocators.LeisureBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.IndustrySelectionPageLocators.MaternalSupplyBtn">
+<span class="sig-name descname"><span class="pre">MaternalSupplyBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/maternal_supply_version_ll')</span></em><a class="headerlink" href="#locators.IndustrySelectionPageLocators.MaternalSupplyBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.IndustrySelectionPageLocators.PetBtn">
+<span class="sig-name descname"><span class="pre">PetBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">(&lt;class</span> <span class="pre">'appium.webdriver.common.appiumby.AppiumBy'&gt;,</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/pet_version_ll')</span></em><a class="headerlink" href="#locators.IndustrySelectionPageLocators.PetBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.IndustrySelectionPageLocators.RetailBtn">
+<span class="sig-name descname"><span class="pre">RetailBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/retail_version_ll')</span></em><a class="headerlink" href="#locators.IndustrySelectionPageLocators.RetailBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.IndustrySelectionPageLocators.ServiceBtn">
+<span class="sig-name descname"><span class="pre">ServiceBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/service_version_ll')</span></em><a class="headerlink" href="#locators.IndustrySelectionPageLocators.ServiceBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="locators.LoginInPageLocators">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">locators.</span></span><span class="sig-name descname"><span class="pre">LoginInPageLocators</span></span><a class="headerlink" href="#locators.LoginInPageLocators" title="Link to this definition"></a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>登录页元素</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.LoginInPageLocators.AccountCashierLoginBtn">
+<span class="sig-name descname"><span class="pre">AccountCashierLoginBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/account_cashier_login_ll')</span></em><a class="headerlink" href="#locators.LoginInPageLocators.AccountCashierLoginBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.LoginInPageLocators.AccountInput">
+<span class="sig-name descname"><span class="pre">AccountInput</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/account_tv')</span></em><a class="headerlink" href="#locators.LoginInPageLocators.AccountInput" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.LoginInPageLocators.ContactServiceBtn">
+<span class="sig-name descname"><span class="pre">ContactServiceBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/contact_customer_service_ll')</span></em><a class="headerlink" href="#locators.LoginInPageLocators.ContactServiceBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.LoginInPageLocators.FreeRegistBtn">
+<span class="sig-name descname"><span class="pre">FreeRegistBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/regist_tv')</span></em><a class="headerlink" href="#locators.LoginInPageLocators.FreeRegistBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.LoginInPageLocators.LoginBtn">
+<span class="sig-name descname"><span class="pre">LoginBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/login_btn')</span></em><a class="headerlink" href="#locators.LoginInPageLocators.LoginBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.LoginInPageLocators.PasswordInput">
+<span class="sig-name descname"><span class="pre">PasswordInput</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/password_tv')</span></em><a class="headerlink" href="#locators.LoginInPageLocators.PasswordInput" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.LoginInPageLocators.PermissionAllowBtn">
+<span class="sig-name descname"><span class="pre">PermissionAllowBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'com.android.packageinstaller:id/permission_allow_button')</span></em><a class="headerlink" href="#locators.LoginInPageLocators.PermissionAllowBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.LoginInPageLocators.PermissionPageText">
+<span class="sig-name descname"><span class="pre">PermissionPageText</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'com.android.packageinstaller:id/current_page_text')</span></em><a class="headerlink" href="#locators.LoginInPageLocators.PermissionPageText" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.LoginInPageLocators.Toast">
+<span class="sig-name descname"><span class="pre">Toast</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('xpath',</span> <span class="pre">&quot;//*[&#64;class='android.widget.Toast']&quot;)</span></em><a class="headerlink" href="#locators.LoginInPageLocators.Toast" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.LoginInPageLocators.TryAccountBtn">
+<span class="sig-name descname"><span class="pre">TryAccountBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/try_tv')</span></em><a class="headerlink" href="#locators.LoginInPageLocators.TryAccountBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="locators.MemberRechargePage">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">locators.</span></span><span class="sig-name descname"><span class="pre">MemberRechargePage</span></span><a class="headerlink" href="#locators.MemberRechargePage" title="Link to this definition"></a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>会员充值页面元素定位</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.MemberRechargePage.AliPayBtn">
+<span class="sig-name descname"><span class="pre">AliPayBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('xpath',</span> <span class="pre">&quot;//*[&#64;resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/name_tv'</span> <span class="pre">and</span> <span class="pre">&#64;text='Zfb支付']&quot;)</span></em><a class="headerlink" href="#locators.MemberRechargePage.AliPayBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.MemberRechargePage.CashBtn">
+<span class="sig-name descname"><span class="pre">CashBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('xpath',</span> <span class="pre">&quot;//*[&#64;resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/name_tv'</span> <span class="pre">and</span> <span class="pre">&#64;text='现金']&quot;)</span></em><a class="headerlink" href="#locators.MemberRechargePage.CashBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.MemberRechargePage.ConfirmRechargeBtn">
+<span class="sig-name descname"><span class="pre">ConfirmRechargeBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/ok_btn')</span></em><a class="headerlink" href="#locators.MemberRechargePage.ConfirmRechargeBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.MemberRechargePage.PrintReceiptCheckBox">
+<span class="sig-name descname"><span class="pre">PrintReceiptCheckBox</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('xpath',</span> <span class="pre">&quot;//*[&#64;resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/checkbox_ll']/*[&#64;resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/checkbox']&quot;)</span></em><a class="headerlink" href="#locators.MemberRechargePage.PrintReceiptCheckBox" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.MemberRechargePage.QRCodeBtn">
+<span class="sig-name descname"><span class="pre">QRCodeBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('xpath',</span> <span class="pre">&quot;//*[&#64;resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/name_tv'</span> <span class="pre">and</span> <span class="pre">&#64;text='收款码']&quot;)</span></em><a class="headerlink" href="#locators.MemberRechargePage.QRCodeBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.MemberRechargePage.RechargeItemList">
+<span class="sig-name descname"><span class="pre">RechargeItemList</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('xpath',</span> <span class="pre">&quot;//*[&#64;resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/pass_product_list']/*[&#64;resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/root_rl']&quot;)</span></em><a class="headerlink" href="#locators.MemberRechargePage.RechargeItemList" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.MemberRechargePage.SFPayBtn">
+<span class="sig-name descname"><span class="pre">SFPayBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('xpath',</span> <span class="pre">&quot;//*[&#64;resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/name_tv'</span> <span class="pre">and</span> <span class="pre">&#64;text='三福支付']&quot;)</span></em><a class="headerlink" href="#locators.MemberRechargePage.SFPayBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.MemberRechargePage.UnionPayBtn">
+<span class="sig-name descname"><span class="pre">UnionPayBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('xpath',</span> <span class="pre">&quot;//*[&#64;resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/name_tv'</span> <span class="pre">and</span> <span class="pre">&#64;text='银联卡']&quot;)</span></em><a class="headerlink" href="#locators.MemberRechargePage.UnionPayBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.MemberRechargePage.WechatBtn">
+<span class="sig-name descname"><span class="pre">WechatBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('xpath',</span> <span class="pre">&quot;//*[&#64;resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/name_tv'</span> <span class="pre">and</span> <span class="pre">&#64;text='微信']&quot;)</span></em><a class="headerlink" href="#locators.MemberRechargePage.WechatBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="locators.MembershipDetailsPage">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">locators.</span></span><span class="sig-name descname"><span class="pre">MembershipDetailsPage</span></span><a class="headerlink" href="#locators.MembershipDetailsPage" title="Link to this definition"></a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>会员详情页元素定位</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.MembershipDetailsPage.BalanceText">
+<span class="sig-name descname"><span class="pre">BalanceText</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/balance_tv')</span></em><a class="headerlink" href="#locators.MembershipDetailsPage.BalanceText" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.MembershipDetailsPage.CouponViewBtn">
+<span class="sig-name descname"><span class="pre">CouponViewBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/coupon_check_btn')</span></em><a class="headerlink" href="#locators.MembershipDetailsPage.CouponViewBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.MembershipDetailsPage.PointsExchangeBtn">
+<span class="sig-name descname"><span class="pre">PointsExchangeBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/exchange_btn')</span></em><a class="headerlink" href="#locators.MembershipDetailsPage.PointsExchangeBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.MembershipDetailsPage.PointsText">
+<span class="sig-name descname"><span class="pre">PointsText</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/point_tv')</span></em><a class="headerlink" href="#locators.MembershipDetailsPage.PointsText" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.MembershipDetailsPage.RechargeBtn">
+<span class="sig-name descname"><span class="pre">RechargeBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/recharge_btn')</span></em><a class="headerlink" href="#locators.MembershipDetailsPage.RechargeBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.MembershipDetailsPage.SelectMemberBtn">
+<span class="sig-name descname"><span class="pre">SelectMemberBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/choose_btn')</span></em><a class="headerlink" href="#locators.MembershipDetailsPage.SelectMemberBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="locators.MessageCenterPageLocators">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">locators.</span></span><span class="sig-name descname"><span class="pre">MessageCenterPageLocators</span></span><a class="headerlink" href="#locators.MessageCenterPageLocators" title="Link to this definition"></a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>消息中心页面元素</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.MessageCenterPageLocators.BackBtn">
+<span class="sig-name descname"><span class="pre">BackBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/back_tv')</span></em><a class="headerlink" href="#locators.MessageCenterPageLocators.BackBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.MessageCenterPageLocators.IgnoreThisGoodsBtn">
+<span class="sig-name descname"><span class="pre">IgnoreThisGoodsBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/left_btn')</span></em><a class="headerlink" href="#locators.MessageCenterPageLocators.IgnoreThisGoodsBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.MessageCenterPageLocators.SelectAllBtn">
+<span class="sig-name descname"><span class="pre">SelectAllBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/select_all_iv')</span></em><a class="headerlink" href="#locators.MessageCenterPageLocators.SelectAllBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.MessageCenterPageLocators.StockWarningBtn">
+<span class="sig-name descname"><span class="pre">StockWarningBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('xpath',</span> <span class="pre">&quot;//*[&#64;text='库存预警']&quot;)</span></em><a class="headerlink" href="#locators.MessageCenterPageLocators.StockWarningBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.MessageCenterPageLocators.StockWarningCount">
+<span class="sig-name descname"><span class="pre">StockWarningCount</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('xpath',</span> <span class="pre">&quot;//*[&#64;text='库存预警']/following-sibling::*[&#64;resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/count_tv']&quot;)</span></em><a class="headerlink" href="#locators.MessageCenterPageLocators.StockWarningCount" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="locators.NewProductPage">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">locators.</span></span><span class="sig-name descname"><span class="pre">NewProductPage</span></span><a class="headerlink" href="#locators.NewProductPage" title="Link to this definition"></a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>新增商品页面元素</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.NewProductPage.BarcodeInput">
+<span class="sig-name descname"><span class="pre">BarcodeInput</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/number_et')</span></em><a class="headerlink" href="#locators.NewProductPage.BarcodeInput" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.NewProductPage.CategoryDropdown">
+<span class="sig-name descname"><span class="pre">CategoryDropdown</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/category_tv')</span></em><a class="headerlink" href="#locators.NewProductPage.CategoryDropdown" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.NewProductPage.CategorySearchConfirmBtn">
+<span class="sig-name descname"><span class="pre">CategorySearchConfirmBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/ok_btn')</span></em><a class="headerlink" href="#locators.NewProductPage.CategorySearchConfirmBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.NewProductPage.CategorySearchInput">
+<span class="sig-name descname"><span class="pre">CategorySearchInput</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/input_et')</span></em><a class="headerlink" href="#locators.NewProductPage.CategorySearchInput" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.NewProductPage.CategorySearchResult">
+<span class="sig-name descname"><span class="pre">CategorySearchResult</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('xpath',</span> <span class="pre">&quot;//*[&#64;resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/ctg_rv']/*[&#64;class='android.widget.LinearLayout']&quot;)</span></em><a class="headerlink" href="#locators.NewProductPage.CategorySearchResult" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.NewProductPage.GenerateBtn">
+<span class="sig-name descname"><span class="pre">GenerateBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/generate_barcode')</span></em><a class="headerlink" href="#locators.NewProductPage.GenerateBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.NewProductPage.NameInput">
+<span class="sig-name descname"><span class="pre">NameInput</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/name_et')</span></em><a class="headerlink" href="#locators.NewProductPage.NameInput" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.NewProductPage.PriceInput">
+<span class="sig-name descname"><span class="pre">PriceInput</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/price_et')</span></em><a class="headerlink" href="#locators.NewProductPage.PriceInput" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.NewProductPage.PurchasePriceInput">
+<span class="sig-name descname"><span class="pre">PurchasePriceInput</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/buy_price_et')</span></em><a class="headerlink" href="#locators.NewProductPage.PurchasePriceInput" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.NewProductPage.SaveBtn">
+<span class="sig-name descname"><span class="pre">SaveBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/save_ll')</span></em><a class="headerlink" href="#locators.NewProductPage.SaveBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.NewProductPage.StockInput">
+<span class="sig-name descname"><span class="pre">StockInput</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/stock_et')</span></em><a class="headerlink" href="#locators.NewProductPage.StockInput" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="locators.NotAvailableCouponPage">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">locators.</span></span><span class="sig-name descname"><span class="pre">NotAvailableCouponPage</span></span><a class="headerlink" href="#locators.NotAvailableCouponPage" title="Link to this definition"></a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>不可用优惠券页面元素定位</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.NotAvailableCouponPage.ExpiredCouponName">
+<span class="sig-name descname"><span class="pre">ExpiredCouponName</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('xpath',</span> <span class="pre">&quot;//*[&#64;resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/expired_customer_coupon_rv']//*[&#64;resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/coupon_name_tv']&quot;)</span></em><a class="headerlink" href="#locators.NotAvailableCouponPage.ExpiredCouponName" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.NotAvailableCouponPage.ExpiredCouponNum">
+<span class="sig-name descname"><span class="pre">ExpiredCouponNum</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('xpath',</span> <span class="pre">&quot;//*[&#64;resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/expired_customer_coupon_rv']//*[&#64;resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/coupon_code_tv']&quot;)</span></em><a class="headerlink" href="#locators.NotAvailableCouponPage.ExpiredCouponNum" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.NotAvailableCouponPage.ExpiredCouponView">
+<span class="sig-name descname"><span class="pre">ExpiredCouponView</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('xpath',</span> <span class="pre">&quot;//*[&#64;resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/expired_customer_coupon_rv']&quot;)</span></em><a class="headerlink" href="#locators.NotAvailableCouponPage.ExpiredCouponView" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.NotAvailableCouponPage.UnavailableCouponName">
+<span class="sig-name descname"><span class="pre">UnavailableCouponName</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('xpath',</span> <span class="pre">&quot;//*[&#64;resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/invalid_customer_coupon_rv']//*[&#64;resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/coupon_name_tv']&quot;)</span></em><a class="headerlink" href="#locators.NotAvailableCouponPage.UnavailableCouponName" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.NotAvailableCouponPage.UnavailableCouponNum">
+<span class="sig-name descname"><span class="pre">UnavailableCouponNum</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('xpath',</span> <span class="pre">&quot;//*[&#64;resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/invalid_customer_coupon_rv']//*[&#64;resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/coupon_code_tv']&quot;)</span></em><a class="headerlink" href="#locators.NotAvailableCouponPage.UnavailableCouponNum" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.NotAvailableCouponPage.UnavailableCouponView">
+<span class="sig-name descname"><span class="pre">UnavailableCouponView</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/invalid_customer_coupon_rv')</span></em><a class="headerlink" href="#locators.NotAvailableCouponPage.UnavailableCouponView" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="locators.PointExchangePage">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">locators.</span></span><span class="sig-name descname"><span class="pre">PointExchangePage</span></span><a class="headerlink" href="#locators.PointExchangePage" title="Link to this definition"></a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>积分兑换页面元素定位</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.PointExchangePage.ExchangeBtn">
+<span class="sig-name descname"><span class="pre">ExchangeBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/ok_btn')</span></em><a class="headerlink" href="#locators.PointExchangePage.ExchangeBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.PointExchangePage.PointsExchangeItemNames">
+<span class="sig-name descname"><span class="pre">PointsExchangeItemNames</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/product_name_tv')</span></em><a class="headerlink" href="#locators.PointExchangePage.PointsExchangeItemNames" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.PointExchangePage.PointsExchangeItemPoints">
+<span class="sig-name descname"><span class="pre">PointsExchangeItemPoints</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/need_point_tv')</span></em><a class="headerlink" href="#locators.PointExchangePage.PointsExchangeItemPoints" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.PointExchangePage.PointsExchangeView">
+<span class="sig-name descname"><span class="pre">PointsExchangeView</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/product_list')</span></em><a class="headerlink" href="#locators.PointExchangePage.PointsExchangeView" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.PointExchangePage.PointsExchangeViewElem">
+<span class="sig-name descname"><span class="pre">PointsExchangeViewElem</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/root_ll')</span></em><a class="headerlink" href="#locators.PointExchangePage.PointsExchangeViewElem" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.PointExchangePage.SearchInput">
+<span class="sig-name descname"><span class="pre">SearchInput</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/input_et')</span></em><a class="headerlink" href="#locators.PointExchangePage.SearchInput" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="locators.RechargeDetailPage">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">locators.</span></span><span class="sig-name descname"><span class="pre">RechargeDetailPage</span></span><a class="headerlink" href="#locators.RechargeDetailPage" title="Link to this definition"></a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>结账详情页元素定位</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.RechargeDetailPage.ActualAmountText">
+<span class="sig-name descname"><span class="pre">ActualAmountText</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/real_take_et')</span></em><a class="headerlink" href="#locators.RechargeDetailPage.ActualAmountText" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.RechargeDetailPage.AliPayBtn">
+<span class="sig-name descname"><span class="pre">AliPayBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('xpath',</span> <span class="pre">&quot;//*[&#64;text='Zfb支付']&quot;)</span></em><a class="headerlink" href="#locators.RechargeDetailPage.AliPayBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.RechargeDetailPage.CashBtn">
+<span class="sig-name descname"><span class="pre">CashBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('xpath',</span> <span class="pre">&quot;//*[&#64;text='现金']&quot;)</span></em><a class="headerlink" href="#locators.RechargeDetailPage.CashBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.RechargeDetailPage.ConfirmBtn">
+<span class="sig-name descname"><span class="pre">ConfirmBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/ok_btn')</span></em><a class="headerlink" href="#locators.RechargeDetailPage.ConfirmBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.RechargeDetailPage.DeleteBtn">
+<span class="sig-name descname"><span class="pre">DeleteBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/num_del')</span></em><a class="headerlink" href="#locators.RechargeDetailPage.DeleteBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.RechargeDetailPage.DotBtn">
+<span class="sig-name descname"><span class="pre">DotBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/num_dot')</span></em><a class="headerlink" href="#locators.RechargeDetailPage.DotBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.RechargeDetailPage.EightBtn">
+<span class="sig-name descname"><span class="pre">EightBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/num_8')</span></em><a class="headerlink" href="#locators.RechargeDetailPage.EightBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.RechargeDetailPage.FiveBtn">
+<span class="sig-name descname"><span class="pre">FiveBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/num_5')</span></em><a class="headerlink" href="#locators.RechargeDetailPage.FiveBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.RechargeDetailPage.FourBtn">
+<span class="sig-name descname"><span class="pre">FourBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/num_4')</span></em><a class="headerlink" href="#locators.RechargeDetailPage.FourBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.RechargeDetailPage.NineBtn">
+<span class="sig-name descname"><span class="pre">NineBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/num_9')</span></em><a class="headerlink" href="#locators.RechargeDetailPage.NineBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.RechargeDetailPage.OneBtn">
+<span class="sig-name descname"><span class="pre">OneBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/num_1')</span></em><a class="headerlink" href="#locators.RechargeDetailPage.OneBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.RechargeDetailPage.PrepaidCardBtn">
+<span class="sig-name descname"><span class="pre">PrepaidCardBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('xpath',</span> <span class="pre">&quot;//*[&#64;text='预付卡']&quot;)</span></em><a class="headerlink" href="#locators.RechargeDetailPage.PrepaidCardBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.RechargeDetailPage.QRCodeBtn">
+<span class="sig-name descname"><span class="pre">QRCodeBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('xpath',</span> <span class="pre">&quot;//*[&#64;text='收款码']&quot;)</span></em><a class="headerlink" href="#locators.RechargeDetailPage.QRCodeBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.RechargeDetailPage.ReceivableAmountText">
+<span class="sig-name descname"><span class="pre">ReceivableAmountText</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/after_amount_tv')</span></em><a class="headerlink" href="#locators.RechargeDetailPage.ReceivableAmountText" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.RechargeDetailPage.SevenBtn">
+<span class="sig-name descname"><span class="pre">SevenBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/num_7')</span></em><a class="headerlink" href="#locators.RechargeDetailPage.SevenBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.RechargeDetailPage.SixBtn">
+<span class="sig-name descname"><span class="pre">SixBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/num_6')</span></em><a class="headerlink" href="#locators.RechargeDetailPage.SixBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.RechargeDetailPage.ThreeBtn">
+<span class="sig-name descname"><span class="pre">ThreeBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/num_3')</span></em><a class="headerlink" href="#locators.RechargeDetailPage.ThreeBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.RechargeDetailPage.TwoBtn">
+<span class="sig-name descname"><span class="pre">TwoBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/num_2')</span></em><a class="headerlink" href="#locators.RechargeDetailPage.TwoBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.RechargeDetailPage.UnionPayBtn">
+<span class="sig-name descname"><span class="pre">UnionPayBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('xpath',</span> <span class="pre">&quot;//*[&#64;text='银联卡']&quot;)</span></em><a class="headerlink" href="#locators.RechargeDetailPage.UnionPayBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.RechargeDetailPage.ValueCardBtn">
+<span class="sig-name descname"><span class="pre">ValueCardBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('xpath',</span> <span class="pre">&quot;//*[&#64;text='储值卡']&quot;)</span></em><a class="headerlink" href="#locators.RechargeDetailPage.ValueCardBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.RechargeDetailPage.ZeroBtn">
+<span class="sig-name descname"><span class="pre">ZeroBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/num_0')</span></em><a class="headerlink" href="#locators.RechargeDetailPage.ZeroBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.RechargeDetailPage.ZeroZeroBtn">
+<span class="sig-name descname"><span class="pre">ZeroZeroBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/num_00')</span></em><a class="headerlink" href="#locators.RechargeDetailPage.ZeroZeroBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="locators.SelectCouponInterface">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">locators.</span></span><span class="sig-name descname"><span class="pre">SelectCouponInterface</span></span><a class="headerlink" href="#locators.SelectCouponInterface" title="Link to this definition"></a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>在收银页面的订单栏下方点击“优惠券”图标按钮后进入的选择优惠券页面元素定位</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.SelectCouponInterface.CommentCouponBtn">
+<span class="sig-name descname"><span class="pre">CommentCouponBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/comment_coupon_rb')</span></em><a class="headerlink" href="#locators.SelectCouponInterface.CommentCouponBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.SelectCouponInterface.ConfirmBtn">
+<span class="sig-name descname"><span class="pre">ConfirmBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/ok_btn')</span></em><a class="headerlink" href="#locators.SelectCouponInterface.ConfirmBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.SelectCouponInterface.CouponAddBtn">
+<span class="sig-name descname"><span class="pre">CouponAddBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/add_iv')</span></em><a class="headerlink" href="#locators.SelectCouponInterface.CouponAddBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.SelectCouponInterface.CouponAddedNumText">
+<span class="sig-name descname"><span class="pre">CouponAddedNumText</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/qty_tv')</span></em><a class="headerlink" href="#locators.SelectCouponInterface.CouponAddedNumText" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.SelectCouponInterface.CouponDeleteBtn">
+<span class="sig-name descname"><span class="pre">CouponDeleteBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/sub_iv')</span></em><a class="headerlink" href="#locators.SelectCouponInterface.CouponDeleteBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.SelectCouponInterface.CouponListView">
+<span class="sig-name descname"><span class="pre">CouponListView</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/coupons_recycle_view')</span></em><a class="headerlink" href="#locators.SelectCouponInterface.CouponListView" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.SelectCouponInterface.CouponNameText">
+<span class="sig-name descname"><span class="pre">CouponNameText</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/coupon_name_tv')</span></em><a class="headerlink" href="#locators.SelectCouponInterface.CouponNameText" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.SelectCouponInterface.CouponScanBtn">
+<span class="sig-name descname"><span class="pre">CouponScanBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/scanning_code_order_rb')</span></em><a class="headerlink" href="#locators.SelectCouponInterface.CouponScanBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.SelectCouponInterface.GeneralCouponBtn">
+<span class="sig-name descname"><span class="pre">GeneralCouponBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/general_coupon_rb')</span></em><a class="headerlink" href="#locators.SelectCouponInterface.GeneralCouponBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="locators.SelectMemberPage">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">locators.</span></span><span class="sig-name descname"><span class="pre">SelectMemberPage</span></span><a class="headerlink" href="#locators.SelectMemberPage" title="Link to this definition"></a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>选择会员页面元素定位</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.SelectMemberPage.AddMemberBtn">
+<span class="sig-name descname"><span class="pre">AddMemberBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/add_btn')</span></em><a class="headerlink" href="#locators.SelectMemberPage.AddMemberBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.SelectMemberPage.BackBtn">
+<span class="sig-name descname"><span class="pre">BackBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/back_tv')</span></em><a class="headerlink" href="#locators.SelectMemberPage.BackBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.SelectMemberPage.ConfirmBtn">
+<span class="sig-name descname"><span class="pre">ConfirmBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/ok_btn')</span></em><a class="headerlink" href="#locators.SelectMemberPage.ConfirmBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.SelectMemberPage.DeleteBtn">
+<span class="sig-name descname"><span class="pre">DeleteBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/num_del')</span></em><a class="headerlink" href="#locators.SelectMemberPage.DeleteBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.SelectMemberPage.DotBtn">
+<span class="sig-name descname"><span class="pre">DotBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/num_dot')</span></em><a class="headerlink" href="#locators.SelectMemberPage.DotBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.SelectMemberPage.EightBtn">
+<span class="sig-name descname"><span class="pre">EightBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/num_8')</span></em><a class="headerlink" href="#locators.SelectMemberPage.EightBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.SelectMemberPage.FiveBtn">
+<span class="sig-name descname"><span class="pre">FiveBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/num_5')</span></em><a class="headerlink" href="#locators.SelectMemberPage.FiveBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.SelectMemberPage.FourBtn">
+<span class="sig-name descname"><span class="pre">FourBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/num_4')</span></em><a class="headerlink" href="#locators.SelectMemberPage.FourBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.SelectMemberPage.NineBtn">
+<span class="sig-name descname"><span class="pre">NineBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/num_9')</span></em><a class="headerlink" href="#locators.SelectMemberPage.NineBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.SelectMemberPage.OneBtn">
+<span class="sig-name descname"><span class="pre">OneBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/num_1')</span></em><a class="headerlink" href="#locators.SelectMemberPage.OneBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.SelectMemberPage.ScanBtn">
+<span class="sig-name descname"><span class="pre">ScanBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/scan_mode_ib')</span></em><a class="headerlink" href="#locators.SelectMemberPage.ScanBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.SelectMemberPage.SearchInput">
+<span class="sig-name descname"><span class="pre">SearchInput</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/input_et')</span></em><a class="headerlink" href="#locators.SelectMemberPage.SearchInput" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.SelectMemberPage.SevenBtn">
+<span class="sig-name descname"><span class="pre">SevenBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/num_7')</span></em><a class="headerlink" href="#locators.SelectMemberPage.SevenBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.SelectMemberPage.SixBtn">
+<span class="sig-name descname"><span class="pre">SixBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/num_6')</span></em><a class="headerlink" href="#locators.SelectMemberPage.SixBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.SelectMemberPage.ThreeBtn">
+<span class="sig-name descname"><span class="pre">ThreeBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/num_3')</span></em><a class="headerlink" href="#locators.SelectMemberPage.ThreeBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.SelectMemberPage.TwoBtn">
+<span class="sig-name descname"><span class="pre">TwoBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/num_2')</span></em><a class="headerlink" href="#locators.SelectMemberPage.TwoBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.SelectMemberPage.ZeroBtn">
+<span class="sig-name descname"><span class="pre">ZeroBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/num_0')</span></em><a class="headerlink" href="#locators.SelectMemberPage.ZeroBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.SelectMemberPage.ZeroZeroBtn">
+<span class="sig-name descname"><span class="pre">ZeroZeroBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/num_00')</span></em><a class="headerlink" href="#locators.SelectMemberPage.ZeroZeroBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="locators.TryLoginInPageLocators">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">locators.</span></span><span class="sig-name descname"><span class="pre">TryLoginInPageLocators</span></span><a class="headerlink" href="#locators.TryLoginInPageLocators" title="Link to this definition"></a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>体验账号登录页元素</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.TryLoginInPageLocators.AccountInput">
+<span class="sig-name descname"><span class="pre">AccountInput</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/login_account_tv')</span></em><a class="headerlink" href="#locators.TryLoginInPageLocators.AccountInput" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.TryLoginInPageLocators.ContactServiceBtn">
+<span class="sig-name descname"><span class="pre">ContactServiceBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/contact_customer_service_ll')</span></em><a class="headerlink" href="#locators.TryLoginInPageLocators.ContactServiceBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.TryLoginInPageLocators.EmployeeLoginBtn">
+<span class="sig-name descname"><span class="pre">EmployeeLoginBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/login_btn')</span></em><a class="headerlink" href="#locators.TryLoginInPageLocators.EmployeeLoginBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.TryLoginInPageLocators.HistoryHandoverBtn">
+<span class="sig-name descname"><span class="pre">HistoryHandoverBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/history_handover_ll')</span></em><a class="headerlink" href="#locators.TryLoginInPageLocators.HistoryHandoverBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.TryLoginInPageLocators.JobNumberInput">
+<span class="sig-name descname"><span class="pre">JobNumberInput</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/account_tv')</span></em><a class="headerlink" href="#locators.TryLoginInPageLocators.JobNumberInput" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.TryLoginInPageLocators.ManagerBtn">
+<span class="sig-name descname"><span class="pre">ManagerBtn</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/manager_ll')</span></em><a class="headerlink" href="#locators.TryLoginInPageLocators.ManagerBtn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.TryLoginInPageLocators.PasswordInput">
+<span class="sig-name descname"><span class="pre">PasswordInput</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('id',</span> <span class="pre">'cn.pospal.www.pospal_pos_android_new.pospal:id/password_tv')</span></em><a class="headerlink" href="#locators.TryLoginInPageLocators.PasswordInput" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="locators.TryLoginInPageLocators.Toast">
+<span class="sig-name descname"><span class="pre">Toast</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('xpath',</span> <span class="pre">&quot;//*[&#64;class='android.widget.Toast']&quot;)</span></em><a class="headerlink" href="#locators.TryLoginInPageLocators.Toast" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2024, w。</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用的 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a> 开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
