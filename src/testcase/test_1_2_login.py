@@ -1,4 +1,7 @@
 import sys
+
+from src.page.operations import *
+
 sys.path.append(r"C:\Users\Administrator\PycharmProjects\PythonProject")
 
 import time

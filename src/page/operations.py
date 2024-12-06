@@ -15,8 +15,16 @@ class LoginInPageOpn(BasePage):
     """
         登录页元素操作
     """
-    # 在系统权限请求页面中，获取current_page_text中的文本信息，即“第 1 项权限（共 3 项）”
     def permission_page_text(self):
+        """
+        在系统权限请求页面中，获取current_page_text中的文本信息，即“第 1 项权限（共 3 项）”
+
+        :return: 当前正在处理第几项权限请求，即“第 1 项权限（共 3 项）”
+
+        Example
+        -------
+        >>> permission_page_text = LoginInPageOpn(self.driver).permission_page_text()
+        """
         logging.info('==========permission_page_text==========')
         # 获取文本信息元素的文本内容，即获取内容“第 1 项权限（共 3 项）”
         ele = self.get_presence_element(LoginInPageLocators.PermissionPageText)
@@ -24,6 +32,13 @@ class LoginInPageOpn(BasePage):
 
     # 在系统权限请求页面中，点击“同意”按钮
     def click_permission_allow_btn(self):
+        """
+        在系统权限请求页面中，点击“同意”按钮
+
+        Example
+        -------
+        >>> LoginInPageOpn(self.driver).click_permission_allow_btn()
+        """
         logging.info('==========click_permission_allow_btn==========')
         # 查找点击元素
         # ele = self.driver.find_element(*LoginInPageLocators.PermissionAllowBtn)
@@ -32,14 +47,34 @@ class LoginInPageOpn(BasePage):
 
 
     # 账号输入框输入账号名
-    def input_account(self, username):
+    def input_account(self, username: str):
+        """
+        账号输入框输入账号名
+
+        :param str username: 账号名
+
+        Example
+        -------
+        >>> username = "Eric"
+        >>> LoginInPageOpn(self.driver).input_account(username)
+        """
         logging.info('==========input_account==========')
         # ele = self.driver.find_element(*LoginInPageLocators.AccountInput)
         ele = self.get_visible_element(LoginInPageLocators.AccountInput)    # 替换为添加了显示等待的元素定位方法
         ele.send_keys(username)
 
     # 密码输入框输入密码
-    def input_password(self, password):
+    def input_password(self, password: str):
+        """
+        密码输入框输入密码
+
+        :param str password: 密码
+
+        Example
+        -------
+        >>> password = "123"
+        >>> LoginInPageOpn(self.driver).input_password(password)
+        """
         logging.info('==========input_password==========')
         # ele = self.driver.find_element(*LoginInPageLocators.PasswordInput)
         ele = self.get_visible_element(LoginInPageLocators.PasswordInput)   # 替换为添加了显示等待的元素定位方法
@@ -47,6 +82,13 @@ class LoginInPageOpn(BasePage):
 
     # 在输入账号和密码后点击登录按钮
     def click_login_btn(self):
+        """
+        在输入账号和密码后点击登录按钮
+
+        Example
+        -------
+        >>>  LoginInPageOpn(self.driver).click_login_btn()
+        """
         logging.info('==========click_login_btn==========')
         # ele = self.driver.find_element(*LoginInPageLocators.LoginBtn)
         ele = self.get_clickable_element(LoginInPageLocators.LoginBtn)  # 替换为添加了显示等待的元素定位方法
@@ -54,6 +96,15 @@ class LoginInPageOpn(BasePage):
 
     # 获取Toast文本信息
     def get_toast_text(self) -> str:
+        """
+        获取Toast文本信息
+
+        :return str: Toast文本信息
+
+        Example
+        -------
+        >>>  LoginInPageOpn(self.driver).get_toast_text()
+        """
         logging.info('==========get_toast_text==========')
         # ele = self.driver.find_element(*LoginInPageLocators.Toast)
         ele = self.get_presence_element(LoginInPageLocators.Toast)  # 替换为添加了显示等待的元素定位方法
@@ -61,6 +112,13 @@ class LoginInPageOpn(BasePage):
 
     # 体验账号按钮点击
     def try_login_btn(self):
+        """
+        体验账号按钮点击
+
+        Example
+        -------
+        >>>  LoginInPageOpn(self.driver).try_login_btn()
+        """
         logging.info('==========try_login_btn==========')
         # ele = self.driver.find_element(*LoginInPageLocators.TryAccountBtn)
         ele = self.get_clickable_element(LoginInPageLocators.TryAccountBtn) # 替换为添加了显示等待的元素定位方法
@@ -68,6 +126,13 @@ class LoginInPageOpn(BasePage):
 
     # 免费注册按钮点击
     def free_login_btn(self):
+        """
+        免费注册按钮点击
+
+        Example
+        -------
+        >>>  LoginInPageOpn(self.driver).free_login_btn()
+        """
         logging.info('==========free_login_btn==========')
         # ele = self.driver.find_element(*LoginInPageLocators.FreeRegistBtn)
         ele = self.get_clickable_element(LoginInPageLocators.FreeRegistBtn) # 替换为添加了显示等待的元素定位方法
@@ -75,6 +140,13 @@ class LoginInPageOpn(BasePage):
 
     # 联系客服按钮点击
     def contact_service_btn(self):
+        """
+        联系客服按钮点击
+
+        Example
+        -------
+        >>>  LoginInPageOpn(self.driver).contact_service_btn()
+        """
         logging.info('==========contact_service_btn==========')
         # ele = self.driver.find_element(*LoginInPageLocators.ContactServiceBtn)
         ele = self.get_clickable_element(LoginInPageLocators.ContactServiceBtn) # 替换为添加了显示等待的元素定位方法
@@ -82,6 +154,13 @@ class LoginInPageOpn(BasePage):
 
     # 账号+工号登录按钮点击
     def account_cashier_login_btn(self):
+        """
+        账号+工号登录按钮点击
+
+        Example
+        -------
+        >>>  LoginInPageOpn(self.driver). account_cashier_login_btn()
+        """
         logging.info('==========account_cashier_login_btn==========')
         # ele = self.driver.find_element(*LoginInPageLocators.AccountCashierLoginBtn)
         ele = self.get_clickable_element(LoginInPageLocators.AccountCashierLoginBtn)    # 替换为添加了显示等待的元素定位方法
@@ -93,6 +172,13 @@ class IndustrySelectionPageOpn(BasePage):
     """
     # 零售行业按钮点击
     def retail_industry_btn(self):
+        """
+        零售行业按钮点击
+
+        Example
+        -------
+        >>>  IndustrySelectionPageOpn(self.driver).retail_industry_btn()
+        """
         logging.info('==========retail_industry_btn==========')
         # ele = self.driver.find_element(*IndustrySelectionPageLocators.RetailBtn)
         ele = self.get_clickable_element(IndustrySelectionPageLocators.RetailBtn)   # 替换为添加了显示等待的元素定位方法
@@ -100,6 +186,13 @@ class IndustrySelectionPageOpn(BasePage):
 
     # 餐饮行业按钮点击
     def food_industry_btn(self):
+        """
+        餐饮行业按钮点击
+
+        Example
+        -------
+        >>>  IndustrySelectionPageOpn(self.driver).food_industry_btn()
+        """
         logging.info('==========food_industry_btn==========')
         # ele = self.driver.find_element(*IndustrySelectionPageLocators.FoodBtn)
         ele = self.get_clickable_element(IndustrySelectionPageLocators.FoodBtn) # 替换为添加了显示等待的元素定位方法
@@ -107,6 +200,13 @@ class IndustrySelectionPageOpn(BasePage):
 
     # 服装鞋帽按钮点击
     def clothes_shoes_industry_btn(self):
+        """
+        服装鞋帽按钮点击
+
+        Example
+        -------
+        >>>  IndustrySelectionPageOpn(self.driver).clothes_shoes_industry_btn()
+        """
         logging.info('==========clothes_shoes_industry_btn==========')
         # ele = self.driver.find_element(*IndustrySelectionPageLocators.ClothesShoesBtn)
         ele = self.get_clickable_element(IndustrySelectionPageLocators.ClothesShoesBtn) # 替换为添加了显示等待的元素定位方法
@@ -114,6 +214,13 @@ class IndustrySelectionPageOpn(BasePage):
 
     # 生活服务按钮点击
     def service_industry_btn(self):
+        """
+        生活服务按钮点击
+
+        Example
+        -------
+        >>>  IndustrySelectionPageOpn(self.driver).service_industry_btn()
+        """
         logging.info('==========service_industry_btn==========')
         # ele = self.driver.find_element(*IndustrySelectionPageLocators.ServiceBtn)
         ele = self.get_clickable_element(IndustrySelectionPageLocators.ServiceBtn)  # 替换为添加了显示等待的元素定位方法
@@ -604,15 +711,6 @@ class SelectCouponOpn(BasePage):
                     else:   # 删除优惠券
                         for j in range(coupon_num):
                             coupon_deletebtn_ele[i].click()
-                    # 获取当前屏幕中优惠券列表视图框内所有优惠券的“已添加优惠券数量”文本值集合
-                    cc = coupon_deletebtn_ele[i].find_element(AppiumBy.XPATH, "following-sibling::*[@resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/qty_tv']")
-                    logging.info("cc:{}".format(cc.text))
-                    # if int(coupon_added_num_eles[i].text) > coupon_num:
-                    #     for j in range(int(coupon_added_num_eles[i].text) - coupon_num):
-                    #         coupon_deletebtn_ele[i].click()
-                    # elif int(coupon_added_num_eles[i].text) < coupon_num:
-                    #     for j in range(coupon_num - int(coupon_added_num_eles[i].text)):
-                    #         coupon_addbtn_ele[i].click()
 
 
             if last_coupon_name == coupon_name_eles[lens - 1].text: # 用于判断是否已经滑动到列表底部
