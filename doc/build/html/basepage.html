@@ -1,0 +1,206 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>basepage module &mdash; e d 文档</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=92fd9be5" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=bcdc910c"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/translations.js?v=beaddf03"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            e
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">basepage module</a><ul>
+<li><a class="reference internal" href="#basepage.BasePage"><code class="docutils literal notranslate"><span class="pre">BasePage</span></code></a><ul>
+<li><a class="reference internal" href="#basepage.BasePage.click_screen"><code class="docutils literal notranslate"><span class="pre">BasePage.click_screen()</span></code></a></li>
+<li><a class="reference internal" href="#basepage.BasePage.get_clickable_element"><code class="docutils literal notranslate"><span class="pre">BasePage.get_clickable_element()</span></code></a></li>
+<li><a class="reference internal" href="#basepage.BasePage.get_elements"><code class="docutils literal notranslate"><span class="pre">BasePage.get_elements()</span></code></a></li>
+<li><a class="reference internal" href="#basepage.BasePage.get_presence_element"><code class="docutils literal notranslate"><span class="pre">BasePage.get_presence_element()</span></code></a></li>
+<li><a class="reference internal" href="#basepage.BasePage.get_presence_element_need_exception"><code class="docutils literal notranslate"><span class="pre">BasePage.get_presence_element_need_exception()</span></code></a></li>
+<li><a class="reference internal" href="#basepage.BasePage.get_presence_until_not_element"><code class="docutils literal notranslate"><span class="pre">BasePage.get_presence_until_not_element()</span></code></a></li>
+<li><a class="reference internal" href="#basepage.BasePage.get_visible_element"><code class="docutils literal notranslate"><span class="pre">BasePage.get_visible_element()</span></code></a></li>
+<li><a class="reference internal" href="#basepage.BasePage.swipe_screen"><code class="docutils literal notranslate"><span class="pre">BasePage.swipe_screen()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">e</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">basepage module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/basepage.rst.txt" rel="nofollow"> 查看页面源码</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-basepage">
+<span id="basepage-module"></span><h1>basepage module<a class="headerlink" href="#module-basepage" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="basepage.BasePage">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">basepage.</span></span><span class="sig-name descname"><span class="pre">BasePage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#basepage.BasePage" title="Link to this definition"></a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="basepage.BasePage.click_screen">
+<span class="sig-name descname"><span class="pre">click_screen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duration</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#basepage.BasePage.click_screen" title="Link to this definition"></a></dt>
+<dd><p>屏幕点击
+:param start_x: 点击横坐标
+:param start_y: 点击纵坐标
+:param duration: 点击持续时间，单位为s
+:return:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="basepage.BasePage.get_clickable_element">
+<span class="sig-name descname"><span class="pre">get_clickable_element</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">locator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#basepage.BasePage.get_clickable_element" title="Link to this definition"></a></dt>
+<dd><p>获取可见，同时可点击的元素，在元素定位的时候添加显式等待功能
+:param locator: By方法定位元素，如（By.XPATH, “//<a href="#id1"><span class="problematic" id="id2">*</span></a>[&#64;class=’frank]”）
+:param timeout:
+:return: 返回可见，同时可点击的元素</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="basepage.BasePage.get_elements">
+<span class="sig-name descname"><span class="pre">get_elements</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">locator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#basepage.BasePage.get_elements" title="Link to this definition"></a></dt>
+<dd><p>获取一组存在的元素，但不一定可见，在元素定位的时候添加显式等待功能
+:param locator: By方法定位元素，如（By.XPATH, “//<a href="#id3"><span class="problematic" id="id4">*</span></a>[&#64;class=’frank]”）
+:param timeout:
+:return: 返回一组存在的元素</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="basepage.BasePage.get_presence_element">
+<span class="sig-name descname"><span class="pre">get_presence_element</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">locator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">element</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#basepage.BasePage.get_presence_element" title="Link to this definition"></a></dt>
+<dd><p>获取存在，但不一定可见的元素，在元素定位的时候添加显式等待功能
+:param locator: By方法定位元素，如（By.XPATH, “//<a href="#id5"><span class="problematic" id="id6">*</span></a>[&#64;class=’frank]”）
+:param timeout:
+:param element: 通过所提供的元素查找该元素的子元素
+:return: 返回存在，但不一定可见的元素</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="basepage.BasePage.get_presence_element_need_exception">
+<span class="sig-name descname"><span class="pre">get_presence_element_need_exception</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">locator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">element</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">need_screenshot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#basepage.BasePage.get_presence_element_need_exception" title="Link to this definition"></a></dt>
+<dd><p>该方法会返回异常信息
+获取存在，但不一定可见的元素，在元素定位的时候添加显式等待功能
+:param locator: By方法定位元素，如（By.XPATH, “//<a href="#id7"><span class="problematic" id="id8">*</span></a>[&#64;class=’frank]”）
+:param timeout:
+:param element: 通过所提供的元素查找该元素的子元素
+:param need_screenshot: 判断是否出现异常时需要截图，默认值为1，表示需要异常截图。0表示不需要异常截图
+:return: 返回存在，但不一定可见的元素</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="basepage.BasePage.get_presence_until_not_element">
+<span class="sig-name descname"><span class="pre">get_presence_until_not_element</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">locator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#basepage.BasePage.get_presence_until_not_element" title="Link to this definition"></a></dt>
+<dd><p>添加的是until not显式等待方法，在规定时间内，代码每隔一段时间就调用一次该方法，直到`until_not`的返回值为False
+获取存在，但不一定可见的元素，在元素定位的时候添加显式等待功能
+:param locator: By方法定位元素，如（By.XPATH, “//<a href="#id9"><span class="problematic" id="id10">*</span></a>[&#64;class=’frank]”）
+:param timeout:
+:return: 返回存在，但不一定可见的元素</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="basepage.BasePage.get_visible_element">
+<span class="sig-name descname"><span class="pre">get_visible_element</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">locator</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#basepage.BasePage.get_visible_element" title="Link to this definition"></a></dt>
+<dd><p>获取可见元素，在元素定位的时候添加显式等待功能
+:param locator: By方法定位元素，如（By.XPATH, “//<a href="#id11"><span class="problematic" id="id12">*</span></a>[&#64;class=’frank]”）
+:param timeout:
+:return: 返回可见元素</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="basepage.BasePage.swipe_screen">
+<span class="sig-name descname"><span class="pre">swipe_screen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">duration</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#basepage.BasePage.swipe_screen" title="Link to this definition"></a></dt>
+<dd><p>屏幕滑动
+:param start_x: 滑动起始点横坐标
+:param start_y: 滑动起始点纵坐标
+:param end_x: 滑动结束点横坐标
+:param end_y: 滑动结束点纵坐标
+:param duration: 滑动持续时间，单位为s，即滑动屏幕的时候是否需要惯性，默认为空值即有惯性，若值越大则不存在惯性，一般设置为0.5s
+:return:</p>
+<p>注意：上述位置信息指的是百分比，例如x轴的二分之一处，传入的值则为0.5</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2024, w。</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用的 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a> 开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

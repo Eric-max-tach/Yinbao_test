@@ -1,0 +1,1174 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>operations module &mdash; e d 文档</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=92fd9be5" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=bcdc910c"></script>
+      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/translations.js?v=beaddf03"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            e
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">operations module</a><ul>
+<li><a class="reference internal" href="#operations.CashInterfaceOpn"><code class="docutils literal notranslate"><span class="pre">CashInterfaceOpn</span></code></a><ul>
+<li><a class="reference internal" href="#operations.CashInterfaceOpn.click_add_product_btn"><code class="docutils literal notranslate"><span class="pre">CashInterfaceOpn.click_add_product_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.CashInterfaceOpn.click_cash_btn"><code class="docutils literal notranslate"><span class="pre">CashInterfaceOpn.click_cash_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.CashInterfaceOpn.click_category_btn"><code class="docutils literal notranslate"><span class="pre">CashInterfaceOpn.click_category_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.CashInterfaceOpn.click_coupon_btn"><code class="docutils literal notranslate"><span class="pre">CashInterfaceOpn.click_coupon_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.CashInterfaceOpn.click_goods_btn"><code class="docutils literal notranslate"><span class="pre">CashInterfaceOpn.click_goods_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.CashInterfaceOpn.click_select_member_btn"><code class="docutils literal notranslate"><span class="pre">CashInterfaceOpn.click_select_member_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.CashInterfaceOpn.click_unread_message_btn"><code class="docutils literal notranslate"><span class="pre">CashInterfaceOpn.click_unread_message_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.CashInterfaceOpn.get_discount_price_text"><code class="docutils literal notranslate"><span class="pre">CashInterfaceOpn.get_discount_price_text()</span></code></a></li>
+<li><a class="reference internal" href="#operations.CashInterfaceOpn.get_discount_value"><code class="docutils literal notranslate"><span class="pre">CashInterfaceOpn.get_discount_value()</span></code></a></li>
+<li><a class="reference internal" href="#operations.CashInterfaceOpn.get_goods_list_num"><code class="docutils literal notranslate"><span class="pre">CashInterfaceOpn.get_goods_list_num()</span></code></a></li>
+<li><a class="reference internal" href="#operations.CashInterfaceOpn.get_goods_name"><code class="docutils literal notranslate"><span class="pre">CashInterfaceOpn.get_goods_name()</span></code></a></li>
+<li><a class="reference internal" href="#operations.CashInterfaceOpn.get_goods_num_list"><code class="docutils literal notranslate"><span class="pre">CashInterfaceOpn.get_goods_num_list()</span></code></a></li>
+<li><a class="reference internal" href="#operations.CashInterfaceOpn.get_goods_price"><code class="docutils literal notranslate"><span class="pre">CashInterfaceOpn.get_goods_price()</span></code></a></li>
+<li><a class="reference internal" href="#operations.CashInterfaceOpn.get_new_product_name_price"><code class="docutils literal notranslate"><span class="pre">CashInterfaceOpn.get_new_product_name_price()</span></code></a></li>
+<li><a class="reference internal" href="#operations.CashInterfaceOpn.get_order_view_size"><code class="docutils literal notranslate"><span class="pre">CashInterfaceOpn.get_order_view_size()</span></code></a></li>
+<li><a class="reference internal" href="#operations.CashInterfaceOpn.get_receipt_price_text"><code class="docutils literal notranslate"><span class="pre">CashInterfaceOpn.get_receipt_price_text()</span></code></a></li>
+<li><a class="reference internal" href="#operations.CashInterfaceOpn.get_total_price_text"><code class="docutils literal notranslate"><span class="pre">CashInterfaceOpn.get_total_price_text()</span></code></a></li>
+<li><a class="reference internal" href="#operations.CashInterfaceOpn.scroll_order_list_to_bottom"><code class="docutils literal notranslate"><span class="pre">CashInterfaceOpn.scroll_order_list_to_bottom()</span></code></a></li>
+<li><a class="reference internal" href="#operations.CashInterfaceOpn.scroll_order_list_to_top"><code class="docutils literal notranslate"><span class="pre">CashInterfaceOpn.scroll_order_list_to_top()</span></code></a></li>
+<li><a class="reference internal" href="#operations.CashInterfaceOpn.wait_toast_disappear"><code class="docutils literal notranslate"><span class="pre">CashInterfaceOpn.wait_toast_disappear()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#operations.CouponOpn"><code class="docutils literal notranslate"><span class="pre">CouponOpn</span></code></a><ul>
+<li><a class="reference internal" href="#operations.CouponOpn.click_unavailable_coupon_btn"><code class="docutils literal notranslate"><span class="pre">CouponOpn.click_unavailable_coupon_btn()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#operations.IndustrySelectionPageOpn"><code class="docutils literal notranslate"><span class="pre">IndustrySelectionPageOpn</span></code></a><ul>
+<li><a class="reference internal" href="#operations.IndustrySelectionPageOpn.bake_industry_btn"><code class="docutils literal notranslate"><span class="pre">IndustrySelectionPageOpn.bake_industry_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.IndustrySelectionPageOpn.clothes_shoes_industry_btn"><code class="docutils literal notranslate"><span class="pre">IndustrySelectionPageOpn.clothes_shoes_industry_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.IndustrySelectionPageOpn.food_industry_btn"><code class="docutils literal notranslate"><span class="pre">IndustrySelectionPageOpn.food_industry_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.IndustrySelectionPageOpn.fresh_industry_btn"><code class="docutils literal notranslate"><span class="pre">IndustrySelectionPageOpn.fresh_industry_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.IndustrySelectionPageOpn.future_industry_btn"><code class="docutils literal notranslate"><span class="pre">IndustrySelectionPageOpn.future_industry_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.IndustrySelectionPageOpn.leisure_industry_btn"><code class="docutils literal notranslate"><span class="pre">IndustrySelectionPageOpn.leisure_industry_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.IndustrySelectionPageOpn.maternal_supply_industry_btn"><code class="docutils literal notranslate"><span class="pre">IndustrySelectionPageOpn.maternal_supply_industry_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.IndustrySelectionPageOpn.pet_industry_btn"><code class="docutils literal notranslate"><span class="pre">IndustrySelectionPageOpn.pet_industry_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.IndustrySelectionPageOpn.retail_industry_btn"><code class="docutils literal notranslate"><span class="pre">IndustrySelectionPageOpn.retail_industry_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.IndustrySelectionPageOpn.service_industry_btn"><code class="docutils literal notranslate"><span class="pre">IndustrySelectionPageOpn.service_industry_btn()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#operations.LoginInPageOpn"><code class="docutils literal notranslate"><span class="pre">LoginInPageOpn</span></code></a><ul>
+<li><a class="reference internal" href="#operations.LoginInPageOpn.account_cashier_login_btn"><code class="docutils literal notranslate"><span class="pre">LoginInPageOpn.account_cashier_login_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.LoginInPageOpn.click_login_btn"><code class="docutils literal notranslate"><span class="pre">LoginInPageOpn.click_login_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.LoginInPageOpn.click_permission_allow_btn"><code class="docutils literal notranslate"><span class="pre">LoginInPageOpn.click_permission_allow_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.LoginInPageOpn.contact_service_btn"><code class="docutils literal notranslate"><span class="pre">LoginInPageOpn.contact_service_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.LoginInPageOpn.free_login_btn"><code class="docutils literal notranslate"><span class="pre">LoginInPageOpn.free_login_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.LoginInPageOpn.get_toast_text"><code class="docutils literal notranslate"><span class="pre">LoginInPageOpn.get_toast_text()</span></code></a></li>
+<li><a class="reference internal" href="#operations.LoginInPageOpn.input_account"><code class="docutils literal notranslate"><span class="pre">LoginInPageOpn.input_account()</span></code></a></li>
+<li><a class="reference internal" href="#operations.LoginInPageOpn.input_password"><code class="docutils literal notranslate"><span class="pre">LoginInPageOpn.input_password()</span></code></a></li>
+<li><a class="reference internal" href="#operations.LoginInPageOpn.permission_page_text"><code class="docutils literal notranslate"><span class="pre">LoginInPageOpn.permission_page_text()</span></code></a></li>
+<li><a class="reference internal" href="#operations.LoginInPageOpn.try_login_btn"><code class="docutils literal notranslate"><span class="pre">LoginInPageOpn.try_login_btn()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#operations.MemberRechargeOpn"><code class="docutils literal notranslate"><span class="pre">MemberRechargeOpn</span></code></a><ul>
+<li><a class="reference internal" href="#operations.MemberRechargeOpn.click_alipay_btn"><code class="docutils literal notranslate"><span class="pre">MemberRechargeOpn.click_alipay_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.MemberRechargeOpn.click_cash_btn"><code class="docutils literal notranslate"><span class="pre">MemberRechargeOpn.click_cash_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.MemberRechargeOpn.click_confirm_btn"><code class="docutils literal notranslate"><span class="pre">MemberRechargeOpn.click_confirm_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.MemberRechargeOpn.click_print_receipt_checkbox"><code class="docutils literal notranslate"><span class="pre">MemberRechargeOpn.click_print_receipt_checkbox()</span></code></a></li>
+<li><a class="reference internal" href="#operations.MemberRechargeOpn.click_qrcode_btn"><code class="docutils literal notranslate"><span class="pre">MemberRechargeOpn.click_qrcode_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.MemberRechargeOpn.click_sfpay_btn"><code class="docutils literal notranslate"><span class="pre">MemberRechargeOpn.click_sfpay_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.MemberRechargeOpn.click_union_btn"><code class="docutils literal notranslate"><span class="pre">MemberRechargeOpn.click_union_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.MemberRechargeOpn.click_wechat_btn"><code class="docutils literal notranslate"><span class="pre">MemberRechargeOpn.click_wechat_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.MemberRechargeOpn.get_print_receipt_status"><code class="docutils literal notranslate"><span class="pre">MemberRechargeOpn.get_print_receipt_status()</span></code></a></li>
+<li><a class="reference internal" href="#operations.MemberRechargeOpn.select_recharge_item"><code class="docutils literal notranslate"><span class="pre">MemberRechargeOpn.select_recharge_item()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#operations.MembershipDetailOpn"><code class="docutils literal notranslate"><span class="pre">MembershipDetailOpn</span></code></a><ul>
+<li><a class="reference internal" href="#operations.MembershipDetailOpn.click_coupon_btn"><code class="docutils literal notranslate"><span class="pre">MembershipDetailOpn.click_coupon_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.MembershipDetailOpn.click_points_exchange_btn"><code class="docutils literal notranslate"><span class="pre">MembershipDetailOpn.click_points_exchange_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.MembershipDetailOpn.click_recharge_btn"><code class="docutils literal notranslate"><span class="pre">MembershipDetailOpn.click_recharge_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.MembershipDetailOpn.click_select_member_btn"><code class="docutils literal notranslate"><span class="pre">MembershipDetailOpn.click_select_member_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.MembershipDetailOpn.get_balance"><code class="docutils literal notranslate"><span class="pre">MembershipDetailOpn.get_balance()</span></code></a></li>
+<li><a class="reference internal" href="#operations.MembershipDetailOpn.get_points"><code class="docutils literal notranslate"><span class="pre">MembershipDetailOpn.get_points()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#operations.MessageCenterOpn"><code class="docutils literal notranslate"><span class="pre">MessageCenterOpn</span></code></a><ul>
+<li><a class="reference internal" href="#operations.MessageCenterOpn.click_back_btn"><code class="docutils literal notranslate"><span class="pre">MessageCenterOpn.click_back_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.MessageCenterOpn.click_ignore_this_goods_btn"><code class="docutils literal notranslate"><span class="pre">MessageCenterOpn.click_ignore_this_goods_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.MessageCenterOpn.click_select_all_btn"><code class="docutils literal notranslate"><span class="pre">MessageCenterOpn.click_select_all_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.MessageCenterOpn.click_stock_btn"><code class="docutils literal notranslate"><span class="pre">MessageCenterOpn.click_stock_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.MessageCenterOpn.get_stock_warning_num"><code class="docutils literal notranslate"><span class="pre">MessageCenterOpn.get_stock_warning_num()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#operations.NewProductPageOpn"><code class="docutils literal notranslate"><span class="pre">NewProductPageOpn</span></code></a><ul>
+<li><a class="reference internal" href="#operations.NewProductPageOpn.click_category_dropdown"><code class="docutils literal notranslate"><span class="pre">NewProductPageOpn.click_category_dropdown()</span></code></a></li>
+<li><a class="reference internal" href="#operations.NewProductPageOpn.click_category_save_btn"><code class="docutils literal notranslate"><span class="pre">NewProductPageOpn.click_category_save_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.NewProductPageOpn.click_generate_btn"><code class="docutils literal notranslate"><span class="pre">NewProductPageOpn.click_generate_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.NewProductPageOpn.click_save_btn"><code class="docutils literal notranslate"><span class="pre">NewProductPageOpn.click_save_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.NewProductPageOpn.click_search_result"><code class="docutils literal notranslate"><span class="pre">NewProductPageOpn.click_search_result()</span></code></a></li>
+<li><a class="reference internal" href="#operations.NewProductPageOpn.get_barcode_input_text"><code class="docutils literal notranslate"><span class="pre">NewProductPageOpn.get_barcode_input_text()</span></code></a></li>
+<li><a class="reference internal" href="#operations.NewProductPageOpn.input_category_search_input"><code class="docutils literal notranslate"><span class="pre">NewProductPageOpn.input_category_search_input()</span></code></a></li>
+<li><a class="reference internal" href="#operations.NewProductPageOpn.input_price"><code class="docutils literal notranslate"><span class="pre">NewProductPageOpn.input_price()</span></code></a></li>
+<li><a class="reference internal" href="#operations.NewProductPageOpn.input_product_name"><code class="docutils literal notranslate"><span class="pre">NewProductPageOpn.input_product_name()</span></code></a></li>
+<li><a class="reference internal" href="#operations.NewProductPageOpn.input_purchase_price"><code class="docutils literal notranslate"><span class="pre">NewProductPageOpn.input_purchase_price()</span></code></a></li>
+<li><a class="reference internal" href="#operations.NewProductPageOpn.input_stock"><code class="docutils literal notranslate"><span class="pre">NewProductPageOpn.input_stock()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#operations.NotAvailableCouponOpn"><code class="docutils literal notranslate"><span class="pre">NotAvailableCouponOpn</span></code></a><ul>
+<li><a class="reference internal" href="#operations.NotAvailableCouponOpn.get_not_available_coupon_number_list"><code class="docutils literal notranslate"><span class="pre">NotAvailableCouponOpn.get_not_available_coupon_number_list()</span></code></a></li>
+<li><a class="reference internal" href="#operations.NotAvailableCouponOpn.get_not_available_coupon_view_size"><code class="docutils literal notranslate"><span class="pre">NotAvailableCouponOpn.get_not_available_coupon_view_size()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#operations.PointExchangeOpn"><code class="docutils literal notranslate"><span class="pre">PointExchangeOpn</span></code></a><ul>
+<li><a class="reference internal" href="#operations.PointExchangeOpn.click_points_exchange_btn"><code class="docutils literal notranslate"><span class="pre">PointExchangeOpn.click_points_exchange_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.PointExchangeOpn.click_points_exchange_item"><code class="docutils literal notranslate"><span class="pre">PointExchangeOpn.click_points_exchange_item()</span></code></a></li>
+<li><a class="reference internal" href="#operations.PointExchangeOpn.get_points_exchange_item_name"><code class="docutils literal notranslate"><span class="pre">PointExchangeOpn.get_points_exchange_item_name()</span></code></a></li>
+<li><a class="reference internal" href="#operations.PointExchangeOpn.get_points_exchange_item_points"><code class="docutils literal notranslate"><span class="pre">PointExchangeOpn.get_points_exchange_item_points()</span></code></a></li>
+<li><a class="reference internal" href="#operations.PointExchangeOpn.get_points_exchange_list"><code class="docutils literal notranslate"><span class="pre">PointExchangeOpn.get_points_exchange_list()</span></code></a></li>
+<li><a class="reference internal" href="#operations.PointExchangeOpn.get_points_exchange_view_size"><code class="docutils literal notranslate"><span class="pre">PointExchangeOpn.get_points_exchange_view_size()</span></code></a></li>
+<li><a class="reference internal" href="#operations.PointExchangeOpn.send_keys_search_input"><code class="docutils literal notranslate"><span class="pre">PointExchangeOpn.send_keys_search_input()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#operations.RechargeDetailOpn"><code class="docutils literal notranslate"><span class="pre">RechargeDetailOpn</span></code></a><ul>
+<li><a class="reference internal" href="#operations.RechargeDetailOpn.click_ali_pay_btn"><code class="docutils literal notranslate"><span class="pre">RechargeDetailOpn.click_ali_pay_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.RechargeDetailOpn.click_cash_btn"><code class="docutils literal notranslate"><span class="pre">RechargeDetailOpn.click_cash_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.RechargeDetailOpn.click_confirm_btn"><code class="docutils literal notranslate"><span class="pre">RechargeDetailOpn.click_confirm_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.RechargeDetailOpn.click_delete_btn"><code class="docutils literal notranslate"><span class="pre">RechargeDetailOpn.click_delete_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.RechargeDetailOpn.click_prepaid_card_btn"><code class="docutils literal notranslate"><span class="pre">RechargeDetailOpn.click_prepaid_card_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.RechargeDetailOpn.click_qr_code_btn"><code class="docutils literal notranslate"><span class="pre">RechargeDetailOpn.click_qr_code_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.RechargeDetailOpn.click_union_card_btn"><code class="docutils literal notranslate"><span class="pre">RechargeDetailOpn.click_union_card_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.RechargeDetailOpn.click_value_card_btn"><code class="docutils literal notranslate"><span class="pre">RechargeDetailOpn.click_value_card_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.RechargeDetailOpn.get_actual_amount_text"><code class="docutils literal notranslate"><span class="pre">RechargeDetailOpn.get_actual_amount_text()</span></code></a></li>
+<li><a class="reference internal" href="#operations.RechargeDetailOpn.get_receivable_amount_text"><code class="docutils literal notranslate"><span class="pre">RechargeDetailOpn.get_receivable_amount_text()</span></code></a></li>
+<li><a class="reference internal" href="#operations.RechargeDetailOpn.input_search_input_dot"><code class="docutils literal notranslate"><span class="pre">RechargeDetailOpn.input_search_input_dot()</span></code></a></li>
+<li><a class="reference internal" href="#operations.RechargeDetailOpn.input_search_input_eight"><code class="docutils literal notranslate"><span class="pre">RechargeDetailOpn.input_search_input_eight()</span></code></a></li>
+<li><a class="reference internal" href="#operations.RechargeDetailOpn.input_search_input_five"><code class="docutils literal notranslate"><span class="pre">RechargeDetailOpn.input_search_input_five()</span></code></a></li>
+<li><a class="reference internal" href="#operations.RechargeDetailOpn.input_search_input_four"><code class="docutils literal notranslate"><span class="pre">RechargeDetailOpn.input_search_input_four()</span></code></a></li>
+<li><a class="reference internal" href="#operations.RechargeDetailOpn.input_search_input_nine"><code class="docutils literal notranslate"><span class="pre">RechargeDetailOpn.input_search_input_nine()</span></code></a></li>
+<li><a class="reference internal" href="#operations.RechargeDetailOpn.input_search_input_one"><code class="docutils literal notranslate"><span class="pre">RechargeDetailOpn.input_search_input_one()</span></code></a></li>
+<li><a class="reference internal" href="#operations.RechargeDetailOpn.input_search_input_seven"><code class="docutils literal notranslate"><span class="pre">RechargeDetailOpn.input_search_input_seven()</span></code></a></li>
+<li><a class="reference internal" href="#operations.RechargeDetailOpn.input_search_input_six"><code class="docutils literal notranslate"><span class="pre">RechargeDetailOpn.input_search_input_six()</span></code></a></li>
+<li><a class="reference internal" href="#operations.RechargeDetailOpn.input_search_input_three"><code class="docutils literal notranslate"><span class="pre">RechargeDetailOpn.input_search_input_three()</span></code></a></li>
+<li><a class="reference internal" href="#operations.RechargeDetailOpn.input_search_input_two"><code class="docutils literal notranslate"><span class="pre">RechargeDetailOpn.input_search_input_two()</span></code></a></li>
+<li><a class="reference internal" href="#operations.RechargeDetailOpn.input_search_input_zero"><code class="docutils literal notranslate"><span class="pre">RechargeDetailOpn.input_search_input_zero()</span></code></a></li>
+<li><a class="reference internal" href="#operations.RechargeDetailOpn.input_search_input_zero_zero"><code class="docutils literal notranslate"><span class="pre">RechargeDetailOpn.input_search_input_zero_zero()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#operations.SelectCouponOpn"><code class="docutils literal notranslate"><span class="pre">SelectCouponOpn</span></code></a><ul>
+<li><a class="reference internal" href="#operations.SelectCouponOpn.click_common_coupon_btn"><code class="docutils literal notranslate"><span class="pre">SelectCouponOpn.click_common_coupon_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.SelectCouponOpn.click_confirm_btn"><code class="docutils literal notranslate"><span class="pre">SelectCouponOpn.click_confirm_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.SelectCouponOpn.click_coupon_add_btn"><code class="docutils literal notranslate"><span class="pre">SelectCouponOpn.click_coupon_add_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.SelectCouponOpn.click_coupon_delete_btn"><code class="docutils literal notranslate"><span class="pre">SelectCouponOpn.click_coupon_delete_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.SelectCouponOpn.click_coupon_scan_btn"><code class="docutils literal notranslate"><span class="pre">SelectCouponOpn.click_coupon_scan_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.SelectCouponOpn.click_normal_coupon_btn"><code class="docutils literal notranslate"><span class="pre">SelectCouponOpn.click_normal_coupon_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.SelectCouponOpn.find_and_click_coupon"><code class="docutils literal notranslate"><span class="pre">SelectCouponOpn.find_and_click_coupon()</span></code></a></li>
+<li><a class="reference internal" href="#operations.SelectCouponOpn.get_coupon_list_view_size"><code class="docutils literal notranslate"><span class="pre">SelectCouponOpn.get_coupon_list_view_size()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#operations.SelectMemberOpn"><code class="docutils literal notranslate"><span class="pre">SelectMemberOpn</span></code></a><ul>
+<li><a class="reference internal" href="#operations.SelectMemberOpn.click_add_member_btn"><code class="docutils literal notranslate"><span class="pre">SelectMemberOpn.click_add_member_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.SelectMemberOpn.click_back_btn"><code class="docutils literal notranslate"><span class="pre">SelectMemberOpn.click_back_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.SelectMemberOpn.click_confirm_btn"><code class="docutils literal notranslate"><span class="pre">SelectMemberOpn.click_confirm_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.SelectMemberOpn.click_delete_btn"><code class="docutils literal notranslate"><span class="pre">SelectMemberOpn.click_delete_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.SelectMemberOpn.click_scan_btn"><code class="docutils literal notranslate"><span class="pre">SelectMemberOpn.click_scan_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.SelectMemberOpn.input_search_input_dot"><code class="docutils literal notranslate"><span class="pre">SelectMemberOpn.input_search_input_dot()</span></code></a></li>
+<li><a class="reference internal" href="#operations.SelectMemberOpn.input_search_input_double_zero"><code class="docutils literal notranslate"><span class="pre">SelectMemberOpn.input_search_input_double_zero()</span></code></a></li>
+<li><a class="reference internal" href="#operations.SelectMemberOpn.input_search_input_eight"><code class="docutils literal notranslate"><span class="pre">SelectMemberOpn.input_search_input_eight()</span></code></a></li>
+<li><a class="reference internal" href="#operations.SelectMemberOpn.input_search_input_five"><code class="docutils literal notranslate"><span class="pre">SelectMemberOpn.input_search_input_five()</span></code></a></li>
+<li><a class="reference internal" href="#operations.SelectMemberOpn.input_search_input_four"><code class="docutils literal notranslate"><span class="pre">SelectMemberOpn.input_search_input_four()</span></code></a></li>
+<li><a class="reference internal" href="#operations.SelectMemberOpn.input_search_input_nine"><code class="docutils literal notranslate"><span class="pre">SelectMemberOpn.input_search_input_nine()</span></code></a></li>
+<li><a class="reference internal" href="#operations.SelectMemberOpn.input_search_input_one"><code class="docutils literal notranslate"><span class="pre">SelectMemberOpn.input_search_input_one()</span></code></a></li>
+<li><a class="reference internal" href="#operations.SelectMemberOpn.input_search_input_seven"><code class="docutils literal notranslate"><span class="pre">SelectMemberOpn.input_search_input_seven()</span></code></a></li>
+<li><a class="reference internal" href="#operations.SelectMemberOpn.input_search_input_six"><code class="docutils literal notranslate"><span class="pre">SelectMemberOpn.input_search_input_six()</span></code></a></li>
+<li><a class="reference internal" href="#operations.SelectMemberOpn.input_search_input_three"><code class="docutils literal notranslate"><span class="pre">SelectMemberOpn.input_search_input_three()</span></code></a></li>
+<li><a class="reference internal" href="#operations.SelectMemberOpn.input_search_input_two"><code class="docutils literal notranslate"><span class="pre">SelectMemberOpn.input_search_input_two()</span></code></a></li>
+<li><a class="reference internal" href="#operations.SelectMemberOpn.input_search_input_zero"><code class="docutils literal notranslate"><span class="pre">SelectMemberOpn.input_search_input_zero()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#operations.TryLogInPageOpn"><code class="docutils literal notranslate"><span class="pre">TryLogInPageOpn</span></code></a><ul>
+<li><a class="reference internal" href="#operations.TryLogInPageOpn.click_contact_service_btn"><code class="docutils literal notranslate"><span class="pre">TryLogInPageOpn.click_contact_service_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.TryLogInPageOpn.click_employee_login_btn"><code class="docutils literal notranslate"><span class="pre">TryLogInPageOpn.click_employee_login_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.TryLogInPageOpn.click_history_handover_btn"><code class="docutils literal notranslate"><span class="pre">TryLogInPageOpn.click_history_handover_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.TryLogInPageOpn.click_manager_btn"><code class="docutils literal notranslate"><span class="pre">TryLogInPageOpn.click_manager_btn()</span></code></a></li>
+<li><a class="reference internal" href="#operations.TryLogInPageOpn.get_account_input_text"><code class="docutils literal notranslate"><span class="pre">TryLogInPageOpn.get_account_input_text()</span></code></a></li>
+<li><a class="reference internal" href="#operations.TryLogInPageOpn.get_job_number_input_text"><code class="docutils literal notranslate"><span class="pre">TryLogInPageOpn.get_job_number_input_text()</span></code></a></li>
+<li><a class="reference internal" href="#operations.TryLogInPageOpn.get_toast_text"><code class="docutils literal notranslate"><span class="pre">TryLogInPageOpn.get_toast_text()</span></code></a></li>
+<li><a class="reference internal" href="#operations.TryLogInPageOpn.input_job_number"><code class="docutils literal notranslate"><span class="pre">TryLogInPageOpn.input_job_number()</span></code></a></li>
+<li><a class="reference internal" href="#operations.TryLogInPageOpn.input_password"><code class="docutils literal notranslate"><span class="pre">TryLogInPageOpn.input_password()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">e</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">operations module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/operations.rst.txt" rel="nofollow"> 查看页面源码</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-operations">
+<span id="operations-module"></span><h1>operations module<a class="headerlink" href="#module-operations" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="operations.CashInterfaceOpn">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">operations.</span></span><span class="sig-name descname"><span class="pre">CashInterfaceOpn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.CashInterfaceOpn" title="Link to this definition"></a></dt>
+<dd><p>基类：<a class="reference internal" href="basepage.html#basepage.BasePage" title="basepage.BasePage"><code class="xref py py-class docutils literal notranslate"><span class="pre">BasePage</span></code></a></p>
+<p>收银页面元素相关操作</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.CashInterfaceOpn.click_add_product_btn">
+<span class="sig-name descname"><span class="pre">click_add_product_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.CashInterfaceOpn.click_add_product_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.CashInterfaceOpn.click_cash_btn">
+<span class="sig-name descname"><span class="pre">click_cash_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.CashInterfaceOpn.click_cash_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.CashInterfaceOpn.click_category_btn">
+<span class="sig-name descname"><span class="pre">click_category_btn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">category_num</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#operations.CashInterfaceOpn.click_category_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.CashInterfaceOpn.click_coupon_btn">
+<span class="sig-name descname"><span class="pre">click_coupon_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.CashInterfaceOpn.click_coupon_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.CashInterfaceOpn.click_goods_btn">
+<span class="sig-name descname"><span class="pre">click_goods_btn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">goods_num</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.CashInterfaceOpn.click_goods_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.CashInterfaceOpn.click_select_member_btn">
+<span class="sig-name descname"><span class="pre">click_select_member_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.CashInterfaceOpn.click_select_member_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.CashInterfaceOpn.click_unread_message_btn">
+<span class="sig-name descname"><span class="pre">click_unread_message_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.CashInterfaceOpn.click_unread_message_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.CashInterfaceOpn.get_discount_price_text">
+<span class="sig-name descname"><span class="pre">get_discount_price_text</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#operations.CashInterfaceOpn.get_discount_price_text" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.CashInterfaceOpn.get_discount_value">
+<span class="sig-name descname"><span class="pre">get_discount_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">product_discounts_in_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.CashInterfaceOpn.get_discount_value" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.CashInterfaceOpn.get_goods_list_num">
+<span class="sig-name descname"><span class="pre">get_goods_list_num</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#operations.CashInterfaceOpn.get_goods_list_num" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.CashInterfaceOpn.get_goods_name">
+<span class="sig-name descname"><span class="pre">get_goods_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">goods_num</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#operations.CashInterfaceOpn.get_goods_name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.CashInterfaceOpn.get_goods_num_list">
+<span class="sig-name descname"><span class="pre">get_goods_num_list</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#operations.CashInterfaceOpn.get_goods_num_list" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.CashInterfaceOpn.get_goods_price">
+<span class="sig-name descname"><span class="pre">get_goods_price</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">goods_num</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#operations.CashInterfaceOpn.get_goods_price" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.CashInterfaceOpn.get_new_product_name_price">
+<span class="sig-name descname"><span class="pre">get_new_product_name_price</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#operations.CashInterfaceOpn.get_new_product_name_price" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.CashInterfaceOpn.get_order_view_size">
+<span class="sig-name descname"><span class="pre">get_order_view_size</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#operations.CashInterfaceOpn.get_order_view_size" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.CashInterfaceOpn.get_receipt_price_text">
+<span class="sig-name descname"><span class="pre">get_receipt_price_text</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#operations.CashInterfaceOpn.get_receipt_price_text" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.CashInterfaceOpn.get_total_price_text">
+<span class="sig-name descname"><span class="pre">get_total_price_text</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#operations.CashInterfaceOpn.get_total_price_text" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.CashInterfaceOpn.scroll_order_list_to_bottom">
+<span class="sig-name descname"><span class="pre">scroll_order_list_to_bottom</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">product_names_in_order</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">product_prices_in_order</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#operations.CashInterfaceOpn.scroll_order_list_to_bottom" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>product_names_in_order</strong> – product_names_in_order = OrderedDict()  # 用于记录订单中商品的名字</p></li>
+<li><p><strong>product_prices_in_order</strong> – product_prices_in_order = OrderedDict()  # 用于记录订单中商品的价格</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>product_names_in_order, product_prices_in_order</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.CashInterfaceOpn.scroll_order_list_to_top">
+<span class="sig-name descname"><span class="pre">scroll_order_list_to_top</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.CashInterfaceOpn.scroll_order_list_to_top" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.CashInterfaceOpn.wait_toast_disappear">
+<span class="sig-name descname"><span class="pre">wait_toast_disappear</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.CashInterfaceOpn.wait_toast_disappear" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="operations.CouponOpn">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">operations.</span></span><span class="sig-name descname"><span class="pre">CouponOpn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.CouponOpn" title="Link to this definition"></a></dt>
+<dd><p>基类：<a class="reference internal" href="basepage.html#basepage.BasePage" title="basepage.BasePage"><code class="xref py py-class docutils literal notranslate"><span class="pre">BasePage</span></code></a></p>
+<p>优惠券页面元素操作</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.CouponOpn.click_unavailable_coupon_btn">
+<span class="sig-name descname"><span class="pre">click_unavailable_coupon_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.CouponOpn.click_unavailable_coupon_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="operations.IndustrySelectionPageOpn">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">operations.</span></span><span class="sig-name descname"><span class="pre">IndustrySelectionPageOpn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.IndustrySelectionPageOpn" title="Link to this definition"></a></dt>
+<dd><p>基类：<a class="reference internal" href="basepage.html#basepage.BasePage" title="basepage.BasePage"><code class="xref py py-class docutils literal notranslate"><span class="pre">BasePage</span></code></a></p>
+<p>在登录页选择体验账号后，进入的行业选择页面的相关操作</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.IndustrySelectionPageOpn.bake_industry_btn">
+<span class="sig-name descname"><span class="pre">bake_industry_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.IndustrySelectionPageOpn.bake_industry_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.IndustrySelectionPageOpn.clothes_shoes_industry_btn">
+<span class="sig-name descname"><span class="pre">clothes_shoes_industry_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.IndustrySelectionPageOpn.clothes_shoes_industry_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.IndustrySelectionPageOpn.food_industry_btn">
+<span class="sig-name descname"><span class="pre">food_industry_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.IndustrySelectionPageOpn.food_industry_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.IndustrySelectionPageOpn.fresh_industry_btn">
+<span class="sig-name descname"><span class="pre">fresh_industry_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.IndustrySelectionPageOpn.fresh_industry_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.IndustrySelectionPageOpn.future_industry_btn">
+<span class="sig-name descname"><span class="pre">future_industry_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.IndustrySelectionPageOpn.future_industry_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.IndustrySelectionPageOpn.leisure_industry_btn">
+<span class="sig-name descname"><span class="pre">leisure_industry_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.IndustrySelectionPageOpn.leisure_industry_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.IndustrySelectionPageOpn.maternal_supply_industry_btn">
+<span class="sig-name descname"><span class="pre">maternal_supply_industry_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.IndustrySelectionPageOpn.maternal_supply_industry_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.IndustrySelectionPageOpn.pet_industry_btn">
+<span class="sig-name descname"><span class="pre">pet_industry_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.IndustrySelectionPageOpn.pet_industry_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.IndustrySelectionPageOpn.retail_industry_btn">
+<span class="sig-name descname"><span class="pre">retail_industry_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.IndustrySelectionPageOpn.retail_industry_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.IndustrySelectionPageOpn.service_industry_btn">
+<span class="sig-name descname"><span class="pre">service_industry_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.IndustrySelectionPageOpn.service_industry_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="operations.LoginInPageOpn">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">operations.</span></span><span class="sig-name descname"><span class="pre">LoginInPageOpn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.LoginInPageOpn" title="Link to this definition"></a></dt>
+<dd><p>基类：<a class="reference internal" href="basepage.html#basepage.BasePage" title="basepage.BasePage"><code class="xref py py-class docutils literal notranslate"><span class="pre">BasePage</span></code></a></p>
+<p>登录页元素操作</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.LoginInPageOpn.account_cashier_login_btn">
+<span class="sig-name descname"><span class="pre">account_cashier_login_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.LoginInPageOpn.account_cashier_login_btn" title="Link to this definition"></a></dt>
+<dd><p>账号+工号登录按钮点击</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span> <span class="n">LoginInPageOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span> <span class="n">account_cashier_login_btn</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.LoginInPageOpn.click_login_btn">
+<span class="sig-name descname"><span class="pre">click_login_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.LoginInPageOpn.click_login_btn" title="Link to this definition"></a></dt>
+<dd><p>在输入账号和密码后点击登录按钮</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span> <span class="n">LoginInPageOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click_login_btn</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.LoginInPageOpn.click_permission_allow_btn">
+<span class="sig-name descname"><span class="pre">click_permission_allow_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.LoginInPageOpn.click_permission_allow_btn" title="Link to this definition"></a></dt>
+<dd><p>在系统权限请求页面中，点击“同意”按钮</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">LoginInPageOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click_permission_allow_btn</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.LoginInPageOpn.contact_service_btn">
+<span class="sig-name descname"><span class="pre">contact_service_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.LoginInPageOpn.contact_service_btn" title="Link to this definition"></a></dt>
+<dd><p>联系客服按钮点击</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span> <span class="n">LoginInPageOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">contact_service_btn</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.LoginInPageOpn.free_login_btn">
+<span class="sig-name descname"><span class="pre">free_login_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.LoginInPageOpn.free_login_btn" title="Link to this definition"></a></dt>
+<dd><p>免费注册按钮点击</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span> <span class="n">LoginInPageOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">free_login_btn</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.LoginInPageOpn.get_toast_text">
+<span class="sig-name descname"><span class="pre">get_toast_text</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#operations.LoginInPageOpn.get_toast_text" title="Link to this definition"></a></dt>
+<dd><p>获取Toast文本信息</p>
+<p>return str: Toast文本信息</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span> <span class="n">LoginInPageOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">get_toast_text</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.LoginInPageOpn.input_account">
+<span class="sig-name descname"><span class="pre">input_account</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">username</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.LoginInPageOpn.input_account" title="Link to this definition"></a></dt>
+<dd><p>账号输入框输入账号名</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>username</strong> (<em>str</em>) – 账号名</p>
+</dd>
+</dl>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">username</span> <span class="o">=</span> <span class="s2">&quot;Eric&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">LoginInPageOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">input_account</span><span class="p">(</span><span class="n">username</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.LoginInPageOpn.input_password">
+<span class="sig-name descname"><span class="pre">input_password</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.LoginInPageOpn.input_password" title="Link to this definition"></a></dt>
+<dd><p>密码输入框输入密码</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>password</strong> (<em>str</em>) – 密码</p>
+</dd>
+</dl>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">password</span> <span class="o">=</span> <span class="s2">&quot;123&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">LoginInPageOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">input_password</span><span class="p">(</span><span class="n">password</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.LoginInPageOpn.permission_page_text">
+<span class="sig-name descname"><span class="pre">permission_page_text</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.LoginInPageOpn.permission_page_text" title="Link to this definition"></a></dt>
+<dd><p>在系统权限请求页面中，获取current_page_text中的文本信息，即“第 1 项权限（共 3 项）”</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>当前正在处理第几项权限请求，即“第 1 项权限（共 3 项）”</p>
+</dd>
+</dl>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">permission_page_text</span> <span class="o">=</span> <span class="n">LoginInPageOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">permission_page_text</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.LoginInPageOpn.try_login_btn">
+<span class="sig-name descname"><span class="pre">try_login_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.LoginInPageOpn.try_login_btn" title="Link to this definition"></a></dt>
+<dd><p>体验账号按钮点击</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span> <span class="n">LoginInPageOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">try_login_btn</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="operations.MemberRechargeOpn">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">operations.</span></span><span class="sig-name descname"><span class="pre">MemberRechargeOpn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.MemberRechargeOpn" title="Link to this definition"></a></dt>
+<dd><p>基类：<a class="reference internal" href="basepage.html#basepage.BasePage" title="basepage.BasePage"><code class="xref py py-class docutils literal notranslate"><span class="pre">BasePage</span></code></a></p>
+<p>会员充值页面元素定位操作</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.MemberRechargeOpn.click_alipay_btn">
+<span class="sig-name descname"><span class="pre">click_alipay_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.MemberRechargeOpn.click_alipay_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.MemberRechargeOpn.click_cash_btn">
+<span class="sig-name descname"><span class="pre">click_cash_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.MemberRechargeOpn.click_cash_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.MemberRechargeOpn.click_confirm_btn">
+<span class="sig-name descname"><span class="pre">click_confirm_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.MemberRechargeOpn.click_confirm_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.MemberRechargeOpn.click_print_receipt_checkbox">
+<span class="sig-name descname"><span class="pre">click_print_receipt_checkbox</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.MemberRechargeOpn.click_print_receipt_checkbox" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.MemberRechargeOpn.click_qrcode_btn">
+<span class="sig-name descname"><span class="pre">click_qrcode_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.MemberRechargeOpn.click_qrcode_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.MemberRechargeOpn.click_sfpay_btn">
+<span class="sig-name descname"><span class="pre">click_sfpay_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.MemberRechargeOpn.click_sfpay_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.MemberRechargeOpn.click_union_btn">
+<span class="sig-name descname"><span class="pre">click_union_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.MemberRechargeOpn.click_union_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.MemberRechargeOpn.click_wechat_btn">
+<span class="sig-name descname"><span class="pre">click_wechat_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.MemberRechargeOpn.click_wechat_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.MemberRechargeOpn.get_print_receipt_status">
+<span class="sig-name descname"><span class="pre">get_print_receipt_status</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.MemberRechargeOpn.get_print_receipt_status" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.MemberRechargeOpn.select_recharge_item">
+<span class="sig-name descname"><span class="pre">select_recharge_item</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item_no</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.MemberRechargeOpn.select_recharge_item" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="operations.MembershipDetailOpn">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">operations.</span></span><span class="sig-name descname"><span class="pre">MembershipDetailOpn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.MembershipDetailOpn" title="Link to this definition"></a></dt>
+<dd><p>基类：<a class="reference internal" href="basepage.html#basepage.BasePage" title="basepage.BasePage"><code class="xref py py-class docutils literal notranslate"><span class="pre">BasePage</span></code></a></p>
+<p>会员详情页元素操作</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.MembershipDetailOpn.click_coupon_btn">
+<span class="sig-name descname"><span class="pre">click_coupon_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.MembershipDetailOpn.click_coupon_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.MembershipDetailOpn.click_points_exchange_btn">
+<span class="sig-name descname"><span class="pre">click_points_exchange_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.MembershipDetailOpn.click_points_exchange_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.MembershipDetailOpn.click_recharge_btn">
+<span class="sig-name descname"><span class="pre">click_recharge_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.MembershipDetailOpn.click_recharge_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.MembershipDetailOpn.click_select_member_btn">
+<span class="sig-name descname"><span class="pre">click_select_member_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.MembershipDetailOpn.click_select_member_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.MembershipDetailOpn.get_balance">
+<span class="sig-name descname"><span class="pre">get_balance</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.MembershipDetailOpn.get_balance" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.MembershipDetailOpn.get_points">
+<span class="sig-name descname"><span class="pre">get_points</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.MembershipDetailOpn.get_points" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="operations.MessageCenterOpn">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">operations.</span></span><span class="sig-name descname"><span class="pre">MessageCenterOpn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.MessageCenterOpn" title="Link to this definition"></a></dt>
+<dd><p>基类：<a class="reference internal" href="basepage.html#basepage.BasePage" title="basepage.BasePage"><code class="xref py py-class docutils literal notranslate"><span class="pre">BasePage</span></code></a></p>
+<p>消息中心元素操作</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.MessageCenterOpn.click_back_btn">
+<span class="sig-name descname"><span class="pre">click_back_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.MessageCenterOpn.click_back_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.MessageCenterOpn.click_ignore_this_goods_btn">
+<span class="sig-name descname"><span class="pre">click_ignore_this_goods_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.MessageCenterOpn.click_ignore_this_goods_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.MessageCenterOpn.click_select_all_btn">
+<span class="sig-name descname"><span class="pre">click_select_all_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.MessageCenterOpn.click_select_all_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.MessageCenterOpn.click_stock_btn">
+<span class="sig-name descname"><span class="pre">click_stock_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.MessageCenterOpn.click_stock_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.MessageCenterOpn.get_stock_warning_num">
+<span class="sig-name descname"><span class="pre">get_stock_warning_num</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#operations.MessageCenterOpn.get_stock_warning_num" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="operations.NewProductPageOpn">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">operations.</span></span><span class="sig-name descname"><span class="pre">NewProductPageOpn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.NewProductPageOpn" title="Link to this definition"></a></dt>
+<dd><p>基类：<a class="reference internal" href="basepage.html#basepage.BasePage" title="basepage.BasePage"><code class="xref py py-class docutils literal notranslate"><span class="pre">BasePage</span></code></a></p>
+<p>新增商品元素操作</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.NewProductPageOpn.click_category_dropdown">
+<span class="sig-name descname"><span class="pre">click_category_dropdown</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.NewProductPageOpn.click_category_dropdown" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.NewProductPageOpn.click_category_save_btn">
+<span class="sig-name descname"><span class="pre">click_category_save_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.NewProductPageOpn.click_category_save_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.NewProductPageOpn.click_generate_btn">
+<span class="sig-name descname"><span class="pre">click_generate_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.NewProductPageOpn.click_generate_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.NewProductPageOpn.click_save_btn">
+<span class="sig-name descname"><span class="pre">click_save_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.NewProductPageOpn.click_save_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.NewProductPageOpn.click_search_result">
+<span class="sig-name descname"><span class="pre">click_search_result</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.NewProductPageOpn.click_search_result" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.NewProductPageOpn.get_barcode_input_text">
+<span class="sig-name descname"><span class="pre">get_barcode_input_text</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#operations.NewProductPageOpn.get_barcode_input_text" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.NewProductPageOpn.input_category_search_input">
+<span class="sig-name descname"><span class="pre">input_category_search_input</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">search_content</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.NewProductPageOpn.input_category_search_input" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.NewProductPageOpn.input_price">
+<span class="sig-name descname"><span class="pre">input_price</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">price</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.NewProductPageOpn.input_price" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.NewProductPageOpn.input_product_name">
+<span class="sig-name descname"><span class="pre">input_product_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">product_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.NewProductPageOpn.input_product_name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.NewProductPageOpn.input_purchase_price">
+<span class="sig-name descname"><span class="pre">input_purchase_price</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">purchase_price</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.NewProductPageOpn.input_purchase_price" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.NewProductPageOpn.input_stock">
+<span class="sig-name descname"><span class="pre">input_stock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stock</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.NewProductPageOpn.input_stock" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="operations.NotAvailableCouponOpn">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">operations.</span></span><span class="sig-name descname"><span class="pre">NotAvailableCouponOpn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.NotAvailableCouponOpn" title="Link to this definition"></a></dt>
+<dd><p>基类：<a class="reference internal" href="basepage.html#basepage.BasePage" title="basepage.BasePage"><code class="xref py py-class docutils literal notranslate"><span class="pre">BasePage</span></code></a></p>
+<p>不可用优惠券页面元素定位</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.NotAvailableCouponOpn.get_not_available_coupon_number_list">
+<span class="sig-name descname"><span class="pre">get_not_available_coupon_number_list</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.NotAvailableCouponOpn.get_not_available_coupon_number_list" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.NotAvailableCouponOpn.get_not_available_coupon_view_size">
+<span class="sig-name descname"><span class="pre">get_not_available_coupon_view_size</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.NotAvailableCouponOpn.get_not_available_coupon_view_size" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>视图框左上角x轴的值、视图框左上角y轴的值、视图框右下角x轴的值、视图框右下角y轴的值</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="operations.PointExchangeOpn">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">operations.</span></span><span class="sig-name descname"><span class="pre">PointExchangeOpn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.PointExchangeOpn" title="Link to this definition"></a></dt>
+<dd><p>基类：<a class="reference internal" href="basepage.html#basepage.BasePage" title="basepage.BasePage"><code class="xref py py-class docutils literal notranslate"><span class="pre">BasePage</span></code></a></p>
+<p>积分兑换页面元素相关操作</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.PointExchangeOpn.click_points_exchange_btn">
+<span class="sig-name descname"><span class="pre">click_points_exchange_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.PointExchangeOpn.click_points_exchange_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.PointExchangeOpn.click_points_exchange_item">
+<span class="sig-name descname"><span class="pre">click_points_exchange_item</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item_no</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.PointExchangeOpn.click_points_exchange_item" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.PointExchangeOpn.get_points_exchange_item_name">
+<span class="sig-name descname"><span class="pre">get_points_exchange_item_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item_no</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.PointExchangeOpn.get_points_exchange_item_name" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.PointExchangeOpn.get_points_exchange_item_points">
+<span class="sig-name descname"><span class="pre">get_points_exchange_item_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item_no</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.PointExchangeOpn.get_points_exchange_item_points" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.PointExchangeOpn.get_points_exchange_list">
+<span class="sig-name descname"><span class="pre">get_points_exchange_list</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.PointExchangeOpn.get_points_exchange_list" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.PointExchangeOpn.get_points_exchange_view_size">
+<span class="sig-name descname"><span class="pre">get_points_exchange_view_size</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.PointExchangeOpn.get_points_exchange_view_size" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>视图框左上角x轴的值、视图框左上角y轴的值、视图框右下角x轴的值、视图框右下角y轴的值</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.PointExchangeOpn.send_keys_search_input">
+<span class="sig-name descname"><span class="pre">send_keys_search_input</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.PointExchangeOpn.send_keys_search_input" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="operations.RechargeDetailOpn">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">operations.</span></span><span class="sig-name descname"><span class="pre">RechargeDetailOpn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.RechargeDetailOpn" title="Link to this definition"></a></dt>
+<dd><p>基类：<a class="reference internal" href="basepage.html#basepage.BasePage" title="basepage.BasePage"><code class="xref py py-class docutils literal notranslate"><span class="pre">BasePage</span></code></a></p>
+<p>结账详情页相关元素操作</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.RechargeDetailOpn.click_ali_pay_btn">
+<span class="sig-name descname"><span class="pre">click_ali_pay_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.RechargeDetailOpn.click_ali_pay_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.RechargeDetailOpn.click_cash_btn">
+<span class="sig-name descname"><span class="pre">click_cash_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.RechargeDetailOpn.click_cash_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.RechargeDetailOpn.click_confirm_btn">
+<span class="sig-name descname"><span class="pre">click_confirm_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.RechargeDetailOpn.click_confirm_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.RechargeDetailOpn.click_delete_btn">
+<span class="sig-name descname"><span class="pre">click_delete_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.RechargeDetailOpn.click_delete_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.RechargeDetailOpn.click_prepaid_card_btn">
+<span class="sig-name descname"><span class="pre">click_prepaid_card_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.RechargeDetailOpn.click_prepaid_card_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.RechargeDetailOpn.click_qr_code_btn">
+<span class="sig-name descname"><span class="pre">click_qr_code_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.RechargeDetailOpn.click_qr_code_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.RechargeDetailOpn.click_union_card_btn">
+<span class="sig-name descname"><span class="pre">click_union_card_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.RechargeDetailOpn.click_union_card_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.RechargeDetailOpn.click_value_card_btn">
+<span class="sig-name descname"><span class="pre">click_value_card_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.RechargeDetailOpn.click_value_card_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.RechargeDetailOpn.get_actual_amount_text">
+<span class="sig-name descname"><span class="pre">get_actual_amount_text</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.RechargeDetailOpn.get_actual_amount_text" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.RechargeDetailOpn.get_receivable_amount_text">
+<span class="sig-name descname"><span class="pre">get_receivable_amount_text</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.RechargeDetailOpn.get_receivable_amount_text" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.RechargeDetailOpn.input_search_input_dot">
+<span class="sig-name descname"><span class="pre">input_search_input_dot</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.RechargeDetailOpn.input_search_input_dot" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.RechargeDetailOpn.input_search_input_eight">
+<span class="sig-name descname"><span class="pre">input_search_input_eight</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.RechargeDetailOpn.input_search_input_eight" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.RechargeDetailOpn.input_search_input_five">
+<span class="sig-name descname"><span class="pre">input_search_input_five</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.RechargeDetailOpn.input_search_input_five" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.RechargeDetailOpn.input_search_input_four">
+<span class="sig-name descname"><span class="pre">input_search_input_four</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.RechargeDetailOpn.input_search_input_four" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.RechargeDetailOpn.input_search_input_nine">
+<span class="sig-name descname"><span class="pre">input_search_input_nine</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.RechargeDetailOpn.input_search_input_nine" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.RechargeDetailOpn.input_search_input_one">
+<span class="sig-name descname"><span class="pre">input_search_input_one</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.RechargeDetailOpn.input_search_input_one" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.RechargeDetailOpn.input_search_input_seven">
+<span class="sig-name descname"><span class="pre">input_search_input_seven</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.RechargeDetailOpn.input_search_input_seven" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.RechargeDetailOpn.input_search_input_six">
+<span class="sig-name descname"><span class="pre">input_search_input_six</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.RechargeDetailOpn.input_search_input_six" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.RechargeDetailOpn.input_search_input_three">
+<span class="sig-name descname"><span class="pre">input_search_input_three</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.RechargeDetailOpn.input_search_input_three" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.RechargeDetailOpn.input_search_input_two">
+<span class="sig-name descname"><span class="pre">input_search_input_two</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.RechargeDetailOpn.input_search_input_two" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.RechargeDetailOpn.input_search_input_zero">
+<span class="sig-name descname"><span class="pre">input_search_input_zero</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.RechargeDetailOpn.input_search_input_zero" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.RechargeDetailOpn.input_search_input_zero_zero">
+<span class="sig-name descname"><span class="pre">input_search_input_zero_zero</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.RechargeDetailOpn.input_search_input_zero_zero" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="operations.SelectCouponOpn">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">operations.</span></span><span class="sig-name descname"><span class="pre">SelectCouponOpn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.SelectCouponOpn" title="Link to this definition"></a></dt>
+<dd><p>基类：<a class="reference internal" href="basepage.html#basepage.BasePage" title="basepage.BasePage"><code class="xref py py-class docutils literal notranslate"><span class="pre">BasePage</span></code></a></p>
+<p>在收银页面的订单栏下方点击“优惠券”图标按钮后进入的选择优惠券页面元素的操作</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.SelectCouponOpn.click_common_coupon_btn">
+<span class="sig-name descname"><span class="pre">click_common_coupon_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.SelectCouponOpn.click_common_coupon_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.SelectCouponOpn.click_confirm_btn">
+<span class="sig-name descname"><span class="pre">click_confirm_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.SelectCouponOpn.click_confirm_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.SelectCouponOpn.click_coupon_add_btn">
+<span class="sig-name descname"><span class="pre">click_coupon_add_btn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coupon_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.SelectCouponOpn.click_coupon_add_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.SelectCouponOpn.click_coupon_delete_btn">
+<span class="sig-name descname"><span class="pre">click_coupon_delete_btn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coupon_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.SelectCouponOpn.click_coupon_delete_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.SelectCouponOpn.click_coupon_scan_btn">
+<span class="sig-name descname"><span class="pre">click_coupon_scan_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.SelectCouponOpn.click_coupon_scan_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.SelectCouponOpn.click_normal_coupon_btn">
+<span class="sig-name descname"><span class="pre">click_normal_coupon_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.SelectCouponOpn.click_normal_coupon_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.SelectCouponOpn.find_and_click_coupon">
+<span class="sig-name descname"><span class="pre">find_and_click_coupon</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coupon_prefix_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coupon_num</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_add</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.SelectCouponOpn.find_and_click_coupon" title="Link to this definition"></a></dt>
+<dd><p>查找并点击指定次数和名称的优惠券</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>coupon_prefix_name</strong> – 所要查找的优惠券的名称的前缀</p></li>
+<li><p><strong>coupon_num</strong> – 优惠券添加/删除个数</p></li>
+<li><p><strong>is_add</strong> – 判断是添加还是删除优惠券，True为添加优惠券，False为删除优惠券</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.SelectCouponOpn.get_coupon_list_view_size">
+<span class="sig-name descname"><span class="pre">get_coupon_list_view_size</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#operations.SelectCouponOpn.get_coupon_list_view_size" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="operations.SelectMemberOpn">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">operations.</span></span><span class="sig-name descname"><span class="pre">SelectMemberOpn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.SelectMemberOpn" title="Link to this definition"></a></dt>
+<dd><p>基类：<a class="reference internal" href="basepage.html#basepage.BasePage" title="basepage.BasePage"><code class="xref py py-class docutils literal notranslate"><span class="pre">BasePage</span></code></a></p>
+<p>选择会员页面元素操作</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.SelectMemberOpn.click_add_member_btn">
+<span class="sig-name descname"><span class="pre">click_add_member_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.SelectMemberOpn.click_add_member_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.SelectMemberOpn.click_back_btn">
+<span class="sig-name descname"><span class="pre">click_back_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.SelectMemberOpn.click_back_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.SelectMemberOpn.click_confirm_btn">
+<span class="sig-name descname"><span class="pre">click_confirm_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.SelectMemberOpn.click_confirm_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.SelectMemberOpn.click_delete_btn">
+<span class="sig-name descname"><span class="pre">click_delete_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.SelectMemberOpn.click_delete_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.SelectMemberOpn.click_scan_btn">
+<span class="sig-name descname"><span class="pre">click_scan_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.SelectMemberOpn.click_scan_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.SelectMemberOpn.input_search_input_dot">
+<span class="sig-name descname"><span class="pre">input_search_input_dot</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.SelectMemberOpn.input_search_input_dot" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.SelectMemberOpn.input_search_input_double_zero">
+<span class="sig-name descname"><span class="pre">input_search_input_double_zero</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.SelectMemberOpn.input_search_input_double_zero" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.SelectMemberOpn.input_search_input_eight">
+<span class="sig-name descname"><span class="pre">input_search_input_eight</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.SelectMemberOpn.input_search_input_eight" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.SelectMemberOpn.input_search_input_five">
+<span class="sig-name descname"><span class="pre">input_search_input_five</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.SelectMemberOpn.input_search_input_five" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.SelectMemberOpn.input_search_input_four">
+<span class="sig-name descname"><span class="pre">input_search_input_four</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.SelectMemberOpn.input_search_input_four" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.SelectMemberOpn.input_search_input_nine">
+<span class="sig-name descname"><span class="pre">input_search_input_nine</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.SelectMemberOpn.input_search_input_nine" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.SelectMemberOpn.input_search_input_one">
+<span class="sig-name descname"><span class="pre">input_search_input_one</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.SelectMemberOpn.input_search_input_one" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.SelectMemberOpn.input_search_input_seven">
+<span class="sig-name descname"><span class="pre">input_search_input_seven</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.SelectMemberOpn.input_search_input_seven" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.SelectMemberOpn.input_search_input_six">
+<span class="sig-name descname"><span class="pre">input_search_input_six</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.SelectMemberOpn.input_search_input_six" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.SelectMemberOpn.input_search_input_three">
+<span class="sig-name descname"><span class="pre">input_search_input_three</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.SelectMemberOpn.input_search_input_three" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.SelectMemberOpn.input_search_input_two">
+<span class="sig-name descname"><span class="pre">input_search_input_two</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.SelectMemberOpn.input_search_input_two" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.SelectMemberOpn.input_search_input_zero">
+<span class="sig-name descname"><span class="pre">input_search_input_zero</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.SelectMemberOpn.input_search_input_zero" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="operations.TryLogInPageOpn">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">operations.</span></span><span class="sig-name descname"><span class="pre">TryLogInPageOpn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">driver</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.TryLogInPageOpn" title="Link to this definition"></a></dt>
+<dd><p>基类：<a class="reference internal" href="basepage.html#basepage.BasePage" title="basepage.BasePage"><code class="xref py py-class docutils literal notranslate"><span class="pre">BasePage</span></code></a></p>
+<p>体验账号登录页元素操作</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.TryLogInPageOpn.click_contact_service_btn">
+<span class="sig-name descname"><span class="pre">click_contact_service_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.TryLogInPageOpn.click_contact_service_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.TryLogInPageOpn.click_employee_login_btn">
+<span class="sig-name descname"><span class="pre">click_employee_login_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.TryLogInPageOpn.click_employee_login_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.TryLogInPageOpn.click_history_handover_btn">
+<span class="sig-name descname"><span class="pre">click_history_handover_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.TryLogInPageOpn.click_history_handover_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.TryLogInPageOpn.click_manager_btn">
+<span class="sig-name descname"><span class="pre">click_manager_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.TryLogInPageOpn.click_manager_btn" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.TryLogInPageOpn.get_account_input_text">
+<span class="sig-name descname"><span class="pre">get_account_input_text</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#operations.TryLogInPageOpn.get_account_input_text" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.TryLogInPageOpn.get_job_number_input_text">
+<span class="sig-name descname"><span class="pre">get_job_number_input_text</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#operations.TryLogInPageOpn.get_job_number_input_text" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.TryLogInPageOpn.get_toast_text">
+<span class="sig-name descname"><span class="pre">get_toast_text</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#operations.TryLogInPageOpn.get_toast_text" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.TryLogInPageOpn.input_job_number">
+<span class="sig-name descname"><span class="pre">input_job_number</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">job_number</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.TryLogInPageOpn.input_job_number" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="operations.TryLogInPageOpn.input_password">
+<span class="sig-name descname"><span class="pre">input_password</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">password</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.TryLogInPageOpn.input_password" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2024, w。</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用的 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a> 开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
