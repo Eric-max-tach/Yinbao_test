@@ -1,20 +1,14 @@
 import sys
-sys.path.append(r"C:\Users\Administrator\PycharmProjects\Yinbao_test")
+sys.path.append(r"/")
 
 import unittest
 
 import ddt
-import yaml
-from appium import webdriver
-from selenium.common import NoSuchElementException, TimeoutException
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.wait import WebDriverWait
 import time
-from common.startend import StartEnd
-from base.parse_csv import parse_csv
-from page.operations import LoginInPageOpn
-from page.scenarios import LoginScenario
+from src.common.startend import StartEnd
+from src.base.parse_csv import parse_csv
+from src.page.operations import LoginInPageOpn
+from src.page.scenarios import LoginScenario
 import os
 import logging
 import re

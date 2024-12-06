@@ -5,19 +5,11 @@ sys.path.append(r"C:\Users\Administrator\PycharmProjects\PythonProject")
 
 import unittest
 
-from appium import webdriver
-from parameterized import parameterized
-from selenium.common import NoSuchElementException, TimeoutException
-from selenium.webdriver.common.action_chains import ActionChains
-from selenium.webdriver.common.actions.mouse_button import MouseButton
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
-from base.parse_csv import parse_csv
+from src.base.parse_csv import parse_csv
 
-from common.startend import StartEnd
-from page.operations import *
-from page.scenarios import *
+from src.common.startend import StartEnd
 import logging
 import re
 import ddt

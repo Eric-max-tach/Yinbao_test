@@ -3,7 +3,7 @@ import time
 import traceback
 import unittest
 from appium import webdriver
-from base.parse_yaml import parse_yaml
+from src.base.parse_yaml import parse_yaml
 import logging
 import logging.config
 

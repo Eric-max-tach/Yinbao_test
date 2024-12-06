@@ -267,7 +267,7 @@ if __name__=='__main__':
 import unittest
 
 if __name__ == '__main__':
-    testSuite = unittest.TestLoader().discover("..")
+    testSuite = unittest.TestLoader().discover("")
     unittest.TextTestRunner().run(testSuite)
 ```
 
@@ -711,7 +711,7 @@ if __name__=='__main__':
 
 **执行结果**
 
-![image-20241127160222465](./images/image-20241127160222465.png)
+![image-20241127160222465](../images/image-20241127160222465.png)
 
 **如何将unittest和appium结合**
 
@@ -1709,7 +1709,7 @@ if __name__ == '__main__':
 
 最后总体项目结构为：
 
-![image-20241128182134781](./images/image-20241128182134781.png)
+![image-20241128182134781](../images/image-20241128182134781.png)
 
 ### **目前还存在的问题：**
 
@@ -1731,7 +1731,7 @@ case目录中存放了测试用例、测试数据、配置数据和一些封装�
 
 ## 十三、自动化测试框架开发
 
-![image-20241129154713172](./images/image-20241129154713172.png)
+![image-20241129154713172](../images/image-20241129154713172.png)
 
 ### 1、优化目录层级
 
@@ -1932,14 +1932,15 @@ import time
 import traceback
 import unittest
 from appium import webdriver
-from base.parse_yaml import parse_yaml
+from src.base import parse_yaml
 import logging
 import logging.config
 
 CON_LOG = '../config/log.conf'
 logging.config.fileConfig(CON_LOG)
 logging = logging.getLogger()
-SCREENSHOT_DIR = '../screenshot/'
+SCREENSHOT_DIR = '../src/screenshot/'
+
 
 class StartEnd(unittest.TestCase):
 ```
@@ -1949,16 +1950,18 @@ class StartEnd(unittest.TestCase):
 例如在operation.py中添加日志输出
 
 ```python
-from page.locators import *
-from base.basepage import *
+from src.page.locators import *
+from src.base import *
 import logging
 
 logging = logging.getLogger()
+
 
 class LoginInPageOpn(BasePage):
     """
         登录页元素操作
     """
+
     # 在系统权限请求页面中，获取current_page_text中的文本信息，即“第 1 项权限（共 3 项）”
     def permission_page_text(self):
         logging.info('==========permission_page_text==========')
@@ -1979,21 +1982,22 @@ import time
 import traceback
 import unittest
 from appium import webdriver
-from base.parse_yaml import parse_yaml
+from src.base import parse_yaml
 import logging
 import logging.config
 
 CON_LOG = '../config/log.conf'
 logging.config.fileConfig(CON_LOG)
 logging = logging.getLogger()
-SCREENSHOT_DIR = '../screenshot/'
+SCREENSHOT_DIR = '../src/screenshot/'
+
 
 class StartEnd(unittest.TestCase):
     def setUp(self):
         logging.info("=========setUp===========")
-        desired_caps = parse_yaml("../config/my_yaml.yml", "yinbao")
+        desired_caps = parse_yaml("../src/config/my_yaml.yml", "yinbao")
 
-        self.driver = webdriver.Remote(parse_yaml("../config/my_yaml.yml", "yinbao", "remoteurl"), desired_caps)
+        self.driver = webdriver.Remote(parse_yaml("../src/config/my_yaml.yml", "yinbao", "remoteurl"), desired_caps)
 
         # # 等待页面加载，可以根据实际情况调整等待时间
         # self.driver.implicitly_wait(15)
@@ -2017,17 +2021,17 @@ class StartEnd(unittest.TestCase):
             def __init__(self, msg):
                 try:
                     # cur_method = test_case._testMethodName  # 获取当前 test() 方法名
-                    cur_time = time.strftime("%Y%m%d%H%M%S", time.localtime(time.time())) # 获取当前时间戳
+                    cur_time = time.strftime("%Y%m%d%H%M%S", time.localtime(time.time()))  # 获取当前时间戳
                     # file_name = '{}_{}.png'.format(cur_method, cur_time)
                     file_name = '{}.png'.format(cur_time)
-                    test_case.driver.get_screenshot_as_file(os.path.join(SCREENSHOT_DIR, file_name))    # 截图生成 png 文件
+                    test_case.driver.get_screenshot_as_file(os.path.join(SCREENSHOT_DIR, file_name))  # 截图生成 png 文件
                     logging.info("失败截图已保存到：{}".format(file_name))
                 except BaseException:
-                    logging.error("截图失败：{}".format(traceback.format_exc()))     # logging.error("截图失败：{}".format(traceback.format_exc()))
-                super(AssertionErrorPlus, self).__init__(msg)   # 调用父类 AssertionError 的构造方法，将错误消息 msg 传递给父类
+                    logging.error("截图失败：{}".format(
+                        traceback.format_exc()))  # logging.error("截图失败：{}".format(traceback.format_exc()))
+                super(AssertionErrorPlus, self).__init__(msg)  # 调用父类 AssertionError 的构造方法，将错误消息 msg 传递给父类
 
-        return AssertionErrorPlus # 返回自定义的异常类，这意味着你可以在其他地方使用 failure_monitor 来动态生成一个自定义异常，并且通过 raise 语句抛出它
-
+        return AssertionErrorPlus  # 返回自定义的异常类，这意味着你可以在其他地方使用 failure_monitor 来动态生成一个自定义异常，并且通过 raise 语句抛出它
 
     def tearDown(self):
         logging.info("========tearDown=========")
@@ -2123,16 +2127,18 @@ class BasePage(object):
 ```python
 from selenium.common import NoSuchElementException
 
-from page.locators import *
-from base.basepage import *
+from src.page.locators import *
+from src.base import *
 import logging
 
 logging = logging.getLogger()
+
 
 class LoginInPageOpn(BasePage):
     """
         登录页元素操作
     """
+
     # 在系统权限请求页面中，获取current_page_text中的文本信息，即“第 1 项权限（共 3 项）”
     def permission_page_text(self):
         logging.info('==========permission_page_text==========')
@@ -2145,22 +2151,21 @@ class LoginInPageOpn(BasePage):
         logging.info('==========click_permission_allow_btn==========')
         # 查找点击元素
         # ele = self.driver.find_element(*LoginInPageLocators.PermissionAllowBtn)
-        ele = self.get_clickable_element(LoginInPageLocators.PermissionAllowBtn)    # 替换为添加了显示等待的元素定位方法
+        ele = self.get_clickable_element(LoginInPageLocators.PermissionAllowBtn)  # 替换为添加了显示等待的元素定位方法
         ele.click()
-
 
     # 账号输入框输入账号名
     def input_account(self, username):
         logging.info('==========input_account==========')
         # ele = self.driver.find_element(*LoginInPageLocators.AccountInput)
-        ele = self.get_visible_element(LoginInPageLocators.AccountInput)    # 替换为添加了显示等待的元素定位方法
+        ele = self.get_visible_element(LoginInPageLocators.AccountInput)  # 替换为添加了显示等待的元素定位方法
         ele.send_keys(username)
 
     # 密码输入框输入密码
     def input_password(self, password):
         logging.info('==========input_password==========')
         # ele = self.driver.find_element(*LoginInPageLocators.PasswordInput)
-        ele = self.get_visible_element(LoginInPageLocators.PasswordInput)   # 替换为添加了显示等待的元素定位方法
+        ele = self.get_visible_element(LoginInPageLocators.PasswordInput)  # 替换为添加了显示等待的元素定位方法
         ele.send_keys(password)
 
     # 在输入账号和密码后点击登录按钮
@@ -2181,53 +2186,55 @@ class LoginInPageOpn(BasePage):
     def try_login_btn(self):
         logging.info('==========try_login_btn==========')
         # ele = self.driver.find_element(*LoginInPageLocators.TryAccountBtn)
-        ele = self.get_clickable_element(LoginInPageLocators.TryAccountBtn) # 替换为添加了显示等待的元素定位方法
+        ele = self.get_clickable_element(LoginInPageLocators.TryAccountBtn)  # 替换为添加了显示等待的元素定位方法
         ele.click()
 
     # 免费注册按钮点击
     def free_login_btn(self):
         logging.info('==========free_login_btn==========')
         # ele = self.driver.find_element(*LoginInPageLocators.FreeRegistBtn)
-        ele = self.get_clickable_element(LoginInPageLocators.FreeRegistBtn) # 替换为添加了显示等待的元素定位方法
+        ele = self.get_clickable_element(LoginInPageLocators.FreeRegistBtn)  # 替换为添加了显示等待的元素定位方法
         ele.click()
 
     # 联系客服按钮点击
     def contact_service_btn(self):
         logging.info('==========contact_service_btn==========')
         # ele = self.driver.find_element(*LoginInPageLocators.ContactServiceBtn)
-        ele = self.get_clickable_element(LoginInPageLocators.ContactServiceBtn) # 替换为添加了显示等待的元素定位方法
+        ele = self.get_clickable_element(LoginInPageLocators.ContactServiceBtn)  # 替换为添加了显示等待的元素定位方法
         ele.click()
 
     # 账号+工号登录按钮点击
     def account_cashier_login_btn(self):
         logging.info('==========account_cashier_login_btn==========')
         # ele = self.driver.find_element(*LoginInPageLocators.AccountCashierLoginBtn)
-        ele = self.get_clickable_element(LoginInPageLocators.AccountCashierLoginBtn)    # 替换为添加了显示等待的元素定位方法
+        ele = self.get_clickable_element(LoginInPageLocators.AccountCashierLoginBtn)  # 替换为添加了显示等待的元素定位方法
         ele.click()
+
 
 class IndustrySelectionPageOpn(BasePage):
     """
         在登录页选择体验账号后，进入的行业选择页面的相关操作
     """
+
     # 零售行业按钮点击
     def retail_industry_btn(self):
         logging.info('==========retail_industry_btn==========')
         # ele = self.driver.find_element(*IndustrySelectionPageLocators.RetailBtn)
-        ele = self.get_clickable_element(IndustrySelectionPageLocators.RetailBtn)   # 替换为添加了显示等待的元素定位方法
+        ele = self.get_clickable_element(IndustrySelectionPageLocators.RetailBtn)  # 替换为添加了显示等待的元素定位方法
         ele.click()
 
     # 餐饮行业按钮点击
     def food_industry_btn(self):
         logging.info('==========food_industry_btn==========')
         # ele = self.driver.find_element(*IndustrySelectionPageLocators.FoodBtn)
-        ele = self.get_clickable_element(IndustrySelectionPageLocators.FoodBtn) # 替换为添加了显示等待的元素定位方法
+        ele = self.get_clickable_element(IndustrySelectionPageLocators.FoodBtn)  # 替换为添加了显示等待的元素定位方法
         ele.click()
 
     # 服装鞋帽按钮点击
     def clothes_shoes_industry_btn(self):
         logging.info('==========clothes_shoes_industry_btn==========')
         # ele = self.driver.find_element(*IndustrySelectionPageLocators.ClothesShoesBtn)
-        ele = self.get_clickable_element(IndustrySelectionPageLocators.ClothesShoesBtn) # 替换为添加了显示等待的元素定位方法
+        ele = self.get_clickable_element(IndustrySelectionPageLocators.ClothesShoesBtn)  # 替换为添加了显示等待的元素定位方法
         ele.click()
 
     # 生活服务按钮点击
@@ -2241,7 +2248,7 @@ class IndustrySelectionPageOpn(BasePage):
     def maternal_supply_industry_btn(self):
         logging.info('==========maternal_supply_industry_btn==========')
         # ele = self.driver.find_element(*IndustrySelectionPageLocators.MaternalSupplyBtn)
-        ele = self.get_clickable_element(IndustrySelectionPageLocators.MaternalSupplyBtn)   # 替换为添加了显示等待的元素定位方法
+        ele = self.get_clickable_element(IndustrySelectionPageLocators.MaternalSupplyBtn)  # 替换为添加了显示等待的元素定位方法
         ele.click()
 
     # 宠物行业按钮点击
@@ -2255,14 +2262,14 @@ class IndustrySelectionPageOpn(BasePage):
     def bake_industry_btn(self):
         logging.info('==========bake_industry_btn==========')
         # ele = self.driver.find_element(*IndustrySelectionPageLocators.BakeBtn)
-        ele = self.get_clickable_element(IndustrySelectionPageLocators.BakeBtn) # 替换为添加了显示等待的元素定位方法
+        ele = self.get_clickable_element(IndustrySelectionPageLocators.BakeBtn)  # 替换为添加了显示等待的元素定位方法
         ele.click()
 
     # 生鲜称重按钮点击
     def fresh_industry_btn(self):
         logging.info('==========fresh_industry_btn==========')
         # ele = self.driver.find_element(*IndustrySelectionPageLocators.FreshBtn)
-        ele = self.get_clickable_element(IndustrySelectionPageLocators.FreshBtn)    # 替换为添加了显示等待的元素定位方法
+        ele = self.get_clickable_element(IndustrySelectionPageLocators.FreshBtn)  # 替换为添加了显示等待的元素定位方法
         ele.click()
 
     # 美妆休闲按钮点击
@@ -2276,41 +2283,43 @@ class IndustrySelectionPageOpn(BasePage):
     def future_industry_btn(self):
         logging.info('==========future_industry_btn==========')
         # ele = self.driver.find_element(*IndustrySelectionPageLocators.FutureBtn)
-        ele = self.get_clickable_element(IndustrySelectionPageLocators.FutureBtn)   # 替换为添加了显示等待的元素定位方法
+        ele = self.get_clickable_element(IndustrySelectionPageLocators.FutureBtn)  # 替换为添加了显示等待的元素定位方法
         ele.click()
+
 
 class TryLogInPageOpn(BasePage):
     """
         体验账号登录页元素操作
     """
+
     # 账号输入框文本获取
     def get_account_input_text(self) -> str:
         logging.info('==========get_account_input_text==========')
         # ele = self.driver.find_element(*TryLoginInPageLocators.AccountInput)
-        ele = self.get_visible_element(TryLoginInPageLocators.AccountInput) # 替换为添加了显示等待的元素定位方法
+        ele = self.get_visible_element(TryLoginInPageLocators.AccountInput)  # 替换为添加了显示等待的元素定位方法
         return ele.text
 
     # 工号输入框获取工号
     def get_job_number_input_text(self) -> str:
         logging.info('==========get_job_number_input_text==========')
         # ele = self.driver.find_element(*TryLoginInPageLocators.JobNumberInput)
-        ele = self.get_visible_element(TryLoginInPageLocators.JobNumberInput)   # 替换为添加了显示等待的元素定位方法
+        ele = self.get_visible_element(TryLoginInPageLocators.JobNumberInput)  # 替换为添加了显示等待的元素定位方法
         return ele.text
 
     # 工号输入框输入工号
     def input_job_number(self, job_number):
         logging.info('==========input_job_number==========')
         # ele = self.driver.find_element(*TryLoginInPageLocators.JobNumberInput)
-        ele = self.get_visible_element(TryLoginInPageLocators.JobNumberInput)   # 替换为添加了显示等待的元素定位方法
+        ele = self.get_visible_element(TryLoginInPageLocators.JobNumberInput)  # 替换为添加了显示等待的元素定位方法
         if len(self.get_job_number_input_text()) != 0:
-            ele.clear() #   如果工号输入框中有内容，则先清空内容
+            ele.clear()  # 如果工号输入框中有内容，则先清空内容
         ele.send_keys(job_number)
 
     # 密码输入框输入密码
     def input_password(self, password):
         logging.info('==========input_password==========')
         # ele = self.driver.find_element(*TryLoginInPageLocators.PasswordInput)
-        ele = self.get_visible_element(TryLoginInPageLocators.PasswordInput)    # 替换为添加了显示等待的元素定位方法
+        ele = self.get_visible_element(TryLoginInPageLocators.PasswordInput)  # 替换为添加了显示等待的元素定位方法
         ele.clear()
         ele.send_keys(password)
 
@@ -2318,14 +2327,14 @@ class TryLogInPageOpn(BasePage):
     def click_employee_login_btn(self):
         logging.info('==========click_employee_login_btn==========')
         # ele = self.driver.find_element(*TryLoginInPageLocators.EmployeeLoginBtn)
-        ele = self.get_clickable_element(TryLoginInPageLocators.EmployeeLoginBtn)   # 替换为添加了显示等待的元素定位方法
+        ele = self.get_clickable_element(TryLoginInPageLocators.EmployeeLoginBtn)  # 替换为添加了显示等待的元素定位方法
         ele.click()
 
     # 管理后台按钮点击
     def click_manager_btn(self):
         logging.info('==========click_manager_btn==========')
         # ele = self.driver.find_element(*TryLoginInPageLocators.ManagerBtn)
-        ele = self.get_clickable_element(TryLoginInPageLocators.ManagerBtn) # 替换为添加了显示等待的元素定位方法
+        ele = self.get_clickable_element(TryLoginInPageLocators.ManagerBtn)  # 替换为添加了显示等待的元素定位方法
         ele.click()
 
     # 联系客服按钮点击
@@ -2339,14 +2348,14 @@ class TryLogInPageOpn(BasePage):
     def click_history_handover_btn(self):
         logging.info('==========click_history_handover_btn==========')
         # ele = self.driver.find_element(*TryLoginInPageLocators.HistoryHandoverBtn)
-        ele = self.get_clickable_element(TryLoginInPageLocators.HistoryHandoverBtn) # 替换为添加了显示等待的元素定位方法
+        ele = self.get_clickable_element(TryLoginInPageLocators.HistoryHandoverBtn)  # 替换为添加了显示等待的元素定位方法
         ele.click()
 
     # 获取Toast文本信息
     def get_toast_text(self) -> str:
         logging.info('==========get_toast_text==========')
         # ele = self.driver.find_element(*TryLoginInPageLocators.Toast)
-        ele = self.get_presence_element(TryLoginInPageLocators.Toast)    # 替换为添加了显示等待的元素定位方法
+        ele = self.get_presence_element(TryLoginInPageLocators.Toast)  # 替换为添加了显示等待的元素定位方法
         return ele.text
 ```
 

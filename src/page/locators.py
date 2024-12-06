@@ -136,8 +136,54 @@ class CashInterface(object):
     # 当前屏幕中订单视图框内所有商品的单价的元素集合
     OrderViewGoodsPrices = (AppiumBy.XPATH, "//*[@resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/sale_ls']//*[@resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/price_tv']")
 
+    # 当前屏幕中订单视图框内所有商品的折扣的元素集合
+    OrderViewGoodsDiscounts = (AppiumBy.XPATH, "//*[@resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/sale_ls']//*[@resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/discount_tv']")
+
     # “收银”按钮
     CashBtn = (AppiumBy.ID, "cn.pospal.www.pospal_pos_android_new.pospal:id/checkout_action_ll")
+
+    # “实收金额”文本值
+    ReceiptPriceText = (AppiumBy.XPATH, "//*[@resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/checkout_action_ll']/*[@resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/amount_tv']")
+
+    # “总额”文本值
+    TotalPriceText = (AppiumBy.XPATH, "//*[@resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/cart_rl']/*[@resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/subtotal_tv']")
+
+    # “折扣”文本值
+    DiscountText = (AppiumBy.XPATH, "//*[@resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/cart_rl']/*[@resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/discount_tv']")
+
+    # “优惠券”图标按钮
+    CouponBtn = (AppiumBy.ID, "cn.pospal.www.pospal_pos_android_new.pospal:id/coupon_ll")
+
+class SelectCouponInterface(object):
+    """
+        在收银页面的订单栏下方点击“优惠券”图标按钮后进入的选择优惠券页面元素定位
+    """
+    # “普通优惠券”按钮
+    GeneralCouponBtn = (AppiumBy.ID, "cn.pospal.www.pospal_pos_android_new.pospal:id/general_coupon_rb")
+
+    # “通用券码”按钮
+    CommentCouponBtn = (AppiumBy.ID, "cn.pospal.www.pospal_pos_android_new.pospal:id/comment_coupon_rb")
+
+    # “券扫码下单”按钮
+    CouponScanBtn = (AppiumBy.ID, "cn.pospal.www.pospal_pos_android_new.pospal:id/scanning_code_order_rb")
+
+    # “优惠券列表”视图框
+    CouponListView = (AppiumBy.ID, "cn.pospal.www.pospal_pos_android_new.pospal:id/coupons_recycle_view")
+
+    # “优惠券列表”中优惠券的“添加”按钮集合
+    CouponAddBtn = (AppiumBy.ID, "cn.pospal.www.pospal_pos_android_new.pospal:id/add_iv")
+
+    # “优惠券列表”中优惠券的“删除”按钮集合
+    CouponDeleteBtn = (AppiumBy.ID, "cn.pospal.www.pospal_pos_android_new.pospal:id/sub_iv")
+
+    # “优惠券列表”中优惠券的“已添加优惠券数量”文本值集合
+    CouponAddedNumText = (AppiumBy.ID, "cn.pospal.www.pospal_pos_android_new.pospal:id/qty_tv")
+
+    # “优惠券列表”中优惠券的“名称”文本值集合
+    CouponNameText = (AppiumBy.ID, "cn.pospal.www.pospal_pos_android_new.pospal:id/coupon_name_tv")
+
+    # “确定”按钮
+    ConfirmBtn = (AppiumBy.ID, "cn.pospal.www.pospal_pos_android_new.pospal:id/ok_btn")
 
 class NewProductPage(object):
     """

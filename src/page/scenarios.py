@@ -1,5 +1,6 @@
-from page.operations import *
-from base.basepage import *
+from src.base.basepage import *
+from src.page.operations import PointExchangeOpn, LoginInPageOpn, NotAvailableCouponOpn
+
 
 class LoginScenario(BasePage):
     """

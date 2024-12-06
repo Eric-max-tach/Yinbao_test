@@ -1,11 +1,14 @@
-from selenium.common import NoSuchElementException, TimeoutException
+from appium.webdriver.common.appiumby import AppiumBy
+from selenium.common import TimeoutException
 
-from page.locators import *
-from base.basepage import *
+from src.base.basepage import *
 import logging
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.actions.mouse_button import MouseButton
 import re
+
+from src.page.locators import *
+
 logging = logging.getLogger()
 
 class LoginInPageOpn(BasePage):
@@ -447,7 +450,191 @@ class CashInterfaceOpn(BasePage):
     def click_cash_btn(self):
         logging.info('==========click_cash_btn==========')
         self.get_clickable_element(CashInterface.CashBtn).click()
-    
+
+    # 获取“实收金额”文本值
+    def get_receipt_price_text(self) -> str:
+        logging.info('==========get_receipt_price_text==========')
+        return self.get_presence_element(CashInterface.ReceiptPriceText).text.removeprefix("￥")  # “实收金额”的文本形式为“￥1255”，所以需要移除前缀
+
+    # 获取“总额”文本值
+    def get_total_price_text(self) -> str:
+        logging.info('==========get_total_price_text==========')
+        return self.get_presence_element(CashInterface.TotalPriceText).text.removeprefix("总额")  # “总额”的文本形式为“总额1255”，所以需要移除前缀
+
+    # 获取“折扣”文本值
+    def get_discount_price_text(self) -> str:
+        logging.info('==========get_discount_text==========')
+        return self.get_presence_element(CashInterface.DiscountText).text.removeprefix("折扣")  # “折扣”的文本形式为“折扣1255”，所以需要移除前缀
+
+    # 在订单栏下方点击“优惠券”图标按钮
+    def click_coupon_btn(self):
+        logging.info('==========click_coupon_btn==========')
+        self.get_clickable_element(CashInterface.CouponBtn).click()
+
+    # 统计在订单中的商品的折扣值列表
+    def get_discount_value(self, product_discounts_in_order: dict):
+        logging.info('==========get_discount_value==========')
+        # 获取“订单”视图框列表的大小，得到视图框左上角和右下角的坐标值，即"[480,92][1440,1080]"
+        top_left_x, top_left_y, lower_right_x, lower_right_y = self.get_order_view_size()
+
+        # 获取屏幕的大小
+        size_dict = self.driver.get_window_size()
+
+        # 判断是否已经滑动到列表底部的标志位
+        last_id_in_order = "0"
+
+        while True:
+            # 获取当前屏幕中订单视图框内所有商品的序号的元素集合
+            product_ids_in_order_eles = self.get_elements(CashInterface.OrderViewGoodsNums)
+
+            # 获取当前屏幕中订单视图框内所有商品的折扣的元素集合
+            product_discounts_in_order_eles = self.get_elements(CashInterface.OrderViewGoodsDiscounts)
+
+            """
+                可能会出现当前屏幕中订单视图框中最后一个元素"商品序号","商品折扣值"不能同时获取的情况
+                当上述情况发生时,就先不处理最后一个元素
+            """
+            min_len = min(len(product_ids_in_order_eles), len(product_discounts_in_order_eles))
+
+            for i in range(min_len):  # 遍历订单视图框内所有商品的序号元素,并将其添加到列表中
+                product_id_in_order = product_ids_in_order_eles[i].get_attribute('text')  # 商品在订单中的编号
+                if product_id_in_order not in product_discounts_in_order:
+                    product_discounts_in_order[product_id_in_order] = product_discounts_in_order_eles[
+                        i].text  # 折扣值的存储形式为“折扣: -0.08”
+
+            if product_ids_in_order_eles[min_len - 1].get_attribute('text') == last_id_in_order:  # 用于判断是否滑动到列表底部
+                break
+
+            last_id_in_order = product_ids_in_order_eles[min_len - 1].get_attribute('text')
+
+            # 滑动"订单列表"
+            BasePage(self.driver).swipe_screen(start_x=((lower_right_x + top_left_x) / 2) / size_dict['width'],
+                                               start_y=(lower_right_y * 0.9) / size_dict['height'],
+                                               end_x=((lower_right_x + top_left_x) / 2) / size_dict['width'],
+                                               end_y=(lower_right_y * 0.5) / size_dict['height'], duration=10)
+
+            # 清空列表
+            product_ids_in_order_eles.clear()
+            product_discounts_in_order_eles.clear()
+
+        return product_discounts_in_order
+
+
+
+class SelectCouponOpn(BasePage):
+    """
+        在收银页面的订单栏下方点击“优惠券”图标按钮后进入的选择优惠券页面元素的操作
+    """
+    # 点击“普通优惠券”按钮
+    def click_normal_coupon_btn(self):
+        logging.info('==========click_normal_coupon_btn==========')
+        self.get_clickable_element(SelectCouponInterface.GeneralCouponBtn).click()
+
+    # 点击“通用券码”按钮
+    def click_common_coupon_btn(self):
+        logging.info('==========click_common_coupon_btn==========')
+        self.get_clickable_element(SelectCouponInterface.CommentCouponBtn).click()
+
+    # 点击“券扫码下单”按钮
+    def click_coupon_scan_btn(self):
+        logging.info('==========click_coupon_scan_btn==========')
+        self.get_clickable_element(SelectCouponInterface.CouponScanBtn).click()
+
+    # 获得“优惠券列表”视图框大小，并返回其左上角和右下角的坐标值
+    def get_coupon_list_view_size(self) -> tuple:
+        logging.info('==========get_coupon_list_view_size==========')
+        ele = self.get_presence_element(SelectCouponInterface.CouponListView)
+        ele_bounds = ele.get_attribute('bounds')
+        # 使用正则表达式提取两个坐标对
+        matches = re.findall(r'\[(\d+),(\d+)\]', ele_bounds)
+        top_left_x, top_left_y = int(matches[0][0]), int(matches[0][1])  # 第一个坐标对
+        lower_right_x, lower_right_y = int(matches[1][0]), int(matches[1][1])  # 第二个坐标对
+
+        return top_left_x, top_left_y, lower_right_x, lower_right_y
+
+    # 点击指定序号的“优惠券列表”中优惠券的“添加”按钮
+    def click_coupon_add_btn(self, coupon_id: int):
+        logging.info('==========click_coupon_add_btn==========')
+        eles = self.get_elements(SelectCouponInterface.CouponListView)
+        eles[coupon_id].click()
+
+    # 点击指定序号的“优惠券列表”中优惠券的“删除”按钮
+    def click_coupon_delete_btn(self, coupon_id: int):
+        logging.info('==========click_coupon_delete_btn==========')
+        eles = self.get_elements(SelectCouponInterface.CouponListView)
+        eles[coupon_id].click()
+
+    # 查找并点击指定次数和名称的优惠券
+    def find_and_click_coupon(self, coupon_prefix_name: str, coupon_num: int, is_add: bool):
+        """
+            查找并点击指定次数和名称的优惠券
+
+            :param coupon_prefix_name: 所要查找的优惠券的名称的前缀
+            :param coupon_num:  优惠券添加/删除个数
+            :param is_add:  判断是添加还是删除优惠券，True为添加优惠券，False为删除优惠券
+        """
+
+        logging.info('==========find_and_click_coupon==========')
+        top_left_x, top_left_y, lower_right_x, lower_right_y = self.get_coupon_list_view_size()
+
+        # 判断是否已经滑动到列表底部的标志位
+        last_coupon_name = "."
+
+        # 获取屏幕的大小
+        size_dict = self.driver.get_window_size()
+
+        while True:
+            # 获取当前屏幕中优惠券列表视图框内所有优惠券的名称的元素集合
+            coupon_name_eles = self.get_elements(SelectCouponInterface.CouponNameText)
+
+            # 获取当前屏幕中优惠券列表视图框内所有优惠券的添加按钮的元素集合
+            coupon_addbtn_ele = self.get_elements(SelectCouponInterface.CouponAddBtn)
+
+            # 获取当前屏幕中优惠券列表视图框内所有优惠券的删除按钮的元素集合
+            coupon_deletebtn_ele = self.get_elements(SelectCouponInterface.CouponDeleteBtn)
+
+            # 判断当前优惠券列表视图中，是否有名称为“20减5”的优惠券
+            lens = min(len(coupon_name_eles), len(coupon_addbtn_ele))   # 有可能存在列表最后一个元素没有加载出来的情况
+            for i in range(lens):
+                coupon_name = coupon_name_eles[i].text
+                if str.startswith(coupon_name, coupon_prefix_name):
+                    if is_add:  # 添加优惠券
+                        for j in range(coupon_num):
+                            coupon_addbtn_ele[i].click()
+                    else:   # 删除优惠券
+                        for j in range(coupon_num):
+                            coupon_deletebtn_ele[i].click()
+                    # 获取当前屏幕中优惠券列表视图框内所有优惠券的“已添加优惠券数量”文本值集合
+                    cc = coupon_deletebtn_ele[i].find_element(AppiumBy.XPATH, "following-sibling::*[@resource-id='cn.pospal.www.pospal_pos_android_new.pospal:id/qty_tv']")
+                    logging.info("cc:{}".format(cc.text))
+                    # if int(coupon_added_num_eles[i].text) > coupon_num:
+                    #     for j in range(int(coupon_added_num_eles[i].text) - coupon_num):
+                    #         coupon_deletebtn_ele[i].click()
+                    # elif int(coupon_added_num_eles[i].text) < coupon_num:
+                    #     for j in range(coupon_num - int(coupon_added_num_eles[i].text)):
+                    #         coupon_addbtn_ele[i].click()
+
+
+            if last_coupon_name == coupon_name_eles[lens - 1].text: # 用于判断是否已经滑动到列表底部
+                break
+            last_coupon_name = coupon_name_eles[lens - 1].text
+
+            # 滑动“优惠券”列表视图
+            BasePage(self.driver).swipe_screen(start_x=((lower_right_x + top_left_x) / 2) / size_dict['width'],
+                                                start_y=(lower_right_y * 0.9) / size_dict['height'],
+                                                end_x=((lower_right_x + top_left_x) / 2) / size_dict['width'],
+                                                end_y=(lower_right_y * 0.5) / size_dict['height'], duration=2)
+
+            # 清空列表
+            coupon_name_eles.clear()
+            coupon_addbtn_ele.clear()
+            coupon_deletebtn_ele.clear()
+
+
+    # 点击“确定”按钮
+    def click_confirm_btn(self):
+        logging.info('==========click_confirm_btn==========')
+        self.get_clickable_element(SelectCouponInterface.ConfirmBtn).click()
 
 class NewProductPageOpn(BasePage):
     """
