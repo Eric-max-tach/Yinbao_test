@@ -6,6 +6,7 @@ import logging
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.actions.mouse_button import MouseButton
 import re
+from selenium.webdriver.support.wait import WebDriverWait
 
 from src.page.locators import *
 
@@ -316,6 +317,17 @@ class TryLogInPageOpn(BasePage):
     """
     # 账号输入框文本获取
     def get_account_input_text(self) -> str:
+        """
+        账号输入框文本获取
+        :return: 账号
+
+        Example
+        -------
+        >>> account = TryLogInPageOpn(self.driver).get_account_input_text()
+        >>> print(account)
+        >>> # "Jack"
+
+        """
         logging.info('==========get_account_input_text==========')
         # ele = self.driver.find_element(*TryLoginInPageLocators.AccountInput)
         ele = self.get_visible_element(TryLoginInPageLocators.AccountInput) # 替换为添加了显示等待的元素定位方法
@@ -323,13 +335,33 @@ class TryLogInPageOpn(BasePage):
 
     # 工号输入框获取工号
     def get_job_number_input_text(self) -> str:
+        """
+        工号输入框获取工号
+        :return: 工号
+
+        Example
+        -------
+        >>> job_number = TryLogInPageOpn(self.driver).get_job_number_input_text()
+        >>> print(job_number)
+        >>> # "123"
+        """
         logging.info('==========get_job_number_input_text==========')
         # ele = self.driver.find_element(*TryLoginInPageLocators.JobNumberInput)
         ele = self.get_visible_element(TryLoginInPageLocators.JobNumberInput)   # 替换为添加了显示等待的元素定位方法
         return ele.text
 
     # 工号输入框输入工号
-    def input_job_number(self, job_number):
+    def input_job_number(self, job_number: str):
+        """
+        工号输入框输入工号
+
+        :param str job_number: 员工工号
+
+        Example
+        -------
+        >>> job_number = "123"
+        >>> TryLogInPageOpn(self.driver).input_job_number(job_number)
+        """
         logging.info('==========input_job_number==========')
         # ele = self.driver.find_element(*TryLoginInPageLocators.JobNumberInput)
         ele = self.get_visible_element(TryLoginInPageLocators.JobNumberInput)   # 替换为添加了显示等待的元素定位方法
@@ -338,7 +370,17 @@ class TryLogInPageOpn(BasePage):
         ele.send_keys(job_number)
 
     # 密码输入框输入密码
-    def input_password(self, password):
+    def input_password(self, password: str):
+        """
+        密码输入框输入密码
+
+        :param password: 密码
+
+        Example
+        -------
+        >>> password = "pwd123"
+        >>> TryLogInPageOpn(self.driver).input_password(password)
+        """
         logging.info('==========input_password==========')
         # ele = self.driver.find_element(*TryLoginInPageLocators.PasswordInput)
         ele = self.get_visible_element(TryLoginInPageLocators.PasswordInput)    # 替换为添加了显示等待的元素定位方法
@@ -347,6 +389,13 @@ class TryLogInPageOpn(BasePage):
 
     # 员工登录按钮点击
     def click_employee_login_btn(self):
+        """
+        员工登录按钮点击
+
+        Example
+        -------
+        >>> TryLogInPageOpn(self.driver).click_employee_login_btn()
+        """
         logging.info('==========click_employee_login_btn==========')
         # ele = self.driver.find_element(*TryLoginInPageLocators.EmployeeLoginBtn)
         ele = self.get_clickable_element(TryLoginInPageLocators.EmployeeLoginBtn)   # 替换为添加了显示等待的元素定位方法
@@ -354,6 +403,13 @@ class TryLogInPageOpn(BasePage):
 
     # 管理后台按钮点击
     def click_manager_btn(self):
+        """
+        管理后台按钮点击
+
+        Example
+        -------
+        >>> TryLogInPageOpn(self.driver).click_manager_btn()
+        """
         logging.info('==========click_manager_btn==========')
         # ele = self.driver.find_element(*TryLoginInPageLocators.ManagerBtn)
         ele = self.get_clickable_element(TryLoginInPageLocators.ManagerBtn) # 替换为添加了显示等待的元素定位方法
@@ -361,6 +417,13 @@ class TryLogInPageOpn(BasePage):
 
     # 联系客服按钮点击
     def click_contact_service_btn(self):
+        """
+        联系客服按钮点击
+
+        Example
+        -------
+        >>> TryLogInPageOpn(self.driver).click_contact_service_btn()
+        """
         logging.info('==========click_contact_service_btn==========')
         # ele = self.driver.find_element(*TryLoginInPageLocators.ContactServiceBtn)
         ele = self.get_clickable_element(TryLoginInPageLocators.ContactServiceBtn)  # 替换为添加了显示等待的元素定位方法
@@ -368,6 +431,13 @@ class TryLogInPageOpn(BasePage):
 
     # 交接班记录按钮
     def click_history_handover_btn(self):
+        """
+        交接班记录按钮点击
+
+        Example
+        -------
+        >>> TryLogInPageOpn(self.driver).click_contact_service_btn()
+        """
         logging.info('==========click_history_handover_btn==========')
         # ele = self.driver.find_element(*TryLoginInPageLocators.HistoryHandoverBtn)
         ele = self.get_clickable_element(TryLoginInPageLocators.HistoryHandoverBtn) # 替换为添加了显示等待的元素定位方法
@@ -375,6 +445,17 @@ class TryLogInPageOpn(BasePage):
 
     # 获取Toast文本信息
     def get_toast_text(self) -> str:
+        """
+        获取Toast文本信息
+
+        :return: Toast文本信息
+
+        Example
+        -------
+        >>> toast = TryLogInPageOpn(self.driver).get_toast_text()
+        >>> print(toast)
+        >>> # "toast文本信息"
+        """
         logging.info('==========get_toast_text==========')
         # ele = self.driver.find_element(*TryLoginInPageLocators.Toast)
         ele = self.get_presence_element(TryLoginInPageLocators.Toast)    # 替换为添加了显示等待的元素定位方法
@@ -386,18 +467,42 @@ class CashInterfaceOpn(BasePage):
     """
     # 点击未读消息按钮
     def click_unread_message_btn(self):
+        """
+        点击未读消息按钮
+
+        Example
+        -------
+        >>> CashInterfaceOpn(self.driver).click_unread_message_btn()
+        """
         logging.info('==========click_unread_message_btn==========')
         ele = self.get_presence_element(CashInterface.UreadMessageBtn)
         ele.click()
 
-    # 等待Toast消息消失
+    # 等待Toast消息提示框消失
     def wait_toast_disappear(self):
+        """
+        等待Toast消息提示框消失
+
+        Example
+        -------
+        >>> CashInterfaceOpn(self.driver).wait_toast_disappear()
+        """
         logging.info('==========wait_toast_disappear==========')
         ele = self.get_presence_until_not_element(CashInterface.Toast)
 
 
     # 点击指定序号的“分类”按钮，并获得其分类名：
-    def click_category_btn(self, category_num) -> str:
+    def click_category_btn(self, category_num: str) -> str:
+        """
+        点击指定序号的“分类”按钮，并获得其分类名
+
+        :param str category_num: 分类序号
+
+        Example
+        -------
+        >>> category_num = "1"
+        >>> CashInterfaceOpn(self.driver).click_category_btn(category_num)
+        """
         logging.info('==========click_category_btn==========')
         eles = self.get_elements(CashInterface.CategoryList)
         eles[category_num].click()
@@ -406,6 +511,13 @@ class CashInterfaceOpn(BasePage):
 
     # 点击某一分类下的“新增商品”按钮
     def click_add_product_btn(self):
+        """
+        点击某一分类下的“新增商品”按钮
+
+        Example
+        -------
+        >>> CashInterfaceOpn(self.driver).click_add_product_btn()
+        """
         logging.info('==========click_add_product_btn==========')
         while True:
             eles = self.get_elements(CashInterface.GoodsList)
@@ -429,6 +541,14 @@ class CashInterfaceOpn(BasePage):
 
     # 获取指定分类序号下,最新添加的商品名和商品售价
     def get_new_product_name_price(self) -> tuple:
+        """
+        获取指定分类序号下,最新添加的商品名和商品售价
+        （最新添加的商品位于对应分类列表中的倒数第二个元素）
+
+        Example
+        -------
+        >>> CashInterfaceOpn(self.driver).get_new_product_name_price()
+        """
         logging.info('==========get_new_product_name_price==========')
         while True:
             eles = self.get_elements(CashInterface.GoodsList)
@@ -471,36 +591,97 @@ class CashInterfaceOpn(BasePage):
 
     # 点击“点击选择会员”按钮
     def click_select_member_btn(self):
+        """
+        点击“点击选择会员”按钮
+
+        Example
+        -------
+        >>> CashInterfaceOpn(self.driver).click_select_member_btn()
+        """
         logging.info('==========click_select_member_btn==========')
         ele = self.get_presence_element(CashInterface.SelectMemberBtn)
         ele.click()
 
-    # 获取当前分类下的商品列表的元素个数
+    # 获取当前分类下的商品列表中，显示在屏幕中的商品个数（不是该列表的所有商品）
     def get_goods_list_num(self) -> int:
+        """
+        获取当前分类下的商品列表中，显示在屏幕中的商品个数（不是该列表的所有商品）
+
+        :return: 商品个数
+
+        Example
+        -------
+        >>> trade_num = CashInterfaceOpn(self.driver).get_goods_list_num()
+        >>> print(trade_num)
+        >>> # 20
+        """
         logging.info('==========get_goods_list_num==========')
         eles = self.get_elements(CashInterface.GoodsList)
         return len(eles)
 
     # 点击指定序号的商品
-    def click_goods_btn(self, goods_num):
+    def click_goods_btn(self, goods_num: int):
+        """
+        点击指定序号的商品
+
+        :param int goods_num:  当前分类下的商品列表中，显示在屏幕中的需要选中的商品序号
+
+        Example
+        -------
+        >>> goods_num = 10 # 点击显示在当前屏幕中的第十件商品
+        >>> CashInterfaceOpn(self.driver).click_goods_btn(goods_num)
+        """
         logging.info('==========click_goods_btn==========')
         eles = self.get_elements(CashInterface.GoodsList)
         eles[goods_num - 1].click()
 
     # 获取指定序号的商品名
-    def get_goods_name(self, goods_num) -> str:
+    def get_goods_name(self, goods_num: int) -> str:
+        """
+        获取指定序号的商品名
+
+        :param int goods_num: 当前分类下的商品列表中，显示在屏幕中的需要选中的商品序号
+        :return: 指定序号的商品名
+
+        Example
+        -------
+        >>> goods_num = 10 # 点击显示在当前屏幕中的第十件商品
+        >>> good_name = CashInterfaceOpn(self.driver).get_goods_name(goods_num)
+        >>> print(good_name)    # “第十件商品的商品名”
+        """
         logging.info('==========get_goods_name==========')
         eles = self.get_elements(CashInterface.GoodsList)
         return self.get_presence_element(locator=CashInterface.GoodsNameText, element=eles[goods_num - 1]).get_attribute("text")
 
     # 获取指定序号的商品价格
-    def get_goods_price(self, goods_num) -> str:
+    def get_goods_price(self, goods_num: int) -> str:
+        """
+        获取指定序号的商品价格
+
+        :param int goods_num: 当前分类下的商品列表中，显示在屏幕中的需要选中的商品序号
+        :return: 指定序号的商品价格
+
+        Example
+        -------
+        >>> goods_num = 10 # 点击显示在当前屏幕中的第十件商品
+        >>> good_name = CashInterfaceOpn(self.driver).get_goods_price(goods_num)
+        >>> print(good_name)    # “第十件商品的商品价格”
+        """
         logging.info('==========get_goods_price==========')
         eles = self.get_elements(CashInterface.GoodsList)
         return self.get_presence_element(locator=CashInterface.GoodsPriceText, element=eles[goods_num - 1]).get_attribute("text").split('￥')[-1] # 去掉符号后提取数字
 
     # 获取“订单”视图框的大小，并返回该视图框左上角和右下角的坐标值，即"[480,92][1440,1080]"
     def get_order_view_size(self) -> tuple:
+        """
+         获取“订单”视图框的大小，并返回该视图框左上角和右下角的坐标值，即"[480,92][1440,1080]"
+
+        :return: “订单列表”视图框左上角个右下角的坐标对
+
+        Example
+        -------
+        >>> top_left_x, top_left_y, lower_right_x, lower_right_y = CashInterfaceOpn(self.driver).get_order_view_size()
+        """
         logging.info('==========get_order_view_size==========')
         ele = self.get_presence_element(CashInterface.OrderView)
         ele_bounds = ele.get_attribute('bounds')
@@ -512,11 +693,27 @@ class CashInterfaceOpn(BasePage):
 
     # 获取当前屏幕中订单视图框内所有商品的序号的元素集合
     def get_goods_num_list(self) -> list:
+        """
+         获取显示在当前屏幕中的，“订单列表”视图框内所有商品序号的元素列表集合
+
+        :return: 显示在当前屏幕中的，“订单列表”视图框内所有商品序号的元素列表集合
+
+        Example
+        -------
+        >>> good_num_list = CashInterfaceOpn(self.driver).get_goods_num_list()
+        """
         logging.info('==========get_goods_num_list==========')
         return self.get_elements(CashInterface.OrderViewGoodsNums)
     
     # 将订单列表滑动到顶部
     def scroll_order_list_to_top(self):
+        """
+        将“订单列表”视图框滑动到列表的顶部
+
+        Example
+        -------
+        >>> CashInterfaceOpn(self.driver).scroll_order_list_to_top()
+        """
         logging.info('==========scroll_order_list_to_top==========')
         # 获取“订单”视图框列表的大小，得到视图框左上角和右下角的坐标值，即"[480,92][1440,1080]"
         top_left_x, top_left_y, lower_right_x, lower_right_y = self.get_order_view_size()
@@ -540,11 +737,22 @@ class CashInterfaceOpn(BasePage):
                                                end_y=(lower_right_y * 0.9) / size_dict['height'], duration=2)
 
     # 将订单列表滑动到底部，并统计订单中包含的商品名和商品价格，返回两个字典，分别为订单中的商品名和商品价格
-    def scroll_order_list_to_bottom(self, product_names_in_order, product_prices_in_order) -> tuple:
+    def scroll_order_list_to_bottom(self, product_names_in_order: dict, product_prices_in_order: dict) -> tuple[dict, dict]:
         """
-        :param product_names_in_order: product_names_in_order = OrderedDict()  # 用于记录订单中商品的名字
-        :param product_prices_in_order: product_prices_in_order = OrderedDict()  # 用于记录订单中商品的价格
-        :return: product_names_in_order, product_prices_in_order
+        将“订单列表”视图框从列表的顶部滑动到列表的底部，统计“订单列表”中所有的商品的商品名和商品价格
+
+        :param dict product_names_in_order: product_names_in_order = OrderedDict()  # 用于记录订单列表中商品的名字
+        :param dict product_prices_in_order: product_prices_in_order = OrderedDict()  # 用于记录订单列表中商品的价格
+        :return: 订单列表中所有的商品的商品名， 订单列表中所有商品的商品价格
+
+        Example
+        -------
+        >>> product_names_in_order = OrderedDict()  # 用于记录订单列表中商品的名字
+        >>> product_prices_in_order = OrderedDict()  # 用于记录订单列表中商品的价格
+        >>> product_names_in_order, product_prices_in_order = CashInterfaceOpn(self.driver).scroll_order_list_to_bottom(product_names_in_order, product_prices_in_order)
+        >>> print(product_names_in_order, product_prices_in_order)
+        >>> # "商品1", "价格1"
+        >>> # "商品2", "价格2"
         """
         logging.info('==========scroll_order_list_to_bottom==========')
         # 获取“订单”视图框列表的大小，得到视图框左上角和右下角的坐标值，即"[480,92][1440,1080]"
@@ -595,33 +803,22 @@ class CashInterfaceOpn(BasePage):
         
         return product_names_in_order, product_prices_in_order
 
-    # 点击“收银”按钮
-    def click_cash_btn(self):
-        logging.info('==========click_cash_btn==========')
-        self.get_clickable_element(CashInterface.CashBtn).click()
-
-    # 获取“实收金额”文本值
-    def get_receipt_price_text(self) -> str:
-        logging.info('==========get_receipt_price_text==========')
-        return self.get_presence_element(CashInterface.ReceiptPriceText).text.removeprefix("￥")  # “实收金额”的文本形式为“￥1255”，所以需要移除前缀
-
-    # 获取“总额”文本值
-    def get_total_price_text(self) -> str:
-        logging.info('==========get_total_price_text==========')
-        return self.get_presence_element(CashInterface.TotalPriceText).text.removeprefix("总额")  # “总额”的文本形式为“总额1255”，所以需要移除前缀
-
-    # 获取“折扣”文本值
-    def get_discount_price_text(self) -> str:
-        logging.info('==========get_discount_text==========')
-        return self.get_presence_element(CashInterface.DiscountText).text.removeprefix("折扣")  # “折扣”的文本形式为“折扣1255”，所以需要移除前缀
-
-    # 在订单栏下方点击“优惠券”图标按钮
-    def click_coupon_btn(self):
-        logging.info('==========click_coupon_btn==========')
-        self.get_clickable_element(CashInterface.CouponBtn).click()
-
     # 统计在订单中的商品的折扣值列表
     def get_discount_value(self, product_discounts_in_order: dict):
+        """
+        将“订单列表”视图框从列表滑动到列表的底部，统计“订单列表”中所有的商品的折扣值
+
+        :param dict product_discounts_in_order: product_discounts_in_order = OrderedDict()  # 用于记录订单列表中商品的折扣值
+        :return: 订单列表中所有的商品的折扣值
+
+        Example
+        -------
+        >>> product_discounts_in_order = OrderedDict()  # 用于记录订单列表中商品的折扣值
+        >>> product_discounts_in_order = CashInterfaceOpn(self.driver).get_discount_value(product_discounts_in_order)
+        >>> print(product_discounts_in_order)
+        >>> # "商品1的折扣值"
+        >>> # "商品2的折扣值"
+        """
         logging.info('==========get_discount_value==========')
         # 获取“订单”视图框列表的大小，得到视图框左上角和右下角的坐标值，即"[480,92][1440,1080]"
         top_left_x, top_left_y, lower_right_x, lower_right_y = self.get_order_view_size()
@@ -668,7 +865,85 @@ class CashInterfaceOpn(BasePage):
 
         return product_discounts_in_order
 
+        # 点击“收银”按钮
 
+    def click_cash_btn(self):
+        """
+        点击“收银”按钮
+
+        Example
+        -------
+        >>> CashInterfaceOpn(self.driver).click_cash_btn()
+        """
+        logging.info('==========click_cash_btn==========')
+        self.get_clickable_element(CashInterface.CashBtn).click()
+
+        # 获取“实收金额”文本值
+
+    def get_receipt_price_text(self) -> str:
+        """
+        获取“实收金额”文本值
+
+        :return: 实收金额
+
+        Example
+        -------
+        >>> receipt_price = CashInterfaceOpn(self.driver).get_receipt_price_text()
+        >>> print("实收金额为：{}".format())
+        >>> # 实收金额为：5
+        """
+        logging.info('==========get_receipt_price_text==========')
+        return self.get_presence_element(CashInterface.ReceiptPriceText).text.removeprefix(
+            "￥")  # “实收金额”的文本形式为“￥1255”，所以需要移除前缀
+
+        # 获取“总金额”文本值
+
+    def get_total_price_text(self) -> str:
+        """
+        获取“总金额”文本值
+
+        :return: 总金额
+
+        Example
+        -------
+        >>> total_price = CashInterfaceOpn(self.driver).get_total_price_text()
+        >>> print("总金额为：{}".format())
+        >>> # 总金额为：5
+        """
+        logging.info('==========get_total_price_text==========')
+        return self.get_presence_element(CashInterface.TotalPriceText).text.removeprefix(
+            "总额")  # “总额”的文本形式为“总额1255”，所以需要移除前缀
+
+        # 获取“折扣金额”文本值
+
+    def get_discount_price_text(self) -> str:
+        """
+        获取“折扣金额”文本值
+
+        :return: 折扣金额
+
+        Example
+        -------
+        >>> discount_price = CashInterfaceOpn(self.driver).get_discount_price_text()
+        >>> print("折扣金额为：{}".format())
+        >>> # 折扣金额为：5
+        """
+        logging.info('==========get_discount_text==========')
+        return self.get_presence_element(CashInterface.DiscountText).text.removeprefix(
+            "折扣")  # “折扣”的文本形式为“折扣1255”，所以需要移除前缀
+
+        # 点击订单栏下方“优惠券”图标按钮
+
+    def click_coupon_btn(self):
+        """
+        点击订单栏下方“优惠券”图标按钮
+
+        Example
+        -------
+        >>> CashInterfaceOpn(self.driver).click_coupon_btn()
+        """
+        logging.info('==========click_coupon_btn==========')
+        self.get_clickable_element(CashInterface.CouponBtn).click()
 
 class SelectCouponOpn(BasePage):
     """
@@ -676,21 +951,49 @@ class SelectCouponOpn(BasePage):
     """
     # 点击“普通优惠券”按钮
     def click_normal_coupon_btn(self):
+        """
+        点击“普通优惠券”按钮
+
+        Example
+        -------
+        >>> SelectCouponOpn(self.driver).click_normal_coupon_btn()
+        """
         logging.info('==========click_normal_coupon_btn==========')
         self.get_clickable_element(SelectCouponInterface.GeneralCouponBtn).click()
 
     # 点击“通用券码”按钮
     def click_common_coupon_btn(self):
+        """
+        点击“通用券码”按钮
+
+        Example
+        -------
+        >>> SelectCouponOpn(self.driver).click_common_coupon_btn()
+        """
         logging.info('==========click_common_coupon_btn==========')
         self.get_clickable_element(SelectCouponInterface.CommentCouponBtn).click()
 
     # 点击“券扫码下单”按钮
     def click_coupon_scan_btn(self):
+        """
+        点击“券扫码下单”按钮
+
+        Example
+        -------
+        >>> SelectCouponOpn(self.driver).click_coupon_scan_btn()
+        """
         logging.info('==========click_coupon_scan_btn==========')
         self.get_clickable_element(SelectCouponInterface.CouponScanBtn).click()
 
     # 获得“优惠券列表”视图框大小，并返回其左上角和右下角的坐标值
-    def get_coupon_list_view_size(self) -> tuple:
+    def get_coupon_list_view_size(self) -> tuple[int, int, int, int]:
+        """
+        获得“优惠券列表”视图框大小，并返回其左上角和右下角的坐标值
+
+        Example
+        -------
+        >>> top_left_x, top_left_y, lower_right_x, lower_right_y = SelectCouponOpn(self.driver).get_coupon_list_view_size()
+        """
         logging.info('==========get_coupon_list_view_size==========')
         ele = self.get_presence_element(SelectCouponInterface.CouponListView)
         ele_bounds = ele.get_attribute('bounds')
@@ -703,24 +1006,51 @@ class SelectCouponOpn(BasePage):
 
     # 点击指定序号的“优惠券列表”中优惠券的“添加”按钮
     def click_coupon_add_btn(self, coupon_id: int):
+        """
+        在“优惠券列表”中，点击显示在当前屏幕中的优惠券元素的“添加”按钮
+
+        :param coupon_id: 显示在当前屏幕中的优惠券的序号
+
+        Example
+        -------
+        >>> coupon_id = 1   # 添加列表中的第一个优惠券
+        >>> SelectCouponOpn(self.driver).click_coupon_add_btn(coupon_id)
+        """
         logging.info('==========click_coupon_add_btn==========')
         eles = self.get_elements(SelectCouponInterface.CouponListView)
-        eles[coupon_id].click()
+        eles[coupon_id - 1].click()
 
     # 点击指定序号的“优惠券列表”中优惠券的“删除”按钮
     def click_coupon_delete_btn(self, coupon_id: int):
+        """
+        在“优惠券列表”中，点击显示在当前屏幕中的优惠券元素的“删除”按钮
+
+        :param int coupon_id: 显示在当前屏幕中的优惠券的序号
+
+        Example
+        -------
+        >>> coupon_id = 1   # 删除列表中的第一个优惠券
+        >>> SelectCouponOpn(self.driver).click_coupon_delete_btn(coupon_id)
+        """
         logging.info('==========click_coupon_delete_btn==========')
         eles = self.get_elements(SelectCouponInterface.CouponListView)
-        eles[coupon_id].click()
+        eles[coupon_id - 1].click()
 
     # 查找并点击指定次数和名称的优惠券
     def find_and_click_coupon(self, coupon_prefix_name: str, coupon_num: int, is_add: bool):
         """
-            查找并点击指定次数和名称的优惠券
+        查找并点击指定次数和名称的优惠券
 
-            :param coupon_prefix_name: 所要查找的优惠券的名称的前缀
-            :param coupon_num:  优惠券添加/删除个数
-            :param is_add:  判断是添加还是删除优惠券，True为添加优惠券，False为删除优惠券
+        :param str coupon_prefix_name: 所要查找的优惠券的名称的前缀
+        :param int coupon_num:  优惠券添加/删除个数
+        :param bool is_add:  判断是添加还是删除优惠券，True为添加优惠券，False为删除优惠券
+
+        Example
+        -------
+        >>> coupon_prefix_name = "20减5"   # 查找以"20减5"名称开头的优惠券
+        >>> coupon_num = 1  # 只添加一张该优惠券
+        >>> is_add = True   # 添加优惠券
+        >>> SelectCouponOpn(self.driver).click_coupon_delete_btn(coupon_prefix_name, coupon_num, is_add)
         """
 
         logging.info('==========find_and_click_coupon==========')
@@ -773,6 +1103,13 @@ class SelectCouponOpn(BasePage):
 
     # 点击“确定”按钮
     def click_confirm_btn(self):
+        """
+        点击“确定”按钮
+
+        Example
+        -------
+        >>> SelectCouponOpn(self.driver).click_confirm_btn()
+        """
         logging.info('==========click_confirm_btn==========')
         self.get_clickable_element(SelectCouponInterface.ConfirmBtn).click()
 
@@ -782,39 +1119,95 @@ class NewProductPageOpn(BasePage):
     """
     # 在“新增商品”页面，点击“生成”按钮，生成随机条码
     def click_generate_btn(self):
+        """
+        在“新增商品”页面，点击“生成”按钮，生成随机条码
+
+        Example
+        -------
+        >>> NewProductPageOpn(self.driver).click_generate_btn()
+        """
         logging.info('==========click_generate_btn==========')
         ele = self.get_clickable_element(NewProductPage.GenerateBtn)
         ele.click()
 
     # 获取商品条码文本框
     def get_barcode_input_text(self) -> str:
+        """
+        获取商品条码文本框
+
+        Example
+        -------
+        >>> barcode = NewProductPageOpn(self.driver).get_barcode_input_text()
+        >>> print("商品条码为：{}".format(barcode))
+        >>> # 商品条码为：5423523
+        """
         logging.info('==========get_barcode_input_text==========')
         ele = self.get_visible_element(NewProductPage.BarcodeInput)
         return ele.text
 
     # 在“品名”输入框，输入商品名
-    def input_product_name(self, product_name):
+    def input_product_name(self, product_name: str):
+        """
+        在“品名”输入框，输入商品名
+
+        :param str product_name: 新增商品的商品名
+
+        Example
+        -------
+        >>> product_name = "新增商品名1"
+        >>> NewProductPageOpn(self.driver).input_product_name(product_name)
+        """
         logging.info('==========input_product_name==========')
         ele = self.get_visible_element(NewProductPage.NameInput)
         ele.clear()
         ele.send_keys(product_name)
 
     # 在“库存”输入框，输入库存
-    def input_stock(self, stock):
+    def input_stock(self, stock: int):
+        """
+        在“库存”输入框，输入库存
+
+        :param int stock: 新增商品的库存
+
+        Example
+        -------
+        >>> stock = 1
+        >>> NewProductPageOpn(self.driver).input_stock(stock)
+        """
         logging.info('==========input_stock==========')
         ele = self.get_visible_element(NewProductPage.StockInput)
         ele.clear()
         ele.send_keys(stock)
 
     # 在“售价”输入框，输入售价
-    def input_price(self, price):
+    def input_price(self, price: float):
+        """
+        在“售价”输入框，输入售价
+
+        :param float price: 新增商品的售价
+
+        Example
+        -------
+        >>> price = 13.2
+        >>> NewProductPageOpn(self.driver).input_price(price)
+        """
         logging.info('==========input_price==========')
         ele = self.get_visible_element(NewProductPage.PriceInput)
         ele.clear()
         ele.send_keys(price)
 
     # 在“进价”输入框，输入进价
-    def input_purchase_price(self, purchase_price):
+    def input_purchase_price(self, purchase_price: float):
+        """
+        在“进价”输入框，输入进价
+
+        :param float purchase_price: 新增商品的进价
+
+        Example
+        -------
+        >>> purchase_price = 10.2
+        >>> NewProductPageOpn(self.driver).input_purchase_price(purchase_price)
+        """
         logging.info('==========input_purchase_price==========')
         ele = self.get_visible_element(NewProductPage.PurchasePriceInput)
         ele.clear()
@@ -822,31 +1215,69 @@ class NewProductPageOpn(BasePage):
 
     # 点击“保存”按钮,保存新增商品
     def click_save_btn(self):
+        """
+        点击“保存”按钮,保存新增商品
+
+        Example
+        -------
+        >>> NewProductPageOpn(self.driver).click_save_btn()
+        """
         logging.info('==========click_save_btn==========')
         ele = self.get_clickable_element(NewProductPage.SaveBtn)
         ele.click()
 
 
-    # 点击“分类”下拉框
+    # 点击“分类”按钮，弹出分类下拉框
     def click_category_dropdown(self):
+        """
+        点击“分类”按钮，弹出分类下拉框
+
+        Example
+        -------
+        >>> NewProductPageOpn(self.driver).click_category_dropdown()
+        """
         logging.info('==========click_category_dropdown==========')
         ele = self.get_clickable_element(NewProductPage.CategoryDropdown)
         ele.click()
 
     # 在“分类”下拉框中，点击搜索栏并输入搜索内容
-    def input_category_search_input(self, search_content):
+    def input_category_search_input(self, search_content: str):
+        """
+        在“分类”下拉框中，点击搜索栏并输入搜索内容
+
+        :param str search_content: 在搜索框内输入要搜索的内容
+
+        Example
+        -------
+        >>> search_content = "搜索商品1"
+        >>> NewProductPageOpn(self.driver).input_category_search_input(search_content)
+        """
         logging.info('==========input_category_search_input==========')
         ele = self.get_presence_element(NewProductPage.CategorySearchInput)
         ele.send_keys(search_content)
 
     # 在“分类”下拉框中，点击搜索结果集合中第一条搜索结果
     def click_search_result(self):
+        """
+        在“分类”下拉框中，点击搜索结果集合中第一条搜索结果
+
+        Example
+        -------
+        >>> NewProductPageOpn(self.driver).click_search_result()
+        """
         logging.info('==========click_search_result==========')
         ele = self.get_clickable_element(NewProductPage.CategorySearchResult)
         ele.click()
 
     # 在“分类”下拉框中，点击“保存”按钮
     def click_category_save_btn(self):
+        """
+        在“分类”下拉框中，点击“保存”按钮
+
+        Example
+        -------
+        >>> NewProductPageOpn(self.driver).click_category_save_btn()
+        """
         logging.info('==========click_save_btn==========')
         ele = self.get_clickable_element(NewProductPage.CategorySearchConfirmBtn)
         ele.click()
@@ -855,32 +1286,71 @@ class MessageCenterOpn(BasePage):
     """
         消息中心元素操作
     """
-    # 点击库存按钮
+    # 点击“库存预警”按钮
     def click_stock_btn(self):
+        """
+        点击“库存预警”按钮
+
+        Example
+        -------
+        >>> MessageCenterOpn(self.driver).click_stock_btn()
+        """
         logging.info('==========click_stock_btn==========')
         ele = self.get_presence_element(MessageCenterPageLocators.StockWarningBtn)
         ele.click()
 
-    # 获得“库存预警”的数量
+    # 获得“库存预警”版块的待处理通知的数量
     def get_stock_warning_num(self) -> int:
+        """
+        获得“库存预警”版块的待处理通知的数量
+
+        :return: “库存预警”版块的待处理通知的数量
+
+        Example
+        -------
+        >>> stock_warning_num = MessageCenterOpn(self.driver).get_stock_warning_num()
+        >>> print("'库存预警'模块待处理通知数量为：{}".formart(stock_warning_num))
+        >>> # '库存预警'模块待处理通知数量为：4
+        """
         logging.info('==========get_stock_warning_num==========')
         ele = self.get_presence_element(MessageCenterPageLocators.StockWarningCount)
         return int(ele.text)
 
     # 点击“全选”按钮
     def click_select_all_btn(self):
+        """
+        点击某一消息模块下，待处理消息通知的“全选”按钮
+
+        Example
+        -------
+        >>> MessageCenterOpn(self.driver).click_select_all_btn()
+        """
         logging.info('==========click_select_all_btn==========')
         ele = self.get_presence_element(MessageCenterPageLocators.SelectAllBtn)
         ele.click()
 
     # 点击“忽略此商品”按钮
     def click_ignore_this_goods_btn(self):
+        """
+        点击“消息中心”模块的“忽略此商品”按钮
+
+        Example
+        -------
+        >>> MessageCenterOpn(self.driver).click_ignore_this_goods_btn()
+        """
         logging.info('==========click_ignore_this_goods_btn==========')
         ele = self.get_presence_element(MessageCenterPageLocators.IgnoreThisGoodsBtn)
         ele.click()
 
     # 点击“返回”按钮
     def click_back_btn(self):
+        """
+        在“消息中心”模块，点击“返回”按钮
+
+        Example
+        -------
+        >>> MessageCenterOpn(self.driver).click_back_btn()
+        """
         logging.info('==========click_back_btn==========')
         ele = self.get_presence_element(MessageCenterPageLocators.BackBtn)
         ele.click()
@@ -891,102 +1361,221 @@ class SelectMemberOpn(BasePage):
     """
     # 在搜索框输入数字“1”
     def input_search_input_one(self):
+        """
+        点击键盘的数字”1“
+
+        Example
+        -------
+        >>> SelectMemberOpn(self.driver).input_search_input_one()
+        """
         logging.info('==========input_search_input_one==========')
         ele = self.get_presence_element(SelectMemberPage.OneBtn)
         ele.click()
 
     # 在搜索框输入数字“2”
     def input_search_input_two(self):
+        """
+        点击键盘的数字”2“
+
+        Example
+        -------
+        >>> SelectMemberOpn(self.driver).input_search_input_two()
+        """
         logging.info('==========input_search_input_two==========')
         ele = self.get_presence_element(SelectMemberPage.TwoBtn)
         ele.click()
 
     # 在搜索框输入数字“3”
     def input_search_input_three(self):
+        """
+        点击键盘的数字”3“
+
+        Example
+        -------
+        >>> SelectMemberOpn(self.driver).input_search_input_three()
+        """
         logging.info('==========input_search_input_three==========')
         ele = self.get_presence_element(SelectMemberPage.ThreeBtn)
         ele.click()
 
     # 在搜索框输入数字“4”
     def input_search_input_four(self):
+        """
+        点击键盘的数字”4“
+
+        Example
+        -------
+        >>> SelectMemberOpn(self.driver).input_search_input_four()
+        """
         logging.info('==========input_search_input_four==========')
         ele = self.get_presence_element(SelectMemberPage.FourBtn)
         ele.click()
 
     # 在搜索框输入数字“5”
     def input_search_input_five(self):
+        """
+        点击键盘的数字”5“
+
+        Example
+        -------
+        >>> SelectMemberOpn(self.driver).input_search_input_five()
+        """
         logging.info('==========input_search_input_five==========')
         ele = self.get_presence_element(SelectMemberPage.FiveBtn)
         ele.click()
 
     # 在搜索框输入数字“6”
     def input_search_input_six(self):
+        """
+        点击键盘的数字”6“
+
+        Example
+        -------
+        >>> SelectMemberOpn(self.driver).input_search_input_six()
+        """
         logging.info('==========input_search_input_six==========')
         ele = self.get_presence_element(SelectMemberPage.SixBtn)
         ele.click()
 
     # 在搜索框输入数字“7”
     def input_search_input_seven(self):
+        """
+        点击键盘的数字”7“
+
+        Example
+        -------
+        >>> SelectMemberOpn(self.driver).input_search_input_seven()
+        """
         logging.info('==========input_search_input_seven==========')
         ele = self.get_presence_element(SelectMemberPage.SevenBtn)
         ele.click()
 
     # 在搜索框输入数字“8”
     def input_search_input_eight(self):
+        """
+        点击键盘的数字”8“
+
+        Example
+        -------
+        >>> SelectMemberOpn(self.driver).input_search_input_eight()
+        """
         logging.info('==========input_search_input_eight==========')
         ele = self.get_presence_element(SelectMemberPage.EightBtn)
         ele.click()
 
     # 在搜索框输入数字“9”
     def input_search_input_nine(self):
+        """
+        点击键盘的数字”9“
+
+        Example
+        -------
+        >>> SelectMemberOpn(self.driver).input_search_input_nine()
+        """
         logging.info('==========input_search_input_nine==========')
         ele = self.get_presence_element(SelectMemberPage.NineBtn)
         ele.click()
 
     # 在搜索框输入数字“0”
     def input_search_input_zero(self):
+        """
+        点击键盘的数字”0“
+
+        Example
+        -------
+        >>> SelectMemberOpn(self.driver).input_search_input_zero()
+        """
         logging.info('==========input_search_input_zero==========')
         ele = self.get_presence_element(SelectMemberPage.ZeroBtn)
         ele.click()
 
     # 在搜索框输入数字“00”
     def input_search_input_double_zero(self):
+        """
+        点击键盘的数字”00“
+
+        Example
+        -------
+        >>> SelectMemberOpn(self.driver).input_search_input_double_zero()
+        """
         logging.info('==========input_search_input_double_zero==========')
         ele = self.get_presence_element(SelectMemberPage.ZeroZeroBtn)
         ele.click()
 
     # 在搜索框输入数字"."
     def input_search_input_dot(self):
+        """
+        点击键盘的数字”.“
+
+        Example
+        -------
+        >>> SelectMemberOpn(self.driver).input_search_input_dot()
+        """
         logging.info('==========input_search_input_dot==========')
         ele = self.get_presence_element(SelectMemberPage.DotBtn)
         ele.click()
 
     # 点击“删除”按钮
     def click_delete_btn(self):
+        """
+        点击“删除”按钮
+
+        Example
+        -------
+        >>> SelectMemberOpn(self.driver).click_delete_btn()
+        """
         logging.info('==========click_delete_btn==========')
         ele = self.get_presence_element(SelectMemberPage.DeleteBtn)
         ele.click()
 
     # 点击“确定”按钮
     def click_confirm_btn(self):
+        """
+        点击“确定”按钮
+
+        Example
+        -------
+        >>> SelectMemberOpn(self.driver).click_confirm_btn()
+        """
         logging.info('==========click_confirm_btn==========')
         ele = self.get_presence_element(SelectMemberPage.ConfirmBtn)
         ele.click()
 
     # 点击“添加会员”按钮
     def click_add_member_btn(self):
+        """
+        点击“添加会员”按钮
+
+        Example
+        -------
+        >>> SelectMemberOpn(self.driver).click_add_member_btn()
+        """
         logging.info('==========click_add_member_btn==========')
         ele = self.get_presence_element(SelectMemberPage.AddMemberBtn)
         ele.click()
 
     # 点击“扫描”按钮
     def click_scan_btn(self):
+        """
+        点击“扫描”按钮
+
+        Example
+        -------
+        >>> SelectMemberOpn(self.driver).click_scan_btn()
+        """
         logging.info('==========click_scan_btn==========')
         ele = self.get_presence_element(SelectMemberPage.ScanBtn)
         ele.click()
 
     # 点击“返回”按钮
     def click_back_btn(self):
+        """
+        点击“返回”按钮
+
+        Example
+        -------
+        >>> SelectMemberOpn(self.driver).click_back_btn()
+        """
         logging.info('==========click_back_btn==========')
         ele = self.get_presence_element(SelectMemberPage.BackBtn)
         ele.click()
@@ -997,36 +1586,84 @@ class MembershipDetailOpn(BasePage):
     """
     # 点击“充值”按钮
     def click_recharge_btn(self):
+        """
+        点击“充值”按钮
+
+        Example
+        -------
+        >>> MembershipDetailOpn(self.driver).click_recharge_btn()
+        """
         logging.info('==========click_recharge_btn==========')
         ele = self.get_presence_element(MembershipDetailsPage.RechargeBtn)
         ele.click()
 
     # 点击“选择会员”按钮
     def click_select_member_btn(self):
+        """
+        点击“选择会员”按钮
+
+        Example
+        -------
+        >>> MembershipDetailOpn(self.driver).click_select_member_btn()
+        """
         logging.info('==========click_select_member_btn==========')
         ele = self.get_presence_element(MembershipDetailsPage.SelectMemberBtn)
         ele.click()
 
     # 获取“余额”
-    def get_balance(self):
+    def get_balance(self) -> str:
+        """
+        获取“会员余额”
+
+        :return:  会员余额
+
+        Example
+        -------
+        >>> balance = MembershipDetailOpn(self.driver).get_balance()
+        >>> print("会员余额为：{}".format(balance))
+        >>> # 会员余额为：5.4
+        """
         logging.info('==========get_balance==========')
         ele = self.get_presence_element(MembershipDetailsPage.BalanceText)
         return ele.text
 
     # 点击“优惠券查看”按钮
     def click_coupon_btn(self):
+        """
+        点击“优惠券查看”按钮
+
+        Example
+        -------
+        >>> MembershipDetailOpn(self.driver).click_coupon_btn()
+        """
         logging.info('==========click_coupon_btn==========')
         ele = self.get_presence_element(MembershipDetailsPage.CouponViewBtn)
         ele.click()
 
     # 获取“积分”
-    def get_points(self):
+    def get_points(self) -> str:
+        """
+        获取“会员积分”
+
+        Example
+        -------
+        >>> points = MembershipDetailOpn(self.driver).get_points()
+        >>> print("会员积分为：{}".format(points))
+        >>> # 会员积分为：5.4
+        """
         logging.info('==========get_points==========')
         ele = self.get_presence_element(MembershipDetailsPage.PointsText)
         return ele.text
 
     # 点击“积分兑换”按钮
     def click_points_exchange_btn(self):
+        """
+        点击“积分兑换”按钮
+
+        Example
+        -------
+        >>> MembershipDetailOpn(self.driver).click_points_exchange_btn()
+        """
         logging.info('==========click_points_exchange_btn==========')
         ele = self.get_presence_element(MembershipDetailsPage.PointsExchangeBtn)
         ele.click()
@@ -1036,61 +1673,140 @@ class MemberRechargeOpn(BasePage):
         会员充值页面元素定位操作
     """
     # 选择指定充值项
-    def select_recharge_item(self, item_no):
+    def select_recharge_item(self, item_no: int):
+        """
+        根据给定的充值项序号，选择指定的充值项（从序号0开始计算）
+
+        :param int item_no: 充值项序号
+
+        Example
+        -------
+        >>> item_no = 1 # 选择第1项充值项
+        >>> MemberRechargeOpn(self.driver).select_recharge_item(item_no)
+        """
         logging.info('==========select_recharge_item==========')
         eles = self.get_elements(MemberRechargePage.RechargeItemList)
         eles[item_no].click()
 
     # 点击“现金”充值按钮
     def click_cash_btn(self):
+        """
+        点击“现金”充值按钮
+
+        Example
+        -------
+        >>> MemberRechargeOpn(self.driver).click_cash_btn()
+        """
         logging.info('==========click_cash_btn==========')
         ele = self.get_presence_element(MemberRechargePage.CashBtn)
         ele.click()
 
     # 点击“银联卡”充值按钮
     def click_union_btn(self):
+        """
+        点击“银联卡”充值按钮
+
+        Example
+        -------
+        >>> MemberRechargeOpn(self.driver).click_union_btn()
+        """
         logging.info('==========click_union_btn==========')
         ele = self.get_presence_element(MemberRechargePage.UnionPayBtn)
         ele.click()
 
     # 点击“收款码”充值按钮
     def click_qrcode_btn(self):
+        """
+        点击“收款码”充值按钮
+
+        Example
+        -------
+        >>> MemberRechargeOpn(self.driver).click_qrcode_btn()
+        """
         logging.info('==========click_qrcode_btn==========')
         ele = self.get_presence_element(MemberRechargePage.QRCodeBtn)
         ele.click()
 
     # 点击“支付宝”充值按钮
     def click_alipay_btn(self):
+        """
+        点击“支付宝”充值按钮
+
+        Example
+        -------
+        >>> MemberRechargeOpn(self.driver).click_alipay_btn()
+        """
         logging.info('==========click_alipay_btn==========')
         ele = self.get_presence_element(MemberRechargePage.AliPayBtn)
         ele.click()
 
     # 点击“微信”充值按钮
     def click_wechat_btn(self):
+        """
+        点击“微信”充值按钮
+
+        Example
+        -------
+        >>> MemberRechargeOpn(self.driver).click_wechat_btn()
+        """
         logging.info('==========click_wechat_btn==========')
         ele = self.get_presence_element(MemberRechargePage.WechatBtn)
         ele.click()
 
     # 点击“三福支付”充值按钮
     def click_sfpay_btn(self):
+        """
+        点击“三福支付”充值按钮
+
+        Example
+        -------
+        >>> MemberRechargeOpn(self.driver).click_sfpay_btn()
+        """
         logging.info('==========click_sfpay_btn==========')
         ele = self.get_presence_element(MemberRechargePage.SFPayBtn)
         ele.click()
 
     # 点击“确认充值”按钮
     def click_confirm_btn(self):
+        """
+        点击“确认充值”按钮
+
+        Example
+        -------
+        >>> MemberRechargeOpn(self.driver).click_confirm_btn()
+        """
         logging.info('==========click_confirm_btn==========')
         ele = self.get_presence_element(MemberRechargePage.ConfirmRechargeBtn)
         ele.click()
 
     # 获取“充值成功后打印小票”选择框的状态，通过checked属性进行判断
-    def get_print_receipt_status(self):
+    def get_print_receipt_status(self) -> bool:
+        """
+        获取“充值成功后打印小票”选择框的状态，通过checked属性进行判断
+
+        :return: “充值成功后打印小票”选择框被选择的状态
+
+        Example
+        -------
+        >>> checked = MemberRechargeOpn(self.driver).get_print_receipt_status()
+        >>> if checked == True:
+        >>>    print("该选择框被选中")
+        >>> else:
+        >>>    print("该选择框未被选中")
+        """
         logging.info('==========get_print_receipt_status==========')
         ele = self.get_presence_element(MemberRechargePage.PrintReceiptCheckBox)
         return ele.get_attribute('checked')
 
     # 点击“充值成功后打印小票”选择框
     def click_print_receipt_checkbox(self):
+        """
+        点击“充值成功后打印小票”选择框
+
+        Example
+        -------
+        >>> MemberRechargeOpn(self.driver).click_print_receipt_checkbox()
+        """
         logging.info('==========click_print_receipt_checkbox==========')
         ele = self.get_presence_element(MemberRechargePage.PrintReceiptCheckBox)
         ele.click()
@@ -1101,6 +1817,13 @@ class CouponOpn(BasePage):
     """
     # 点击“不可用券”按钮
     def click_unavailable_coupon_btn(self):
+        """
+        点击“不可用券”按钮
+
+        Example
+        -------
+        >>> CouponOpn(self.driver).click_unavailable_coupon_btn()
+        """
         logging.info('==========click_unavailable_coupon_btn==========')
         ele = self.get_presence_element(CouponPage.UnavailableCouponBtn)
         ele.click()
@@ -1112,7 +1835,13 @@ class NotAvailableCouponOpn(BasePage):
     # 获取“未生效优惠券”视图框列表的大小，并返回视图框左上角和右下角的坐标值
     def get_not_available_coupon_view_size(self):
         """
-            :return: 视图框左上角x轴的值、视图框左上角y轴的值、视图框右下角x轴的值、视图框右下角y轴的值
+        获取“未生效优惠券”视图框列表的大小，并返回视图框左上角和右下角的坐标值
+
+        :return: 视图框左上角x轴的值、视图框左上角y轴的值、视图框右下角x轴的值、视图框右下角y轴的值
+
+        Example
+        -------
+        >>> top_left_x, top_left_y, lower_right_x, lower_right_y = NotAvailableCouponOpn(self.driver).get_not_available_coupon_view_size()
         """
         logging.info('==========get_not_available_coupon_view_size==========')
         ele = self.get_presence_element(NotAvailableCouponPage.UnavailableCouponView)
@@ -1127,6 +1856,17 @@ class NotAvailableCouponOpn(BasePage):
 
     # 获取当前显示在“未生效优惠券”视图框中，优惠券号码元素列表
     def get_not_available_coupon_number_list(self):
+        """
+        获取在“未生效优惠券”视图框里，显示在当前屏幕中的优惠券编号的元素列表
+
+        :return:  优惠券编号的元素列表
+
+        Example
+        -------
+        >>> available_coupon_number_eles_list = NotAvailableCouponOpn(self.driver).get_not_available_coupon_number_list()
+        >>> for available_coupon_number_ele in available_coupon_number_eles_list:
+        >>>     print(available_coupon_number_ele.text) # 输出每一张未生效优惠券的编号
+        """
         logging.info('==========get_not_available_coupon_number_list==========')
         eles = self.get_elements(NotAvailableCouponPage.UnavailableCouponNum)
         return eles
@@ -1135,34 +1875,85 @@ class PointExchangeOpn(BasePage):
     """
         积分兑换页面元素相关操作
     """
-
     # 获取“积分兑换商品”列表元素
     def get_points_exchange_list(self):
+        """
+        获取“积分兑换商品”视图框列表中，显示在当前屏幕中的元素列表
+
+        :return: “积分兑换商品”视图框列表中，显示在当前屏幕中的元素列表
+
+        Example
+        -------
+        >>> points_exchange_eles_list = PointExchangeOpn(self.driver).get_points_exchange_list()
+        """
         logging.info('==========get_points_exchange_list==========')
         eles = self.get_elements(PointExchangePage.PointsExchangeViewElem)
         return eles
 
     # 点击“积分兑换商品”列表中，指定序号的元素
-    def click_points_exchange_item(self, item_no):
+    def click_points_exchange_item(self, item_no: int):
+        """
+        获取“积分兑换商品”视图框列表中，显示在当前屏幕中的指定商品的序号的元素
+
+        :param int item_no: 当前屏幕中的指定商品的序号（从0开始计算）
+
+        Example
+        -------
+        >>> item_no = 3 # 选择当前屏幕中，序号第三的元素
+        >>> PointExchangeOpn(self.driver).click_points_exchange_item()
+        """
         logging.info('==========click_points_exchange_item==========')
         eles = self.get_points_exchange_list()
         eles[item_no].click()
 
     # 获取“积分兑换商品”列表中，指定序号元素的积分值
-    def get_points_exchange_item_points(self, item_no):
+    def get_points_exchange_item_points(self, item_no: int) -> str:
+        """
+        获取“积分兑换商品”视图框列表中，显示在当前屏幕中的指定商品的序号的元素的积分值
+
+        :param int item_no: 当前屏幕中的指定商品的序号（从0开始计算）
+        :return: 在当前屏幕中的指定商品的序号的元素的积分值
+
+        Example
+        -------
+        >>> item_no = 3 # 选择当前屏幕中，序号第三的元素
+        >>> points = PointExchangeOpn(self.driver).get_points_exchange_item_points(item_no)
+        >>> print("积分值为：{}".format(points))
+        >>> # 积分值为：5453
+        """
         logging.info('==========get_points_exchange_item_points==========')
         eles = self.get_points_exchange_list()
         ele = self.get_presence_element(locator=PointExchangePage.PointsExchangeItemPoints, element=eles[item_no])
         return ele.get_attribute("text")
 
     # 获取"积分兑换商品"列表中,指定序号元素的品名
-    def get_points_exchange_item_name(self, item_no):
+    def get_points_exchange_item_name(self, item_no: int) -> str:
+        """
+        获取“积分兑换商品”视图框列表中，显示在当前屏幕中的指定商品的序号的元素的商品名
+
+        :param int item_no: 当前屏幕中的指定商品的序号（从0开始计算）
+        :return: 在当前屏幕中的指定商品的序号的元素的商品名
+
+        Example
+        -------
+        >>> item_no = 3 # 选择当前屏幕中，序号第三的元素
+        >>> points = PointExchangeOpn(self.driver).get_points_exchange_item_name(item_no)
+        >>> print("积分值为：{}".format(points))
+        >>> # 积分值为：5453
+        """
         logging.info('==========get_points_exchange_item_name==========')
         eles = self.get_elements(PointExchangePage.PointsExchangeItemNames)
         return eles[item_no].get_attribute("text")
 
     # 点击“积分兑换”按钮
     def click_points_exchange_btn(self):
+        """
+        点击“积分兑换”按钮
+
+        Example
+        -------
+        >>> points = PointExchangeOpn(self.driver).click_points_exchange_btn()
+        """
         logging.info('==========click_points_exchange_btn==========')
         ele = self.get_presence_element(PointExchangePage.ExchangeBtn)
         ele.click()
@@ -1170,7 +1961,13 @@ class PointExchangeOpn(BasePage):
     # 获取“积分兑换商品”视图大小，并返回视图框左上角和右下角的坐标值
     def get_points_exchange_view_size(self):
         """
-            :return: 视图框左上角x轴的值、视图框左上角y轴的值、视图框右下角x轴的值、视图框右下角y轴的值
+        获取“积分兑换商品”视图大小，并返回视图框左上角和右下角的坐标值
+
+        :return: “积分兑换商品”视图框左上角x轴的值、视图框左上角y轴的值、视图框右下角x轴的值、视图框右下角y轴的值
+
+        Example
+        -------
+        >>> top_left_x, top_left_y, lower_right_x, lower_right_y = PointExchangeOpn(self.driver).get_points_exchange_view_size()
         """
         logging.info('==========get_points_exchange_view_size==========')
         ele = self.get_presence_element(PointExchangePage.PointsExchangeView)
@@ -1183,7 +1980,17 @@ class PointExchangeOpn(BasePage):
         return top_left_x, top_left_y, lower_right_x, lower_right_y
 
     # 搜索框发送指定数据
-    def send_keys_search_input(self, text):
+    def send_keys_search_input(self, text: str):
+        """
+        搜索框发送指定数据
+
+        :param str text: 所要搜索的数据
+
+        Example
+        -------
+        >>> text = "搜索的内容"
+        >>> points = PointExchangeOpn(self.driver).send_keys_search_input(text)
+        """
         logging.info('==========send_keys_search_input==========')
         ele = self.get_presence_element(PointExchangePage.SearchInput)
         ele.send_keys(text)
@@ -1194,132 +2001,294 @@ class RechargeDetailOpn(BasePage):
     """
     # 点击"现金"按钮
     def click_cash_btn(self):
+        """
+        点击“现金”按钮
+
+        Example
+        -------
+        >>> RechargeDetailOpn(self.driver).click_cash_btn()
+        """
         logging.info('==========click_cash_btn==========')
         ele = self.get_presence_element(RechargeDetailPage.CashBtn)
         ele.click()
 
     # 点击"储值卡"按钮
     def click_value_card_btn(self):
+        """
+        点击"储值卡"按钮
+
+        Example
+        -------
+        >>> RechargeDetailOpn(self.driver).click_value_card_btn()
+        """
         logging.info('==========click_value_card_btn==========')
         ele = self.get_presence_element(RechargeDetailPage.ValueCardBtn)
         ele.click()
 
     # 点击"银联卡"按钮
     def click_union_card_btn(self):
+        """
+        点击"银联卡"按钮
+
+        Example
+        -------
+        >>> RechargeDetailOpn(self.driver).click_union_card_btn()
+        """
         logging.info('==========click_union_card_btn==========')
         ele = self.get_presence_element(RechargeDetailPage.UnionPayBtn)
         ele.click()
 
     # 点击"收款码"按钮
     def click_qr_code_btn(self):
+        """
+        点击"收款码"按钮
+
+        Example
+        -------
+        >>> RechargeDetailOpn(self.driver).click_qr_code_btn()
+        """
         logging.info('==========click_qr_code_btn==========')
         ele = self.get_presence_element(RechargeDetailPage.QRCodeBtn)
         ele.click()
 
     # 点击"Zfb支付"按钮
     def click_ali_pay_btn(self):
+        """
+        点击"Zfb支付"按钮
+
+        Example
+        -------
+        >>> RechargeDetailOpn(self.driver).click_ali_pay_btn()
+        """
         logging.info('==========click_ali_pay_btn==========')
         ele = self.get_presence_element(RechargeDetailPage.AliPayBtn)
         ele.click()
 
     # 点击"预付卡"按钮
     def click_prepaid_card_btn(self):
+        """
+        点击"预付卡"按钮
+
+        Example
+        -------
+        >>> RechargeDetailOpn(self.driver).click_prepaid_card_btn()
+        """
         logging.info('==========click_prepaid_card_btn==========')
         ele = self.get_presence_element(RechargeDetailPage.PrepaidCardBtn)
         ele.click()
 
     # 输入数字“1”
     def input_search_input_one(self):
+        """
+        输入数字“1”
+
+        Example
+        -------
+        >>> RechargeDetailOpn(self.driver).input_search_input_one()
+        """
         logging.info('==========input_one==========')
         ele = self.get_presence_element(RechargeDetailPage.OneBtn)
         ele.click()
 
     # 输入数字“2”
     def input_search_input_two(self):
+        """
+        输入数字“2”
+
+        Example
+        -------
+        >>> RechargeDetailOpn(self.driver).input_search_input_two()
+        """
         logging.info('==========input_two==========')
         ele = self.get_presence_element(RechargeDetailPage.TwoBtn)
         ele.click()
 
     # 输入数字“3”
     def input_search_input_three(self):
+        """
+        输入数字“3”
+
+        Example
+        -------
+        >>> RechargeDetailOpn(self.driver).input_search_input_three()
+        """
         logging.info('==========input_three==========')
         ele = self.get_presence_element(RechargeDetailPage.ThreeBtn)
         ele.click()
 
     # 输入数字“4”
     def input_search_input_four(self):
+        """
+        输入数字“4”
+
+        Example
+        -------
+        >>> RechargeDetailOpn(self.driver).input_search_input_four()
+        """
         logging.info('==========input_four==========')
         ele = self.get_presence_element(RechargeDetailPage.FourBtn)
         ele.click()
 
     # 输入数字“5”
     def input_search_input_five(self):
+        """
+        输入数字“5”
+
+        Example
+        -------
+        >>> RechargeDetailOpn(self.driver).input_search_input_five()
+        """
         logging.info('==========input_five==========')
         ele = self.get_presence_element(RechargeDetailPage.FiveBtn)
         ele.click()
 
     # 输入数字“6”
     def input_search_input_six(self):
+        """
+        输入数字“6”
+
+        Example
+        -------
+        >>> RechargeDetailOpn(self.driver).input_search_input_six()
+        """
         logging.info('==========input_six==========')
         ele = self.get_presence_element(RechargeDetailPage.SixBtn)
         ele.click()
 
     # 输入数字“7”
     def input_search_input_seven(self):
+        """
+        输入数字“7”
+
+        Example
+        -------
+        >>> RechargeDetailOpn(self.driver).input_search_input_seven()
+        """
         logging.info('==========input_seven==========')
         ele = self.get_presence_element(RechargeDetailPage.SevenBtn)
         ele.click()
 
     # 输入数字“8”
     def input_search_input_eight(self):
+        """
+        输入数字“8”
+
+        Example
+        -------
+        >>> RechargeDetailOpn(self.driver).input_search_input_eight()
+        """
         logging.info('==========input_eight==========')
         ele = self.get_presence_element(RechargeDetailPage.EightBtn)
         ele.click()
 
     # 输入数字“9”
     def input_search_input_nine(self):
+        """
+        输入数字“9”
+
+        Example
+        -------
+        >>> RechargeDetailOpn(self.driver).input_search_input_nine()
+        """
         logging.info('==========input_nine==========')
         ele = self.get_presence_element(RechargeDetailPage.NineBtn)
         ele.click()
 
     # 输入数字“0”
     def input_search_input_zero(self):
+        """
+        输入数字“0”
+
+        Example
+        -------
+        >>> RechargeDetailOpn(self.driver).input_search_input_zero()
+        """
         logging.info('==========input_zero==========')
         ele = self.get_presence_element(RechargeDetailPage.ZeroBtn)
         ele.click()
 
     # 输入数字“00”
     def input_search_input_zero_zero(self):
+        """
+        输入数字“00”
+
+        Example
+        -------
+        >>> RechargeDetailOpn(self.driver).input_search_input_zero_zero()
+        """
         logging.info('==========input_zero_zero==========')
         ele = self.get_presence_element(RechargeDetailPage.ZeroZeroBtn)
         ele.click()
 
     # 输入数字"."
     def input_search_input_dot(self):
+        """
+        输入数字“.”
+
+        Example
+        -------
+        >>> RechargeDetailOpn(self.driver).input_search_input_dot()
+        """
         logging.info('==========input_dot==========')
         ele = self.get_presence_element(RechargeDetailPage.DotBtn)
         ele.click()
 
     # 点击"删除"按钮
     def click_delete_btn(self):
+        """
+        点击“删除”按钮
+
+        Example
+        -------
+        >>> RechargeDetailOpn(self.driver).click_delete_btn()
+        """
         logging.info('==========click_delete_btn==========')
         ele = self.get_presence_element(RechargeDetailPage.DeleteBtn)
         ele.click()
 
     # 点击"确定"按钮
     def click_confirm_btn(self):
+        """
+        点击"确定"按钮
+
+        Example
+        -------
+        >>> RechargeDetailOpn(self.driver).click_confirm_btn()
+        """
         logging.info('==========click_confirm_btn==========')
         ele = self.get_presence_element(RechargeDetailPage.ConfirmBtn)
         ele.click()
 
     # 获取“应收金额”文本信息
-    def get_receivable_amount_text(self):
+    def get_receivable_amount_text(self) -> str:
+        """
+        获取“应收金额”文本信息
+
+        :return: 应收金额
+
+        Example
+        -------
+        >>> receivable_amount = RechargeDetailOpn(self.driver).get_receivable_amount_text()
+        >>> print("应收金额为：{}".format(receivable_amount))
+        >>> # 应收金额为：32.4
+        """
         logging.info('==========get_receivable_amount_text==========')
         ele = self.get_presence_element(RechargeDetailPage.ReceivableAmountText)
         return ele.text
 
     # 获取“实收金额”文本信息
     def get_actual_amount_text(self):
+        """
+        获取“实收金额”文本信息
+
+        :return: 实收金额
+
+        Example
+        -------
+        >>> receivable_amount = RechargeDetailOpn(self.driver).get_receivable_amount_text()
+        >>> print("实收金额为：{}".format(receivable_amount))
+        >>> # 实收金额为：32.4
+        """
         logging.info('==========get_actual_amount_text==========')
         ele = self.get_presence_element(RechargeDetailPage.ActualAmountText)
         return ele.text

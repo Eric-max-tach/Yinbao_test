@@ -181,7 +181,7 @@ class TestCaseInterface(StartEnd):
         """
             在收银页面，遍历左侧订单栏中每一个商品的”折扣值”元素，并将这个值保存在有序字典中
         """
-        # # 获取“订单”视图框列表的大小，得到视图框左上角和右下角的坐标值，即"[480,92][1440,1080]"
+        # # 获取“订单”视图框列表的大小，得到                                                            视图框左上角和右下角的坐标值，即"[480,92][1440,1080]"
         # order_view_bounds = (WebDriverWait(self.driver, 10, 0.5, None)
         #                .until(lambda x: x.find_element(
         #                 By.ID, "cn.pospal.www.pospal_pos_android_new.pospal:id/sale_ls"))
@@ -286,7 +286,7 @@ class TestCaseInterface(StartEnd):
         after_deduction_balance = MembershipDetailOpn(self.driver).get_balance()
 
         # 判断扣款后的会员余额是否正确
-        self.assertEqual(float(after_deduction_balance), float(before_deduction_balance) - float(actual_receipt_price))
+        self.assertEqual(round(float(after_deduction_balance),1), round(float(before_deduction_balance) - float(actual_receipt_price), 1))   # 四舍五入保留一位小数
 
 if __name__ == '__main__':
     unittest.main()

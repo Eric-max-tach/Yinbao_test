@@ -6,14 +6,14 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>scenarios module &mdash; e d 文档</title>
+  <title>scenarios module &mdash; YinBao App Test 1.0.0 文档</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=92fd9be5" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
 
   
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=bcdc910c"></script>
+      <script src="_static/documentation_options.js?v=34088549"></script>
       <script src="_static/doctools.js?v=9a2dae69"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
       <script src="_static/translations.js?v=beaddf03"></script>
@@ -31,7 +31,7 @@
           
           
           <a href="index.html" class="icon icon-home">
-            e
+            YinBao App Test
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -66,7 +66,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">e</a>
+          <a href="index.html">YinBao App Test</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -93,8 +93,23 @@
 <p>定义了与登录相关的场景</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="scenarios.LoginScenario.fillin_account_pwd_and_login">
-<span class="sig-name descname"><span class="pre">fillin_account_pwd_and_login</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">username</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#scenarios.LoginScenario.fillin_account_pwd_and_login" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">fillin_account_pwd_and_login</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">username</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#scenarios.LoginScenario.fillin_account_pwd_and_login" title="Link to this definition"></a></dt>
+<dd><p>在登录界面，输入账号和密码，并点击登录按钮</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>username</strong> (<em>str</em>) – 账号</p></li>
+<li><p><strong>password</strong> (<em>str</em>) – 密码</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">username</span> <span class="o">=</span> <span class="s2">&quot;admin&quot;</span>  <span class="c1"># 登录账号</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">password</span> <span class="o">=</span> <span class="s2">&quot;pwd123&quot;</span>    <span class="c1"># 登录密码</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">LoginScenario</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">fillin_account_pwd_and_login</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
 
 </dd></dl>
 
@@ -105,19 +120,38 @@
 <p>定义了不可用优惠券页面相关的场景</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="scenarios.NotAvailableCouponScenario.get_unavailable_coupon_num">
-<span class="sig-name descname"><span class="pre">get_unavailable_coupon_num</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coupon_number_dic</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coupon_number_extend_dic</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_first</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#scenarios.NotAvailableCouponScenario.get_unavailable_coupon_num" title="Link to this definition"></a></dt>
-<dd><dl class="field-list simple">
+<span class="sig-name descname"><span class="pre">get_unavailable_coupon_num</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coupon_number_dic</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">OrderedDict</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coupon_number_extend_dic</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">OrderedDict</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_first</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">OrderedDict</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">OrderedDict</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#scenarios.NotAvailableCouponScenario.get_unavailable_coupon_num" title="Link to this definition"></a></dt>
+<dd><p>统计“不可用优惠券”页面下，“未生效”优惠券的数量，用字典记录每一条优惠券号码，并返回该字典</p>
+<p>python 3.6及以上可以直接传入python提供的字典数据类型（dict），也可以传入有序字典类型（OrderDict）
+python 3.6以下只能传入有序字典类型（OrderDict）</p>
+<dl class="field-list simple">
 <dt class="field-odd">参数<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>coupon_number_dic</strong> – 统计优惠券编号的字典</p></li>
-<li><p><strong>coupon_number_extend_dic</strong> – 统计添加新优惠券后，记录新增优惠券编号的字典，默认为空</p></li>
-<li><p><strong>is_first</strong> – 判断是否为第一次统计优惠券编号，如果是第一次统计，则将记录信息添加到coupon_number_dic字典中。如果不是第一次添加，浙江记录信息添加到coupon_number_extend_dic字典中</p></li>
+<li><p><strong>coupon_number_dic</strong> (<em>dict</em>) – 统计“未生效”优惠券编号的字典，默认为空</p></li>
+<li><p><strong>coupon_number_extend_dic</strong> (<em>dict</em>) – 统计添加新的“未生效”优惠券后，记录新增“未生效”优惠券编号的字典，默认为空</p></li>
+<li><p><strong>is_first</strong> (<em>bool</em>) – 判断是否为第一次统计“未生效”优惠券编号，如果是第一次统计，则将记录信息添加到coupon_number_dic字典中。如果不是第一次统计，则将记录信息添加到coupon_number_extend_dic字典中</p></li>
 </ul>
 </dd>
 <dt class="field-even">返回<span class="colon">:</span></dt>
-<dd class="field-even"><p>返回两个字典</p>
+<dd class="field-even"><p>统计“未生效”优惠券编号的字典， 新增“未生效”优惠券编号的字典</p>
 </dd>
 </dl>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span> <span class="n">Example</span> <span class="mi">1</span>
+<span class="gp">&gt;&gt;&gt; </span> <span class="n">coupon_number_dic</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>  <span class="c1"># 统计“未生效”优惠券编号的字典</span>
+<span class="gp">&gt;&gt;&gt; </span> <span class="n">coupon_number_extend_dic</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>   <span class="c1"># 记录新增“未生效”优惠券编号的字典</span>
+<span class="gp">&gt;&gt;&gt; </span> <span class="n">is_first</span> <span class="o">=</span> <span class="kc">True</span> <span class="c1"># 第一次统计“未生效”优惠券数量</span>
+<span class="gp">&gt;&gt;&gt; </span> <span class="n">coupon_number_dic</span><span class="p">,</span> <span class="n">coupon_number_extend_dic</span> <span class="o">=</span> <span class="n">NotAvailableCouponScenario</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">get_unavailable_coupon_num</span><span class="p">(</span><span class="n">coupon_number_dic</span><span class="p">,</span> <span class="n">coupon_number_extend_dic</span><span class="p">,</span> <span class="n">is_first</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span> <span class="c1"># 此时字典“coupon_number_dic”中记录着第一次统计的“未生效”优惠券编号，字典“coupon_number_extend_dic”仍然为空</span>
+<span class="gp">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span> <span class="n">Example</span> <span class="mi">2</span>
+<span class="gp">&gt;&gt;&gt; </span> <span class="n">coupon_number_dic</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>  <span class="c1"># 统计“未生效”优惠券编号的字典</span>
+<span class="gp">&gt;&gt;&gt; </span> <span class="n">coupon_number_extend_dic</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>   <span class="c1"># 记录新增“未生效”优惠券编号的字典</span>
+<span class="gp">&gt;&gt;&gt; </span> <span class="n">is_first</span> <span class="o">=</span> <span class="kc">False</span> <span class="c1"># 第二次统计“未生效”优惠券数量</span>
+<span class="gp">&gt;&gt;&gt; </span> <span class="n">coupon_number_dic</span><span class="p">,</span> <span class="n">coupon_number_extend_dic</span> <span class="o">=</span> <span class="n">NotAvailableCouponScenario</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">get_unavailable_coupon_num</span><span class="p">(</span><span class="n">coupon_number_dic</span><span class="p">,</span> <span class="n">coupon_number_extend_dic</span><span class="p">,</span> <span class="n">is_first</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span> <span class="c1"># 此时字典“coupon_number_dic”中记录着第一次统计的“未生效”优惠券编号，字典“coupon_number_extend_dic”记录着相较于第一次统计的“未生效”的优惠券，在第二次新增的“未生效”的优惠券编号</span>
+</pre></div>
+</div>
 </dd></dl>
 
 </dd></dl>
@@ -129,9 +163,19 @@
 <p>定义了积分兑换页面相关的场景</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="scenarios.PointExchangeScenarios.get_last_point_exchange_goods_name">
-<span class="sig-name descname"><span class="pre">get_last_point_exchange_goods_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#scenarios.PointExchangeScenarios.get_last_point_exchange_goods_name" title="Link to this definition"></a></dt>
-<dd><p>获得”积分兑换商品”列表的最后一个元素的名称
-:return:</p>
+<span class="sig-name descname"><span class="pre">get_last_point_exchange_goods_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#scenarios.PointExchangeScenarios.get_last_point_exchange_goods_name" title="Link to this definition"></a></dt>
+<dd><p>在“积分兑换”页面下，获取“积分兑换商品”视图框列表中，最后一项可兑换商品的名称</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>最后一项可兑换商品的名称</p>
+</dd>
+</dl>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span> <span class="n">product_name</span> <span class="o">=</span> <span class="n">PointExchangeScenarios</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">get_last_point_exchange_goods_name</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;最后一项可兑换商品的名称为：</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">product_name</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span> <span class="c1"># 最后一项可兑换商品的名称为：商品1</span>
+</pre></div>
+</div>
 </dd></dl>
 
 </dd></dl>
@@ -146,7 +190,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; 版权所有 2024, w。</p>
+    <p>&#169; 版权所有 2024, Eric Qian。</p>
   </div>
 
   利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用的 

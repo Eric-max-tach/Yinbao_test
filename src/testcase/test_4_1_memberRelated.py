@@ -1,6 +1,9 @@
 import sys
 import time
 
+from src.page.operations import *
+from src.page.scenarios import *
+
 sys.path.append(r"C:\Users\Administrator\PycharmProjects\PythonProject")
 
 import unittest

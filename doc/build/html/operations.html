@@ -6,14 +6,14 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>operations module &mdash; e d 文档</title>
+  <title>operations module &mdash; YinBao App Test 1.0.0 文档</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=92fd9be5" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
 
   
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=bcdc910c"></script>
+      <script src="_static/documentation_options.js?v=34088549"></script>
       <script src="_static/doctools.js?v=9a2dae69"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
       <script src="_static/translations.js?v=beaddf03"></script>
@@ -31,7 +31,7 @@
           
           
           <a href="index.html" class="icon icon-home">
-            e
+            YinBao App Test
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -234,7 +234,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">e</a>
+          <a href="index.html">YinBao App Test</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -262,113 +262,305 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.CashInterfaceOpn.click_add_product_btn">
 <span class="sig-name descname"><span class="pre">click_add_product_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.CashInterfaceOpn.click_add_product_btn" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>点击某一分类下的“新增商品”按钮</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">CashInterfaceOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click_add_product_btn</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.CashInterfaceOpn.click_cash_btn">
 <span class="sig-name descname"><span class="pre">click_cash_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.CashInterfaceOpn.click_cash_btn" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>点击“收银”按钮</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">CashInterfaceOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click_cash_btn</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.CashInterfaceOpn.click_category_btn">
-<span class="sig-name descname"><span class="pre">click_category_btn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">category_num</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#operations.CashInterfaceOpn.click_category_btn" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">click_category_btn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">category_num</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#operations.CashInterfaceOpn.click_category_btn" title="Link to this definition"></a></dt>
+<dd><p>点击指定序号的“分类”按钮，并获得其分类名</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>category_num</strong> (<em>str</em>) – 分类序号</p>
+</dd>
+</dl>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">category_num</span> <span class="o">=</span> <span class="s2">&quot;1&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">CashInterfaceOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click_category_btn</span><span class="p">(</span><span class="n">category_num</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.CashInterfaceOpn.click_coupon_btn">
 <span class="sig-name descname"><span class="pre">click_coupon_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.CashInterfaceOpn.click_coupon_btn" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>点击订单栏下方“优惠券”图标按钮</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">CashInterfaceOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click_coupon_btn</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.CashInterfaceOpn.click_goods_btn">
-<span class="sig-name descname"><span class="pre">click_goods_btn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">goods_num</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.CashInterfaceOpn.click_goods_btn" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">click_goods_btn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">goods_num</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.CashInterfaceOpn.click_goods_btn" title="Link to this definition"></a></dt>
+<dd><p>点击指定序号的商品</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>goods_num</strong> (<em>int</em>) – 当前分类下的商品列表中，显示在屏幕中的需要选中的商品序号</p>
+</dd>
+</dl>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">goods_num</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># 点击显示在当前屏幕中的第十件商品</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">CashInterfaceOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click_goods_btn</span><span class="p">(</span><span class="n">goods_num</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.CashInterfaceOpn.click_select_member_btn">
 <span class="sig-name descname"><span class="pre">click_select_member_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.CashInterfaceOpn.click_select_member_btn" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>点击“点击选择会员”按钮</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">CashInterfaceOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click_select_member_btn</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.CashInterfaceOpn.click_unread_message_btn">
 <span class="sig-name descname"><span class="pre">click_unread_message_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.CashInterfaceOpn.click_unread_message_btn" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>点击未读消息按钮</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">CashInterfaceOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click_unread_message_btn</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.CashInterfaceOpn.get_discount_price_text">
 <span class="sig-name descname"><span class="pre">get_discount_price_text</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#operations.CashInterfaceOpn.get_discount_price_text" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>获取“折扣金额”文本值</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>折扣金额</p>
+</dd>
+</dl>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">discount_price</span> <span class="o">=</span> <span class="n">CashInterfaceOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">get_discount_price_text</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;折扣金额为：</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">())</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># 折扣金额为：5</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.CashInterfaceOpn.get_discount_value">
 <span class="sig-name descname"><span class="pre">get_discount_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">product_discounts_in_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.CashInterfaceOpn.get_discount_value" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>将“订单列表”视图框从列表滑动到列表的底部，统计“订单列表”中所有的商品的折扣值</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>product_discounts_in_order</strong> (<em>dict</em>) – product_discounts_in_order = OrderedDict()  # 用于记录订单列表中商品的折扣值</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>订单列表中所有的商品的折扣值</p>
+</dd>
+</dl>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">product_discounts_in_order</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>  <span class="c1"># 用于记录订单列表中商品的折扣值</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">product_discounts_in_order</span> <span class="o">=</span> <span class="n">CashInterfaceOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">get_discount_value</span><span class="p">(</span><span class="n">product_discounts_in_order</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">product_discounts_in_order</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># &quot;商品1的折扣值&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># &quot;商品2的折扣值&quot;</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.CashInterfaceOpn.get_goods_list_num">
 <span class="sig-name descname"><span class="pre">get_goods_list_num</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#operations.CashInterfaceOpn.get_goods_list_num" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>获取当前分类下的商品列表中，显示在屏幕中的商品个数（不是该列表的所有商品）</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>商品个数</p>
+</dd>
+</dl>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">trade_num</span> <span class="o">=</span> <span class="n">CashInterfaceOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">get_goods_list_num</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">trade_num</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># 20</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.CashInterfaceOpn.get_goods_name">
-<span class="sig-name descname"><span class="pre">get_goods_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">goods_num</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#operations.CashInterfaceOpn.get_goods_name" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">get_goods_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">goods_num</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#operations.CashInterfaceOpn.get_goods_name" title="Link to this definition"></a></dt>
+<dd><p>获取指定序号的商品名</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>goods_num</strong> (<em>int</em>) – 当前分类下的商品列表中，显示在屏幕中的需要选中的商品序号</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>指定序号的商品名</p>
+</dd>
+</dl>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">goods_num</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># 点击显示在当前屏幕中的第十件商品</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">good_name</span> <span class="o">=</span> <span class="n">CashInterfaceOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">get_goods_name</span><span class="p">(</span><span class="n">goods_num</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">good_name</span><span class="p">)</span>    <span class="c1"># “第十件商品的商品名”</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.CashInterfaceOpn.get_goods_num_list">
 <span class="sig-name descname"><span class="pre">get_goods_num_list</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#operations.CashInterfaceOpn.get_goods_num_list" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><blockquote>
+<div><p>获取显示在当前屏幕中的，“订单列表”视图框内所有商品序号的元素列表集合</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>显示在当前屏幕中的，“订单列表”视图框内所有商品序号的元素列表集合</p>
+</dd>
+</dl>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">good_num_list</span> <span class="o">=</span> <span class="n">CashInterfaceOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">get_goods_num_list</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.CashInterfaceOpn.get_goods_price">
-<span class="sig-name descname"><span class="pre">get_goods_price</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">goods_num</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#operations.CashInterfaceOpn.get_goods_price" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">get_goods_price</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">goods_num</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#operations.CashInterfaceOpn.get_goods_price" title="Link to this definition"></a></dt>
+<dd><p>获取指定序号的商品价格</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>goods_num</strong> (<em>int</em>) – 当前分类下的商品列表中，显示在屏幕中的需要选中的商品序号</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>指定序号的商品价格</p>
+</dd>
+</dl>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">goods_num</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># 点击显示在当前屏幕中的第十件商品</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">good_name</span> <span class="o">=</span> <span class="n">CashInterfaceOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">get_goods_price</span><span class="p">(</span><span class="n">goods_num</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">good_name</span><span class="p">)</span>    <span class="c1"># “第十件商品的商品价格”</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.CashInterfaceOpn.get_new_product_name_price">
 <span class="sig-name descname"><span class="pre">get_new_product_name_price</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#operations.CashInterfaceOpn.get_new_product_name_price" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>获取指定分类序号下,最新添加的商品名和商品售价
+（最新添加的商品位于对应分类列表中的倒数第二个元素）</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">CashInterfaceOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">get_new_product_name_price</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.CashInterfaceOpn.get_order_view_size">
 <span class="sig-name descname"><span class="pre">get_order_view_size</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#operations.CashInterfaceOpn.get_order_view_size" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><blockquote>
+<div><p>获取“订单”视图框的大小，并返回该视图框左上角和右下角的坐标值，即”[480,92][1440,1080]”</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>“订单列表”视图框左上角个右下角的坐标对</p>
+</dd>
+</dl>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">top_left_x</span><span class="p">,</span> <span class="n">top_left_y</span><span class="p">,</span> <span class="n">lower_right_x</span><span class="p">,</span> <span class="n">lower_right_y</span> <span class="o">=</span> <span class="n">CashInterfaceOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">get_order_view_size</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.CashInterfaceOpn.get_receipt_price_text">
 <span class="sig-name descname"><span class="pre">get_receipt_price_text</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#operations.CashInterfaceOpn.get_receipt_price_text" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>获取“实收金额”文本值</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>实收金额</p>
+</dd>
+</dl>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">receipt_price</span> <span class="o">=</span> <span class="n">CashInterfaceOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">get_receipt_price_text</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;实收金额为：</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">())</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># 实收金额为：5</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.CashInterfaceOpn.get_total_price_text">
 <span class="sig-name descname"><span class="pre">get_total_price_text</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#operations.CashInterfaceOpn.get_total_price_text" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>获取“总金额”文本值</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>总金额</p>
+</dd>
+</dl>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">total_price</span> <span class="o">=</span> <span class="n">CashInterfaceOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">get_total_price_text</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;总金额为：</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">())</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># 总金额为：5</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.CashInterfaceOpn.scroll_order_list_to_bottom">
-<span class="sig-name descname"><span class="pre">scroll_order_list_to_bottom</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">product_names_in_order</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">product_prices_in_order</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#operations.CashInterfaceOpn.scroll_order_list_to_bottom" title="Link to this definition"></a></dt>
-<dd><dl class="field-list simple">
+<span class="sig-name descname"><span class="pre">scroll_order_list_to_bottom</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">product_names_in_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">product_prices_in_order</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#operations.CashInterfaceOpn.scroll_order_list_to_bottom" title="Link to this definition"></a></dt>
+<dd><p>将“订单列表”视图框从列表的顶部滑动到列表的底部，统计“订单列表”中所有的商品的商品名和商品价格</p>
+<dl class="field-list simple">
 <dt class="field-odd">参数<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>product_names_in_order</strong> – product_names_in_order = OrderedDict()  # 用于记录订单中商品的名字</p></li>
-<li><p><strong>product_prices_in_order</strong> – product_prices_in_order = OrderedDict()  # 用于记录订单中商品的价格</p></li>
+<li><p><strong>product_names_in_order</strong> (<em>dict</em>) – product_names_in_order = OrderedDict()  # 用于记录订单列表中商品的名字</p></li>
+<li><p><strong>product_prices_in_order</strong> (<em>dict</em>) – product_prices_in_order = OrderedDict()  # 用于记录订单列表中商品的价格</p></li>
 </ul>
 </dd>
 <dt class="field-even">返回<span class="colon">:</span></dt>
-<dd class="field-even"><p>product_names_in_order, product_prices_in_order</p>
+<dd class="field-even"><p>订单列表中所有的商品的商品名， 订单列表中所有商品的商品价格</p>
 </dd>
 </dl>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">product_names_in_order</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>  <span class="c1"># 用于记录订单列表中商品的名字</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">product_prices_in_order</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>  <span class="c1"># 用于记录订单列表中商品的价格</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">product_names_in_order</span><span class="p">,</span> <span class="n">product_prices_in_order</span> <span class="o">=</span> <span class="n">CashInterfaceOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">scroll_order_list_to_bottom</span><span class="p">(</span><span class="n">product_names_in_order</span><span class="p">,</span> <span class="n">product_prices_in_order</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">product_names_in_order</span><span class="p">,</span> <span class="n">product_prices_in_order</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># &quot;商品1&quot;, &quot;价格1&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># &quot;商品2&quot;, &quot;价格2&quot;</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.CashInterfaceOpn.scroll_order_list_to_top">
 <span class="sig-name descname"><span class="pre">scroll_order_list_to_top</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.CashInterfaceOpn.scroll_order_list_to_top" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>将“订单列表”视图框滑动到列表的顶部</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">CashInterfaceOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">scroll_order_list_to_top</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.CashInterfaceOpn.wait_toast_disappear">
 <span class="sig-name descname"><span class="pre">wait_toast_disappear</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.CashInterfaceOpn.wait_toast_disappear" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>等待Toast消息提示框消失</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">CashInterfaceOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">wait_toast_disappear</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 </dd></dl>
 
@@ -380,7 +572,12 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.CouponOpn.click_unavailable_coupon_btn">
 <span class="sig-name descname"><span class="pre">click_unavailable_coupon_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.CouponOpn.click_unavailable_coupon_btn" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>点击“不可用券”按钮</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">CouponOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click_unavailable_coupon_btn</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 </dd></dl>
 
@@ -628,52 +825,117 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.MemberRechargeOpn.click_alipay_btn">
 <span class="sig-name descname"><span class="pre">click_alipay_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.MemberRechargeOpn.click_alipay_btn" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>点击“支付宝”充值按钮</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">MemberRechargeOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click_alipay_btn</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.MemberRechargeOpn.click_cash_btn">
 <span class="sig-name descname"><span class="pre">click_cash_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.MemberRechargeOpn.click_cash_btn" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>点击“现金”充值按钮</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">MemberRechargeOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click_cash_btn</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.MemberRechargeOpn.click_confirm_btn">
 <span class="sig-name descname"><span class="pre">click_confirm_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.MemberRechargeOpn.click_confirm_btn" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>点击“确认充值”按钮</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">MemberRechargeOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click_confirm_btn</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.MemberRechargeOpn.click_print_receipt_checkbox">
 <span class="sig-name descname"><span class="pre">click_print_receipt_checkbox</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.MemberRechargeOpn.click_print_receipt_checkbox" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>点击“充值成功后打印小票”选择框</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">MemberRechargeOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click_print_receipt_checkbox</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.MemberRechargeOpn.click_qrcode_btn">
 <span class="sig-name descname"><span class="pre">click_qrcode_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.MemberRechargeOpn.click_qrcode_btn" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>点击“收款码”充值按钮</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">MemberRechargeOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click_qrcode_btn</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.MemberRechargeOpn.click_sfpay_btn">
 <span class="sig-name descname"><span class="pre">click_sfpay_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.MemberRechargeOpn.click_sfpay_btn" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>点击“三福支付”充值按钮</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">MemberRechargeOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click_sfpay_btn</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.MemberRechargeOpn.click_union_btn">
 <span class="sig-name descname"><span class="pre">click_union_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.MemberRechargeOpn.click_union_btn" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>点击“银联卡”充值按钮</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">MemberRechargeOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click_union_btn</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.MemberRechargeOpn.click_wechat_btn">
 <span class="sig-name descname"><span class="pre">click_wechat_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.MemberRechargeOpn.click_wechat_btn" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>点击“微信”充值按钮</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">MemberRechargeOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click_wechat_btn</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.MemberRechargeOpn.get_print_receipt_status">
-<span class="sig-name descname"><span class="pre">get_print_receipt_status</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.MemberRechargeOpn.get_print_receipt_status" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">get_print_receipt_status</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#operations.MemberRechargeOpn.get_print_receipt_status" title="Link to this definition"></a></dt>
+<dd><p>获取“充值成功后打印小票”选择框的状态，通过checked属性进行判断</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>“充值成功后打印小票”选择框被选择的状态</p>
+</dd>
+</dl>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">checked</span> <span class="o">=</span> <span class="n">MemberRechargeOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">get_print_receipt_status</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">if</span> <span class="n">checked</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;该选择框被选中&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">else</span><span class="p">:</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;该选择框未被选中&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.MemberRechargeOpn.select_recharge_item">
-<span class="sig-name descname"><span class="pre">select_recharge_item</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item_no</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.MemberRechargeOpn.select_recharge_item" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">select_recharge_item</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item_no</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.MemberRechargeOpn.select_recharge_item" title="Link to this definition"></a></dt>
+<dd><p>根据给定的充值项序号，选择指定的充值项（从序号0开始计算）</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>item_no</strong> (<em>int</em>) – 充值项序号</p>
+</dd>
+</dl>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">item_no</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># 选择第1项充值项</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">MemberRechargeOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">select_recharge_item</span><span class="p">(</span><span class="n">item_no</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
 
 </dd></dl>
 
@@ -685,32 +947,71 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.MembershipDetailOpn.click_coupon_btn">
 <span class="sig-name descname"><span class="pre">click_coupon_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.MembershipDetailOpn.click_coupon_btn" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>点击“优惠券查看”按钮</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">MembershipDetailOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click_coupon_btn</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.MembershipDetailOpn.click_points_exchange_btn">
 <span class="sig-name descname"><span class="pre">click_points_exchange_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.MembershipDetailOpn.click_points_exchange_btn" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>点击“积分兑换”按钮</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">MembershipDetailOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click_points_exchange_btn</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.MembershipDetailOpn.click_recharge_btn">
 <span class="sig-name descname"><span class="pre">click_recharge_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.MembershipDetailOpn.click_recharge_btn" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>点击“充值”按钮</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">MembershipDetailOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click_recharge_btn</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.MembershipDetailOpn.click_select_member_btn">
 <span class="sig-name descname"><span class="pre">click_select_member_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.MembershipDetailOpn.click_select_member_btn" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>点击“选择会员”按钮</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">MembershipDetailOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click_select_member_btn</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.MembershipDetailOpn.get_balance">
-<span class="sig-name descname"><span class="pre">get_balance</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.MembershipDetailOpn.get_balance" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">get_balance</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#operations.MembershipDetailOpn.get_balance" title="Link to this definition"></a></dt>
+<dd><p>获取“会员余额”</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>会员余额</p>
+</dd>
+</dl>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">balance</span> <span class="o">=</span> <span class="n">MembershipDetailOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">get_balance</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;会员余额为：</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">balance</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># 会员余额为：5.4</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.MembershipDetailOpn.get_points">
-<span class="sig-name descname"><span class="pre">get_points</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.MembershipDetailOpn.get_points" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">get_points</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#operations.MembershipDetailOpn.get_points" title="Link to this definition"></a></dt>
+<dd><p>获取“会员积分”</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">points</span> <span class="o">=</span> <span class="n">MembershipDetailOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">get_points</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;会员积分为：</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">points</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># 会员积分为：5.4</span>
+</pre></div>
+</div>
+</dd></dl>
 
 </dd></dl>
 
@@ -722,27 +1023,59 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.MessageCenterOpn.click_back_btn">
 <span class="sig-name descname"><span class="pre">click_back_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.MessageCenterOpn.click_back_btn" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>在“消息中心”模块，点击“返回”按钮</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">MessageCenterOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click_back_btn</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.MessageCenterOpn.click_ignore_this_goods_btn">
 <span class="sig-name descname"><span class="pre">click_ignore_this_goods_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.MessageCenterOpn.click_ignore_this_goods_btn" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>点击“消息中心”模块的“忽略此商品”按钮</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">MessageCenterOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click_ignore_this_goods_btn</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.MessageCenterOpn.click_select_all_btn">
 <span class="sig-name descname"><span class="pre">click_select_all_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.MessageCenterOpn.click_select_all_btn" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>点击某一消息模块下，待处理消息通知的“全选”按钮</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">MessageCenterOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click_select_all_btn</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.MessageCenterOpn.click_stock_btn">
 <span class="sig-name descname"><span class="pre">click_stock_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.MessageCenterOpn.click_stock_btn" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>点击“库存预警”按钮</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">MessageCenterOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click_stock_btn</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.MessageCenterOpn.get_stock_warning_num">
 <span class="sig-name descname"><span class="pre">get_stock_warning_num</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#operations.MessageCenterOpn.get_stock_warning_num" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>获得“库存预警”版块的待处理通知的数量</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>“库存预警”版块的待处理通知的数量</p>
+</dd>
+</dl>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">stock_warning_num</span> <span class="o">=</span> <span class="n">MessageCenterOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">get_stock_warning_num</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&#39;库存预警&#39;模块待处理通知数量为：</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">formart</span><span class="p">(</span><span class="n">stock_warning_num</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># &#39;库存预警&#39;模块待处理通知数量为：4</span>
+</pre></div>
+</div>
+</dd></dl>
 
 </dd></dl>
 
@@ -754,57 +1087,144 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.NewProductPageOpn.click_category_dropdown">
 <span class="sig-name descname"><span class="pre">click_category_dropdown</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.NewProductPageOpn.click_category_dropdown" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>点击“分类”按钮，弹出分类下拉框</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">NewProductPageOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click_category_dropdown</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.NewProductPageOpn.click_category_save_btn">
 <span class="sig-name descname"><span class="pre">click_category_save_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.NewProductPageOpn.click_category_save_btn" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>在“分类”下拉框中，点击“保存”按钮</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">NewProductPageOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click_category_save_btn</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.NewProductPageOpn.click_generate_btn">
 <span class="sig-name descname"><span class="pre">click_generate_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.NewProductPageOpn.click_generate_btn" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>在“新增商品”页面，点击“生成”按钮，生成随机条码</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">NewProductPageOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click_generate_btn</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.NewProductPageOpn.click_save_btn">
 <span class="sig-name descname"><span class="pre">click_save_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.NewProductPageOpn.click_save_btn" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>点击“保存”按钮,保存新增商品</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">NewProductPageOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click_save_btn</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.NewProductPageOpn.click_search_result">
 <span class="sig-name descname"><span class="pre">click_search_result</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.NewProductPageOpn.click_search_result" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>在“分类”下拉框中，点击搜索结果集合中第一条搜索结果</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">NewProductPageOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click_search_result</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.NewProductPageOpn.get_barcode_input_text">
 <span class="sig-name descname"><span class="pre">get_barcode_input_text</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#operations.NewProductPageOpn.get_barcode_input_text" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>获取商品条码文本框</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">barcode</span> <span class="o">=</span> <span class="n">NewProductPageOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">get_barcode_input_text</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;商品条码为：</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">barcode</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># 商品条码为：5423523</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.NewProductPageOpn.input_category_search_input">
-<span class="sig-name descname"><span class="pre">input_category_search_input</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">search_content</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.NewProductPageOpn.input_category_search_input" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">input_category_search_input</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">search_content</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.NewProductPageOpn.input_category_search_input" title="Link to this definition"></a></dt>
+<dd><p>在“分类”下拉框中，点击搜索栏并输入搜索内容</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>search_content</strong> (<em>str</em>) – 在搜索框内输入要搜索的内容</p>
+</dd>
+</dl>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">search_content</span> <span class="o">=</span> <span class="s2">&quot;搜索商品1&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">NewProductPageOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">input_category_search_input</span><span class="p">(</span><span class="n">search_content</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.NewProductPageOpn.input_price">
-<span class="sig-name descname"><span class="pre">input_price</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">price</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.NewProductPageOpn.input_price" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">input_price</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">price</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.NewProductPageOpn.input_price" title="Link to this definition"></a></dt>
+<dd><p>在“售价”输入框，输入售价</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>price</strong> (<em>float</em>) – 新增商品的售价</p>
+</dd>
+</dl>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">price</span> <span class="o">=</span> <span class="mf">13.2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">NewProductPageOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">input_price</span><span class="p">(</span><span class="n">price</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.NewProductPageOpn.input_product_name">
-<span class="sig-name descname"><span class="pre">input_product_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">product_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.NewProductPageOpn.input_product_name" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">input_product_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">product_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.NewProductPageOpn.input_product_name" title="Link to this definition"></a></dt>
+<dd><p>在“品名”输入框，输入商品名</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>product_name</strong> (<em>str</em>) – 新增商品的商品名</p>
+</dd>
+</dl>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">product_name</span> <span class="o">=</span> <span class="s2">&quot;新增商品名1&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">NewProductPageOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">input_product_name</span><span class="p">(</span><span class="n">product_name</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.NewProductPageOpn.input_purchase_price">
-<span class="sig-name descname"><span class="pre">input_purchase_price</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">purchase_price</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.NewProductPageOpn.input_purchase_price" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">input_purchase_price</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">purchase_price</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.NewProductPageOpn.input_purchase_price" title="Link to this definition"></a></dt>
+<dd><p>在“进价”输入框，输入进价</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>purchase_price</strong> (<em>float</em>) – 新增商品的进价</p>
+</dd>
+</dl>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">purchase_price</span> <span class="o">=</span> <span class="mf">10.2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">NewProductPageOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">input_purchase_price</span><span class="p">(</span><span class="n">purchase_price</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.NewProductPageOpn.input_stock">
-<span class="sig-name descname"><span class="pre">input_stock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stock</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.NewProductPageOpn.input_stock" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">input_stock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stock</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.NewProductPageOpn.input_stock" title="Link to this definition"></a></dt>
+<dd><p>在“库存”输入框，输入库存</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>stock</strong> (<em>int</em>) – 新增商品的库存</p>
+</dd>
+</dl>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">stock</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">NewProductPageOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">input_stock</span><span class="p">(</span><span class="n">stock</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
 
 </dd></dl>
 
@@ -816,16 +1236,33 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.NotAvailableCouponOpn.get_not_available_coupon_number_list">
 <span class="sig-name descname"><span class="pre">get_not_available_coupon_number_list</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.NotAvailableCouponOpn.get_not_available_coupon_number_list" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>获取在“未生效优惠券”视图框里，显示在当前屏幕中的优惠券编号的元素列表</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>优惠券编号的元素列表</p>
+</dd>
+</dl>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">available_coupon_number_eles_list</span> <span class="o">=</span> <span class="n">NotAvailableCouponOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">get_not_available_coupon_number_list</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">available_coupon_number_ele</span> <span class="ow">in</span> <span class="n">available_coupon_number_eles_list</span><span class="p">:</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="nb">print</span><span class="p">(</span><span class="n">available_coupon_number_ele</span><span class="o">.</span><span class="n">text</span><span class="p">)</span> <span class="c1"># 输出每一张未生效优惠券的编号</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.NotAvailableCouponOpn.get_not_available_coupon_view_size">
 <span class="sig-name descname"><span class="pre">get_not_available_coupon_view_size</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.NotAvailableCouponOpn.get_not_available_coupon_view_size" title="Link to this definition"></a></dt>
-<dd><dl class="field-list simple">
+<dd><p>获取“未生效优惠券”视图框列表的大小，并返回视图框左上角和右下角的坐标值</p>
+<dl class="field-list simple">
 <dt class="field-odd">返回<span class="colon">:</span></dt>
 <dd class="field-odd"><p>视图框左上角x轴的值、视图框左上角y轴的值、视图框右下角x轴的值、视图框右下角y轴的值</p>
 </dd>
 </dl>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">top_left_x</span><span class="p">,</span> <span class="n">top_left_y</span><span class="p">,</span> <span class="n">lower_right_x</span><span class="p">,</span> <span class="n">lower_right_y</span> <span class="o">=</span> <span class="n">NotAvailableCouponOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">get_not_available_coupon_view_size</span><span class="p">()</span>
+</pre></div>
+</div>
 </dd></dl>
 
 </dd></dl>
@@ -838,42 +1275,116 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.PointExchangeOpn.click_points_exchange_btn">
 <span class="sig-name descname"><span class="pre">click_points_exchange_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.PointExchangeOpn.click_points_exchange_btn" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>点击“积分兑换”按钮</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">points</span> <span class="o">=</span> <span class="n">PointExchangeOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click_points_exchange_btn</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.PointExchangeOpn.click_points_exchange_item">
-<span class="sig-name descname"><span class="pre">click_points_exchange_item</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item_no</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.PointExchangeOpn.click_points_exchange_item" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">click_points_exchange_item</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item_no</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.PointExchangeOpn.click_points_exchange_item" title="Link to this definition"></a></dt>
+<dd><p>获取“积分兑换商品”视图框列表中，显示在当前屏幕中的指定商品的序号的元素</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>item_no</strong> (<em>int</em>) – 当前屏幕中的指定商品的序号（从0开始计算）</p>
+</dd>
+</dl>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">item_no</span> <span class="o">=</span> <span class="mi">3</span> <span class="c1"># 选择当前屏幕中，序号第三的元素</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">PointExchangeOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click_points_exchange_item</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.PointExchangeOpn.get_points_exchange_item_name">
-<span class="sig-name descname"><span class="pre">get_points_exchange_item_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item_no</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.PointExchangeOpn.get_points_exchange_item_name" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">get_points_exchange_item_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item_no</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#operations.PointExchangeOpn.get_points_exchange_item_name" title="Link to this definition"></a></dt>
+<dd><p>获取“积分兑换商品”视图框列表中，显示在当前屏幕中的指定商品的序号的元素的商品名</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>item_no</strong> (<em>int</em>) – 当前屏幕中的指定商品的序号（从0开始计算）</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>在当前屏幕中的指定商品的序号的元素的商品名</p>
+</dd>
+</dl>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">item_no</span> <span class="o">=</span> <span class="mi">3</span> <span class="c1"># 选择当前屏幕中，序号第三的元素</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">points</span> <span class="o">=</span> <span class="n">PointExchangeOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">get_points_exchange_item_name</span><span class="p">(</span><span class="n">item_no</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;积分值为：</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">points</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># 积分值为：5453</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.PointExchangeOpn.get_points_exchange_item_points">
-<span class="sig-name descname"><span class="pre">get_points_exchange_item_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item_no</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.PointExchangeOpn.get_points_exchange_item_points" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">get_points_exchange_item_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item_no</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#operations.PointExchangeOpn.get_points_exchange_item_points" title="Link to this definition"></a></dt>
+<dd><p>获取“积分兑换商品”视图框列表中，显示在当前屏幕中的指定商品的序号的元素的积分值</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>item_no</strong> (<em>int</em>) – 当前屏幕中的指定商品的序号（从0开始计算）</p>
+</dd>
+<dt class="field-even">返回<span class="colon">:</span></dt>
+<dd class="field-even"><p>在当前屏幕中的指定商品的序号的元素的积分值</p>
+</dd>
+</dl>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">item_no</span> <span class="o">=</span> <span class="mi">3</span> <span class="c1"># 选择当前屏幕中，序号第三的元素</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">points</span> <span class="o">=</span> <span class="n">PointExchangeOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">get_points_exchange_item_points</span><span class="p">(</span><span class="n">item_no</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;积分值为：</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">points</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># 积分值为：5453</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.PointExchangeOpn.get_points_exchange_list">
 <span class="sig-name descname"><span class="pre">get_points_exchange_list</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.PointExchangeOpn.get_points_exchange_list" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>获取“积分兑换商品”视图框列表中，显示在当前屏幕中的元素列表</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>“积分兑换商品”视图框列表中，显示在当前屏幕中的元素列表</p>
+</dd>
+</dl>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">points_exchange_eles_list</span> <span class="o">=</span> <span class="n">PointExchangeOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">get_points_exchange_list</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.PointExchangeOpn.get_points_exchange_view_size">
 <span class="sig-name descname"><span class="pre">get_points_exchange_view_size</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.PointExchangeOpn.get_points_exchange_view_size" title="Link to this definition"></a></dt>
-<dd><dl class="field-list simple">
+<dd><p>获取“积分兑换商品”视图大小，并返回视图框左上角和右下角的坐标值</p>
+<dl class="field-list simple">
 <dt class="field-odd">返回<span class="colon">:</span></dt>
-<dd class="field-odd"><p>视图框左上角x轴的值、视图框左上角y轴的值、视图框右下角x轴的值、视图框右下角y轴的值</p>
+<dd class="field-odd"><p>“积分兑换商品”视图框左上角x轴的值、视图框左上角y轴的值、视图框右下角x轴的值、视图框右下角y轴的值</p>
 </dd>
 </dl>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">top_left_x</span><span class="p">,</span> <span class="n">top_left_y</span><span class="p">,</span> <span class="n">lower_right_x</span><span class="p">,</span> <span class="n">lower_right_y</span> <span class="o">=</span> <span class="n">PointExchangeOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">get_points_exchange_view_size</span><span class="p">()</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.PointExchangeOpn.send_keys_search_input">
-<span class="sig-name descname"><span class="pre">send_keys_search_input</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.PointExchangeOpn.send_keys_search_input" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">send_keys_search_input</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.PointExchangeOpn.send_keys_search_input" title="Link to this definition"></a></dt>
+<dd><p>搜索框发送指定数据</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>text</strong> (<em>str</em>) – 所要搜索的数据</p>
+</dd>
+</dl>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;搜索的内容&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">points</span> <span class="o">=</span> <span class="n">PointExchangeOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">send_keys_search_input</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
 
 </dd></dl>
 
@@ -885,112 +1396,236 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.RechargeDetailOpn.click_ali_pay_btn">
 <span class="sig-name descname"><span class="pre">click_ali_pay_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.RechargeDetailOpn.click_ali_pay_btn" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>点击”Zfb支付”按钮</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">RechargeDetailOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click_ali_pay_btn</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.RechargeDetailOpn.click_cash_btn">
 <span class="sig-name descname"><span class="pre">click_cash_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.RechargeDetailOpn.click_cash_btn" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>点击“现金”按钮</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">RechargeDetailOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click_cash_btn</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.RechargeDetailOpn.click_confirm_btn">
 <span class="sig-name descname"><span class="pre">click_confirm_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.RechargeDetailOpn.click_confirm_btn" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>点击”确定”按钮</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">RechargeDetailOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click_confirm_btn</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.RechargeDetailOpn.click_delete_btn">
 <span class="sig-name descname"><span class="pre">click_delete_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.RechargeDetailOpn.click_delete_btn" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>点击“删除”按钮</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">RechargeDetailOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click_delete_btn</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.RechargeDetailOpn.click_prepaid_card_btn">
 <span class="sig-name descname"><span class="pre">click_prepaid_card_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.RechargeDetailOpn.click_prepaid_card_btn" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>点击”预付卡”按钮</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">RechargeDetailOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click_prepaid_card_btn</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.RechargeDetailOpn.click_qr_code_btn">
 <span class="sig-name descname"><span class="pre">click_qr_code_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.RechargeDetailOpn.click_qr_code_btn" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>点击”收款码”按钮</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">RechargeDetailOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click_qr_code_btn</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.RechargeDetailOpn.click_union_card_btn">
 <span class="sig-name descname"><span class="pre">click_union_card_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.RechargeDetailOpn.click_union_card_btn" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>点击”银联卡”按钮</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">RechargeDetailOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click_union_card_btn</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.RechargeDetailOpn.click_value_card_btn">
 <span class="sig-name descname"><span class="pre">click_value_card_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.RechargeDetailOpn.click_value_card_btn" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>点击”储值卡”按钮</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">RechargeDetailOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click_value_card_btn</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.RechargeDetailOpn.get_actual_amount_text">
 <span class="sig-name descname"><span class="pre">get_actual_amount_text</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.RechargeDetailOpn.get_actual_amount_text" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>获取“实收金额”文本信息</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>实收金额</p>
+</dd>
+</dl>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">receivable_amount</span> <span class="o">=</span> <span class="n">RechargeDetailOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">get_receivable_amount_text</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;实收金额为：</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">receivable_amount</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># 实收金额为：32.4</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.RechargeDetailOpn.get_receivable_amount_text">
-<span class="sig-name descname"><span class="pre">get_receivable_amount_text</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.RechargeDetailOpn.get_receivable_amount_text" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">get_receivable_amount_text</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#operations.RechargeDetailOpn.get_receivable_amount_text" title="Link to this definition"></a></dt>
+<dd><p>获取“应收金额”文本信息</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>应收金额</p>
+</dd>
+</dl>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">receivable_amount</span> <span class="o">=</span> <span class="n">RechargeDetailOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">get_receivable_amount_text</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;应收金额为：</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">receivable_amount</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># 应收金额为：32.4</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.RechargeDetailOpn.input_search_input_dot">
 <span class="sig-name descname"><span class="pre">input_search_input_dot</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.RechargeDetailOpn.input_search_input_dot" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>输入数字“.”</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">RechargeDetailOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">input_search_input_dot</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.RechargeDetailOpn.input_search_input_eight">
 <span class="sig-name descname"><span class="pre">input_search_input_eight</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.RechargeDetailOpn.input_search_input_eight" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>输入数字“8”</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">RechargeDetailOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">input_search_input_eight</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.RechargeDetailOpn.input_search_input_five">
 <span class="sig-name descname"><span class="pre">input_search_input_five</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.RechargeDetailOpn.input_search_input_five" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>输入数字“5”</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">RechargeDetailOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">input_search_input_five</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.RechargeDetailOpn.input_search_input_four">
 <span class="sig-name descname"><span class="pre">input_search_input_four</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.RechargeDetailOpn.input_search_input_four" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>输入数字“4”</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">RechargeDetailOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">input_search_input_four</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.RechargeDetailOpn.input_search_input_nine">
 <span class="sig-name descname"><span class="pre">input_search_input_nine</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.RechargeDetailOpn.input_search_input_nine" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>输入数字“9”</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">RechargeDetailOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">input_search_input_nine</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.RechargeDetailOpn.input_search_input_one">
 <span class="sig-name descname"><span class="pre">input_search_input_one</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.RechargeDetailOpn.input_search_input_one" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>输入数字“1”</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">RechargeDetailOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">input_search_input_one</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.RechargeDetailOpn.input_search_input_seven">
 <span class="sig-name descname"><span class="pre">input_search_input_seven</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.RechargeDetailOpn.input_search_input_seven" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>输入数字“7”</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">RechargeDetailOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">input_search_input_seven</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.RechargeDetailOpn.input_search_input_six">
 <span class="sig-name descname"><span class="pre">input_search_input_six</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.RechargeDetailOpn.input_search_input_six" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>输入数字“6”</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">RechargeDetailOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">input_search_input_six</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.RechargeDetailOpn.input_search_input_three">
 <span class="sig-name descname"><span class="pre">input_search_input_three</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.RechargeDetailOpn.input_search_input_three" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>输入数字“3”</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">RechargeDetailOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">input_search_input_three</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.RechargeDetailOpn.input_search_input_two">
 <span class="sig-name descname"><span class="pre">input_search_input_two</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.RechargeDetailOpn.input_search_input_two" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>输入数字“2”</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">RechargeDetailOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">input_search_input_two</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.RechargeDetailOpn.input_search_input_zero">
 <span class="sig-name descname"><span class="pre">input_search_input_zero</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.RechargeDetailOpn.input_search_input_zero" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>输入数字“0”</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">RechargeDetailOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">input_search_input_zero</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.RechargeDetailOpn.input_search_input_zero_zero">
 <span class="sig-name descname"><span class="pre">input_search_input_zero_zero</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.RechargeDetailOpn.input_search_input_zero_zero" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>输入数字“00”</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">RechargeDetailOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">input_search_input_zero_zero</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 </dd></dl>
 
@@ -1002,32 +1637,74 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.SelectCouponOpn.click_common_coupon_btn">
 <span class="sig-name descname"><span class="pre">click_common_coupon_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.SelectCouponOpn.click_common_coupon_btn" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>点击“通用券码”按钮</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">SelectCouponOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click_common_coupon_btn</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.SelectCouponOpn.click_confirm_btn">
 <span class="sig-name descname"><span class="pre">click_confirm_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.SelectCouponOpn.click_confirm_btn" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>点击“确定”按钮</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">SelectCouponOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click_confirm_btn</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.SelectCouponOpn.click_coupon_add_btn">
 <span class="sig-name descname"><span class="pre">click_coupon_add_btn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coupon_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.SelectCouponOpn.click_coupon_add_btn" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>在“优惠券列表”中，点击显示在当前屏幕中的优惠券元素的“添加”按钮</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>coupon_id</strong> – 显示在当前屏幕中的优惠券的序号</p>
+</dd>
+</dl>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">coupon_id</span> <span class="o">=</span> <span class="mi">1</span>   <span class="c1"># 添加列表中的第一个优惠券</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">SelectCouponOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click_coupon_add_btn</span><span class="p">(</span><span class="n">coupon_id</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.SelectCouponOpn.click_coupon_delete_btn">
 <span class="sig-name descname"><span class="pre">click_coupon_delete_btn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coupon_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.SelectCouponOpn.click_coupon_delete_btn" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>在“优惠券列表”中，点击显示在当前屏幕中的优惠券元素的“删除”按钮</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>coupon_id</strong> (<em>int</em>) – 显示在当前屏幕中的优惠券的序号</p>
+</dd>
+</dl>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">coupon_id</span> <span class="o">=</span> <span class="mi">1</span>   <span class="c1"># 删除列表中的第一个优惠券</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">SelectCouponOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click_coupon_delete_btn</span><span class="p">(</span><span class="n">coupon_id</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.SelectCouponOpn.click_coupon_scan_btn">
 <span class="sig-name descname"><span class="pre">click_coupon_scan_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.SelectCouponOpn.click_coupon_scan_btn" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>点击“券扫码下单”按钮</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">SelectCouponOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click_coupon_scan_btn</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.SelectCouponOpn.click_normal_coupon_btn">
 <span class="sig-name descname"><span class="pre">click_normal_coupon_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.SelectCouponOpn.click_normal_coupon_btn" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>点击“普通优惠券”按钮</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">SelectCouponOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click_normal_coupon_btn</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.SelectCouponOpn.find_and_click_coupon">
@@ -1036,18 +1713,30 @@
 <dl class="field-list simple">
 <dt class="field-odd">参数<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>coupon_prefix_name</strong> – 所要查找的优惠券的名称的前缀</p></li>
-<li><p><strong>coupon_num</strong> – 优惠券添加/删除个数</p></li>
-<li><p><strong>is_add</strong> – 判断是添加还是删除优惠券，True为添加优惠券，False为删除优惠券</p></li>
+<li><p><strong>coupon_prefix_name</strong> (<em>str</em>) – 所要查找的优惠券的名称的前缀</p></li>
+<li><p><strong>coupon_num</strong> (<em>int</em>) – 优惠券添加/删除个数</p></li>
+<li><p><strong>is_add</strong> (<em>bool</em>) – 判断是添加还是删除优惠券，True为添加优惠券，False为删除优惠券</p></li>
 </ul>
 </dd>
 </dl>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">coupon_prefix_name</span> <span class="o">=</span> <span class="s2">&quot;20减5&quot;</span>   <span class="c1"># 查找以&quot;20减5&quot;名称开头的优惠券</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">coupon_num</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># 只添加一张该优惠券</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">is_add</span> <span class="o">=</span> <span class="kc">True</span>   <span class="c1"># 添加优惠券</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">SelectCouponOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click_coupon_delete_btn</span><span class="p">(</span><span class="n">coupon_prefix_name</span><span class="p">,</span> <span class="n">coupon_num</span><span class="p">,</span> <span class="n">is_add</span><span class="p">)</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.SelectCouponOpn.get_coupon_list_view_size">
-<span class="sig-name descname"><span class="pre">get_coupon_list_view_size</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="headerlink" href="#operations.SelectCouponOpn.get_coupon_list_view_size" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">get_coupon_list_view_size</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#operations.SelectCouponOpn.get_coupon_list_view_size" title="Link to this definition"></a></dt>
+<dd><p>获得“优惠券列表”视图框大小，并返回其左上角和右下角的坐标值</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">top_left_x</span><span class="p">,</span> <span class="n">top_left_y</span><span class="p">,</span> <span class="n">lower_right_x</span><span class="p">,</span> <span class="n">lower_right_y</span> <span class="o">=</span> <span class="n">SelectCouponOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">get_coupon_list_view_size</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 </dd></dl>
 
@@ -1059,87 +1748,172 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.SelectMemberOpn.click_add_member_btn">
 <span class="sig-name descname"><span class="pre">click_add_member_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.SelectMemberOpn.click_add_member_btn" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>点击“添加会员”按钮</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">SelectMemberOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click_add_member_btn</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.SelectMemberOpn.click_back_btn">
 <span class="sig-name descname"><span class="pre">click_back_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.SelectMemberOpn.click_back_btn" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>点击“返回”按钮</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">SelectMemberOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click_back_btn</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.SelectMemberOpn.click_confirm_btn">
 <span class="sig-name descname"><span class="pre">click_confirm_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.SelectMemberOpn.click_confirm_btn" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>点击“确定”按钮</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">SelectMemberOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click_confirm_btn</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.SelectMemberOpn.click_delete_btn">
 <span class="sig-name descname"><span class="pre">click_delete_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.SelectMemberOpn.click_delete_btn" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>点击“删除”按钮</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">SelectMemberOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click_delete_btn</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.SelectMemberOpn.click_scan_btn">
 <span class="sig-name descname"><span class="pre">click_scan_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.SelectMemberOpn.click_scan_btn" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>点击“扫描”按钮</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">SelectMemberOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click_scan_btn</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.SelectMemberOpn.input_search_input_dot">
 <span class="sig-name descname"><span class="pre">input_search_input_dot</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.SelectMemberOpn.input_search_input_dot" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>点击键盘的数字”.“</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">SelectMemberOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">input_search_input_dot</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.SelectMemberOpn.input_search_input_double_zero">
 <span class="sig-name descname"><span class="pre">input_search_input_double_zero</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.SelectMemberOpn.input_search_input_double_zero" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>点击键盘的数字”00“</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">SelectMemberOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">input_search_input_double_zero</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.SelectMemberOpn.input_search_input_eight">
 <span class="sig-name descname"><span class="pre">input_search_input_eight</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.SelectMemberOpn.input_search_input_eight" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>点击键盘的数字”8“</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">SelectMemberOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">input_search_input_eight</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.SelectMemberOpn.input_search_input_five">
 <span class="sig-name descname"><span class="pre">input_search_input_five</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.SelectMemberOpn.input_search_input_five" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>点击键盘的数字”5“</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">SelectMemberOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">input_search_input_five</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.SelectMemberOpn.input_search_input_four">
 <span class="sig-name descname"><span class="pre">input_search_input_four</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.SelectMemberOpn.input_search_input_four" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>点击键盘的数字”4“</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">SelectMemberOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">input_search_input_four</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.SelectMemberOpn.input_search_input_nine">
 <span class="sig-name descname"><span class="pre">input_search_input_nine</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.SelectMemberOpn.input_search_input_nine" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>点击键盘的数字”9“</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">SelectMemberOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">input_search_input_nine</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.SelectMemberOpn.input_search_input_one">
 <span class="sig-name descname"><span class="pre">input_search_input_one</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.SelectMemberOpn.input_search_input_one" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>点击键盘的数字”1“</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">SelectMemberOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">input_search_input_one</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.SelectMemberOpn.input_search_input_seven">
 <span class="sig-name descname"><span class="pre">input_search_input_seven</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.SelectMemberOpn.input_search_input_seven" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>点击键盘的数字”7“</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">SelectMemberOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">input_search_input_seven</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.SelectMemberOpn.input_search_input_six">
 <span class="sig-name descname"><span class="pre">input_search_input_six</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.SelectMemberOpn.input_search_input_six" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>点击键盘的数字”6“</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">SelectMemberOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">input_search_input_six</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.SelectMemberOpn.input_search_input_three">
 <span class="sig-name descname"><span class="pre">input_search_input_three</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.SelectMemberOpn.input_search_input_three" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>点击键盘的数字”3“</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">SelectMemberOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">input_search_input_three</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.SelectMemberOpn.input_search_input_two">
 <span class="sig-name descname"><span class="pre">input_search_input_two</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.SelectMemberOpn.input_search_input_two" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>点击键盘的数字”2“</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">SelectMemberOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">input_search_input_two</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.SelectMemberOpn.input_search_input_zero">
 <span class="sig-name descname"><span class="pre">input_search_input_zero</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.SelectMemberOpn.input_search_input_zero" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>点击键盘的数字”0“</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">SelectMemberOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">input_search_input_zero</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 </dd></dl>
 
@@ -1151,47 +1925,117 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.TryLogInPageOpn.click_contact_service_btn">
 <span class="sig-name descname"><span class="pre">click_contact_service_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.TryLogInPageOpn.click_contact_service_btn" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>联系客服按钮点击</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">TryLogInPageOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click_contact_service_btn</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.TryLogInPageOpn.click_employee_login_btn">
 <span class="sig-name descname"><span class="pre">click_employee_login_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.TryLogInPageOpn.click_employee_login_btn" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>员工登录按钮点击</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">TryLogInPageOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click_employee_login_btn</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.TryLogInPageOpn.click_history_handover_btn">
 <span class="sig-name descname"><span class="pre">click_history_handover_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.TryLogInPageOpn.click_history_handover_btn" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>交接班记录按钮点击</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">TryLogInPageOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click_contact_service_btn</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.TryLogInPageOpn.click_manager_btn">
 <span class="sig-name descname"><span class="pre">click_manager_btn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#operations.TryLogInPageOpn.click_manager_btn" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>管理后台按钮点击</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">TryLogInPageOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">click_manager_btn</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.TryLogInPageOpn.get_account_input_text">
 <span class="sig-name descname"><span class="pre">get_account_input_text</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#operations.TryLogInPageOpn.get_account_input_text" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>账号输入框文本获取
+:return: 账号</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">account</span> <span class="o">=</span> <span class="n">TryLogInPageOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">get_account_input_text</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">account</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># &quot;Jack&quot;</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.TryLogInPageOpn.get_job_number_input_text">
 <span class="sig-name descname"><span class="pre">get_job_number_input_text</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#operations.TryLogInPageOpn.get_job_number_input_text" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>工号输入框获取工号
+:return: 工号</p>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">job_number</span> <span class="o">=</span> <span class="n">TryLogInPageOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">get_job_number_input_text</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">job_number</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># &quot;123&quot;</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.TryLogInPageOpn.get_toast_text">
 <span class="sig-name descname"><span class="pre">get_toast_text</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#operations.TryLogInPageOpn.get_toast_text" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<dd><p>获取Toast文本信息</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Toast文本信息</p>
+</dd>
+</dl>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">toast</span> <span class="o">=</span> <span class="n">TryLogInPageOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">get_toast_text</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">toast</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># &quot;toast文本信息&quot;</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.TryLogInPageOpn.input_job_number">
-<span class="sig-name descname"><span class="pre">input_job_number</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">job_number</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.TryLogInPageOpn.input_job_number" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">input_job_number</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">job_number</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.TryLogInPageOpn.input_job_number" title="Link to this definition"></a></dt>
+<dd><p>工号输入框输入工号</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>job_number</strong> (<em>str</em>) – 员工工号</p>
+</dd>
+</dl>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">job_number</span> <span class="o">=</span> <span class="s2">&quot;123&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">TryLogInPageOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">input_job_number</span><span class="p">(</span><span class="n">job_number</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="operations.TryLogInPageOpn.input_password">
-<span class="sig-name descname"><span class="pre">input_password</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">password</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.TryLogInPageOpn.input_password" title="Link to this definition"></a></dt>
-<dd></dd></dl>
+<span class="sig-name descname"><span class="pre">input_password</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#operations.TryLogInPageOpn.input_password" title="Link to this definition"></a></dt>
+<dd><p>密码输入框输入密码</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>password</strong> – 密码</p>
+</dd>
+</dl>
+<p class="rubric">示例</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">password</span> <span class="o">=</span> <span class="s2">&quot;pwd123&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">TryLogInPageOpn</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span><span class="o">.</span><span class="n">input_password</span><span class="p">(</span><span class="n">password</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
 
 </dd></dl>
 
@@ -1205,7 +2049,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; 版权所有 2024, w。</p>
+    <p>&#169; 版权所有 2024, Eric Qian。</p>
   </div>
 
   利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用的 
