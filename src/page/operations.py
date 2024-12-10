@@ -1115,7 +1115,7 @@ class SelectCouponOpn(BasePage):
 
 class NewProductPageOpn(BasePage):
     """
-        新增商品元素操作
+        新增商品页面元素操作
     """
     # 在“新增商品”页面，点击“生成”按钮，生成随机条码
     def click_generate_btn(self):
@@ -1284,7 +1284,7 @@ class NewProductPageOpn(BasePage):
 
 class MessageCenterOpn(BasePage):
     """
-        消息中心元素操作
+        消息中心页面元素操作
     """
     # 点击“库存预警”按钮
     def click_stock_btn(self):
